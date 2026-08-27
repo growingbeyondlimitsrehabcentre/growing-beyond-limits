@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Growing Beyond Limits Rehab Center | Occupational Therapy</title>
 
-  <meta name="description" content="Growing Beyond Limits Rehab Center provides compassionate and purposeful occupational therapy focused on meaningful skills, participation, confidence and greater independence.">
+  <meta
+    name="description"
+    content="Growing Beyond Limits Rehab Center provides compassionate and purposeful occupational therapy focused on meaningful skills, confidence, participation and greater independence."
+  >
 
-  <meta name="keywords" content="Growing Beyond Limits Rehab Center, occupational therapy, occupational therapist, rehabilitation, Dr Jeeva A, rehab center, occupational therapy Chennai">
+  <meta
+    name="keywords"
+    content="Growing Beyond Limits, occupational therapy, rehabilitation centre, occupational therapist, Dr Jeeva A, rehab centre, Chennai, occupational therapy Chennai"
+  >
 
   <meta name="author" content="Growing Beyond Limits Rehab Center">
 
@@ -16,41 +23,63 @@
 
   <meta name="theme-color" content="#071b35">
 
-  <!-- Open Graph / Social Sharing -->
+  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:title" content="Growing Beyond Limits Rehab Center">
-  <meta property="og:description" content="Compassionate and purposeful occupational therapy with a focus on meaningful skills, participation, confidence and greater independence.">
+  <meta
+    property="og:description"
+    content="Compassionate and purposeful occupational therapy focused on meaningful skills, confidence, participation and greater independence."
+  >
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/">
+  <meta
+    property="og:url"
+    content="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/"
+  >
+  <meta
+    property="og:image"
+    content="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/assets/logo.png"
+  >
 
-  <link rel="canonical" href="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Growing Beyond Limits Rehab Center">
+  <meta
+    name="twitter:description"
+    content="Purposeful occupational therapy helping individuals build meaningful skills, confidence and independence."
+  >
+  <meta
+    name="twitter:image"
+    content="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/assets/logo.png"
+  >
+
+  <!-- Canonical -->
+  <link
+    rel="canonical"
+    href="https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
   <style>
 
-    :root {
-      --navy: #071b35;
-      --navy-light: #0d2948;
-      --blue: #087fc5;
-      --blue-light: #1da4df;
-      --green: #20c96b;
-      --green-dark: #13aa57;
-      --mint: #eff9f5;
-      --sky: #eef8fc;
-      --white: #ffffff;
-      --text: #16314d;
-      --muted: #617993;
-      --line: rgba(7, 27, 53, 0.10);
-      --shadow: 0 25px 70px rgba(7, 27, 53, 0.11);
-      --radius: 28px;
-    }
+    /* =========================================================
+       RESET
+    ========================================================= */
 
     * {
       margin: 0;
@@ -60,56 +89,69 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: "DM Sans", Arial, sans-serif;
-      color: var(--text);
-      background: #f8fcfb;
-      line-height: 1.7;
+      font-family: "DM Sans", sans-serif;
+      background: #f5fbfa;
+      color: #071b35;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
     img {
-      display: block;
       max-width: 100%;
+      display: block;
     }
 
     a {
-      color: inherit;
       text-decoration: none;
+      color: inherit;
     }
 
     button,
     input,
-    textarea,
-    select {
-      font: inherit;
+    select,
+    textarea {
+      font-family: inherit;
     }
 
-    .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: auto;
+    :root {
+      --navy: #071b35;
+      --navy-light: #102d4f;
+      --blue: #087fc1;
+      --green: #20cf72;
+      --green-dark: #0ca85a;
+      --light: #f5fbfa;
+      --white: #ffffff;
+      --text: #54718e;
+      --border: #dfe8ed;
+      --instagram-1: #833ab4;
+      --instagram-2: #fd1d1d;
+      --instagram-3: #fcb045;
     }
 
-    /* =========================
+
+    /* =========================================================
        HEADER
-    ========================= */
+    ========================================================= */
 
     header {
-      position: fixed;
+      position: sticky;
       top: 0;
-      left: 0;
-      right: 0;
       z-index: 1000;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(7,27,53,0.08);
+      height: 88px;
+      background: rgba(255,255,255,0.97);
+      border-bottom: 1px solid #edf0f2;
+      backdrop-filter: blur(12px);
     }
 
-    .nav {
-      height: 88px;
+    .navbar {
+      max-width: 1410px;
+      height: 100%;
+      margin: auto;
+      padding: 0 28px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -119,201 +161,163 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
-      color: var(--navy);
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 1.7px;
-      white-space: nowrap;
+      gap: 16px;
+      flex-shrink: 0;
     }
 
     .brand img {
-      width: 58px;
-      height: 58px;
+      width: 70px;
+      height: 70px;
       object-fit: contain;
+    }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--navy);
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: 34px;
     }
 
-    .nav-links > a {
-      font-weight: 700;
+    .nav-links a {
+      font-size: 17px;
+      font-weight: 600;
       color: var(--navy);
       transition: 0.25s ease;
       white-space: nowrap;
     }
 
-    .nav-links > a:hover {
+    .nav-links a:hover {
       color: var(--blue);
     }
 
     .instagram-nav {
-      display: inline-flex;
+      display: flex !important;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
     }
 
-    .instagram-icon {
-      width: 21px;
-      height: 21px;
-      border: 2px solid currentColor;
-      border-radius: 6px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+    .instagram-nav i {
+      font-size: 20px;
     }
 
-    .instagram-icon::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border: 2px solid currentColor;
-      border-radius: 50%;
-    }
-
-    .instagram-icon::after {
-      content: "";
-      width: 3px;
-      height: 3px;
-      background: currentColor;
-      border-radius: 50%;
-      position: absolute;
-      top: 3px;
-      right: 3px;
-    }
-
-    .nav-cta {
+    .appointment-btn {
       background: var(--navy);
       color: white !important;
-      padding: 15px 25px;
-      border-radius: 999px;
-      box-shadow: 0 12px 30px rgba(7,27,53,0.18);
+      padding: 17px 30px;
+      border-radius: 40px;
+      font-weight: 700 !important;
+      box-shadow: 0 10px 30px rgba(7,27,53,0.15);
+      transition: 0.25s ease;
     }
 
-    .nav-cta:hover {
-      background: var(--blue) !important;
+    .appointment-btn:hover {
+      background: #102d4f;
       transform: translateY(-2px);
     }
 
-    .menu-btn {
+    .mobile-menu {
       display: none;
-      width: 45px;
-      height: 45px;
-      border: 1px solid var(--line);
-      background: white;
-      border-radius: 12px;
+      border: 0;
+      background: transparent;
+      font-size: 26px;
       color: var(--navy);
       cursor: pointer;
-      font-size: 22px;
     }
 
-    /* =========================
+
+    /* =========================================================
        HERO
-    ========================= */
+    ========================================================= */
 
     .hero {
-      min-height: 850px;
-      padding-top: 88px;
-      display: flex;
-      align-items: center;
+      min-height: 690px;
       position: relative;
       overflow: hidden;
+
       background:
-        radial-gradient(circle at 88% 18%, rgba(123,198,50,0.23), transparent 30%),
-        radial-gradient(circle at 7% 90%, rgba(0,145,210,0.15), transparent 32%),
-        linear-gradient(135deg,#ffffff 0%,#f5faf8 55%,#edf8f2 100%);
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(185,235,195,0.45),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          #eef9f7,
+          #ffffff 60%,
+          #edf9ef
+        );
     }
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      width: 650px;
-      height: 650px;
-      border: 1px solid rgba(77,169,57,0.12);
-      border-radius: 50%;
-      right: -230px;
-      top: 80px;
-    }
+    .hero-inner {
+      max-width: 1410px;
+      margin: auto;
+      min-height: 690px;
+      padding: 95px 28px;
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      width: 420px;
-      height: 420px;
-      border: 1px solid rgba(0,125,190,0.10);
-      border-radius: 50%;
-      left: -260px;
-      bottom: -220px;
-    }
-
-    .hero-grid {
-      position: relative;
-      z-index: 2;
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
-      gap: 65px;
       align-items: center;
-    }
-
-    .eyebrow,
-    .section-kicker {
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 4px;
-      text-transform: uppercase;
+      gap: 70px;
     }
 
     .eyebrow {
-      margin-bottom: 27px;
+      color: var(--blue);
+      font-size: 15px;
+      letter-spacing: 4px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
     .hero h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(58px,7vw,100px);
-      line-height: .92;
-      letter-spacing: -4px;
-      color: var(--navy);
-      margin-bottom: 32px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(60px, 7vw, 105px);
+      line-height: 0.95;
+      font-weight: 600;
+      max-width: 800px;
+      margin-bottom: 30px;
     }
 
-    .hero h1 .blue {
-      color: var(--blue);
+    .hero h1 span {
+      display: block;
     }
 
-    .hero h1 .green {
-      color: var(--green-dark);
-    }
-
-    .hero-copy {
-      max-width: 650px;
-      color: var(--muted);
-      font-size: 18px;
-      margin-bottom: 34px;
+    .hero-text {
+      max-width: 720px;
+      color: var(--text);
+      font-size: 20px;
+      line-height: 1.75;
+      margin-bottom: 35px;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
     }
 
     .btn {
-      min-height: 56px;
-      padding: 0 27px;
-      border-radius: 999px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 9px;
-      border: 1px solid transparent;
-      font-weight: 800;
+      gap: 10px;
+
+      min-height: 58px;
+      padding: 0 28px;
+
+      border-radius: 35px;
+      font-size: 17px;
+      font-weight: 700;
+
+      transition: 0.25s ease;
       cursor: pointer;
-      transition: .25s ease;
+      border: none;
     }
 
     .btn:hover {
@@ -323,443 +327,364 @@
     .btn-primary {
       background: var(--navy);
       color: white;
-      box-shadow: 0 15px 30px rgba(7,27,53,.17);
     }
 
-    .btn-primary:hover {
-      background: var(--blue);
-    }
-
-    .btn-green {
+    .btn-whatsapp {
       background: var(--green);
       color: white;
-      box-shadow: 0 15px 30px rgba(33,201,107,.18);
     }
 
-    .btn-green:hover {
-      background: var(--green-dark);
-    }
-
-    .btn-light {
+    .btn-map {
       background: white;
-      border-color: var(--line);
       color: var(--navy);
+      border: 1px solid var(--border);
     }
 
     .btn-instagram {
-      background: linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
       color: white;
+      background:
+        linear-gradient(
+          90deg,
+          var(--instagram-1),
+          var(--instagram-2),
+          var(--instagram-3)
+        );
     }
 
-    .hero-visual {
-      min-height: 570px;
-      position: relative;
+    .hero-image {
       display: flex;
-      align-items: center;
       justify-content: center;
     }
 
-    .logo-card {
-      width: min(530px,100%);
-      min-height: 510px;
-      padding: 50px;
-      background: rgba(255,255,255,.90);
-      border-radius: 34px;
-      border: 1px solid rgba(255,255,255,.9);
-      box-shadow: 0 35px 80px rgba(7,27,53,.13);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .hero-image-card {
+      width: min(520px, 100%);
+      background: white;
+      border-radius: 45px;
+      padding: 35px;
+      box-shadow: 0 25px 70px rgba(7,27,53,0.12);
     }
 
-    .logo-card img {
+    .hero-image-card img {
       width: 100%;
-      max-width: 440px;
+      max-height: 540px;
       object-fit: contain;
+      border-radius: 25px;
     }
 
-    .floating-label {
-      position: absolute;
-      padding: 14px 22px;
-      border-radius: 20px;
-      background: var(--navy);
-      color: white;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 1px;
-      box-shadow: 0 18px 35px rgba(7,27,53,.22);
-    }
 
-    .label-top {
-      top: 45px;
-      right: -15px;
-    }
-
-    .label-bottom {
-      bottom: 25px;
-      left: -30px;
-      background: white;
-      color: var(--navy);
-    }
-
-    /* =========================
-       TRUST
-    ========================= */
-
-    .trust {
-      background: white;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .trust-grid {
-      min-height: 105px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-      align-items: center;
-      text-align: center;
-    }
-
-    .trust-item {
-      color: var(--navy);
-      font-weight: 800;
-    }
-
-    .trust-item span {
-      display: block;
-      color: var(--blue);
-      font-size: 12px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    /* =========================
-       COMMON SECTIONS
-    ========================= */
+    /* =========================================================
+       GENERAL SECTIONS
+    ========================================================= */
 
     section {
-      padding: 110px 0;
+      padding: 105px 28px;
     }
 
-    .section-kicker {
-      margin-bottom: 13px;
+    .container {
+      max-width: 1280px;
+      margin: auto;
+    }
+
+    .section-label {
+      text-align: center;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
     }
 
     .section-title {
-      font-family: "Playfair Display", Georgia, serif;
-      color: var(--navy);
-      font-size: clamp(44px,5vw,70px);
-      line-height: 1.03;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 6vw, 82px);
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 25px;
     }
 
-    .section-text {
-      color: var(--muted);
-      font-size: 17px;
-      max-width: 720px;
+    .section-intro {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+      color: var(--text);
+      font-size: 18px;
     }
 
-    .section-heading {
-      margin-bottom: 55px;
-    }
 
-    /* =========================
+    /* =========================================================
        ABOUT
-    ========================= */
+    ========================================================= */
 
     .about {
-      background: #f8fcfb;
+      background: white;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
 
-    .about-card {
-      background: white;
-      border-radius: 32px;
-      padding: 38px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--line);
+    .about-copy h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 5vw, 72px);
+      line-height: 1;
+      margin-bottom: 25px;
     }
 
-    .about-card img {
-      width: 100%;
-      max-height: 470px;
-      object-fit: contain;
-    }
-
-    .about-content h3 {
-      font-family: "Playfair Display",Georgia,serif;
-      font-size: 40px;
-      color: var(--navy);
-      margin-bottom: 20px;
-    }
-
-    .about-content p {
-      color: var(--muted);
-      margin-bottom: 20px;
-      font-size: 17px;
+    .about-copy p {
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 22px;
     }
 
     .check-list {
       list-style: none;
       display: grid;
-      gap: 13px;
+      gap: 14px;
       margin-top: 25px;
     }
 
     .check-list li {
       display: flex;
+      align-items: center;
       gap: 12px;
-      align-items: flex-start;
-      color: var(--text);
       font-weight: 600;
     }
 
-    .check-list li::before {
-      content: "✓";
-      width: 25px;
-      height: 25px;
-      flex: 0 0 25px;
-      border-radius: 50%;
-      background: #e3f7eb;
+    .check-list i {
       color: var(--green-dark);
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
     }
 
-    /* =========================
+    .about-card {
+      background: #eff9f6;
+      padding: 45px;
+      border-radius: 35px;
+    }
+
+    .about-card h3 {
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .about-card p {
+      color: var(--text);
+    }
+
+
+    /* =========================================================
        SERVICES
-    ========================= */
+    ========================================================= */
 
     .services {
-      background: white;
+      background: #f4faf9;
     }
 
-    .service-grid {
+    .services-grid {
+      margin-top: 55px;
       display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .service-card {
-      padding: 34px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: linear-gradient(145deg,#fff,#f6fbfa);
-      transition: .3s ease;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 35px;
+      min-height: 250px;
+      transition: 0.25s ease;
     }
 
     .service-card:hover {
-      transform: translateY(-7px);
-      box-shadow: var(--shadow);
-    }
-
-    .service-number {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--blue);
-      letter-spacing: 2px;
-      margin-bottom: 30px;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(7,27,53,0.08);
     }
 
     .service-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 18px;
-      background: #eaf7fc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      background: #eaf8fc;
+      border-radius: 16px;
+      color: var(--blue);
+      font-size: 23px;
       margin-bottom: 22px;
     }
 
     .service-card h3 {
-      color: var(--navy);
       font-size: 22px;
       margin-bottom: 12px;
     }
 
     .service-card p {
-      color: var(--muted);
-      font-size: 15px;
+      color: var(--text);
     }
 
-    /* =========================
+
+    /* =========================================================
        APPROACH
-    ========================= */
+    ========================================================= */
 
     .approach {
-      background:
-        radial-gradient(circle at 5% 15%,rgba(0,150,210,.10),transparent 30%),
-        #f3faf7;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .approach-list {
-      display: grid;
-      gap: 16px;
-    }
-
-    .approach-item {
       background: white;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 24px 28px;
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-      box-shadow: 0 10px 35px rgba(7,27,53,.05);
     }
 
-    .approach-item strong {
-      display: block;
-      color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 4px;
+    .steps {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
-    .approach-item p {
-      color: var(--muted);
+    .step {
+      padding: 30px;
+      border-top: 2px solid var(--navy);
+    }
+
+    .step-number {
       font-size: 15px;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
-    .approach-icon {
-      width: 45px;
-      height: 45px;
-      flex: 0 0 45px;
-      background: #eaf7fc;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* =========================
-       THERAPIST
-    ========================= */
-
-    .therapist {
-      background:
-        radial-gradient(circle at 90% 15%,rgba(123,198,50,.18),transparent 32%),
-        linear-gradient(135deg,#f9fdfc,#eef9f5);
-    }
-
-    .therapist-grid {
-      display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      gap: 70px;
-      align-items: center;
-    }
-
-    .therapist-image {
-      background: white;
-      border-radius: 34px;
-      padding: 25px;
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .therapist-image img {
-      width: 100%;
-      max-height: 610px;
-      object-fit: contain;
-      border-radius: 25px;
-    }
-
-    .therapist-content h2 {
-      font-family: "Playfair Display",Georgia,serif;
-      color: var(--navy);
-      font-size: clamp(45px,5vw,70px);
-      line-height: 1;
+    .step h3 {
+      font-size: 25px;
       margin-bottom: 12px;
     }
 
-    .therapist-role {
-      color: var(--blue);
-      font-size: 20px;
-      font-weight: 800;
-      margin-bottom: 28px;
+    .step p {
+      color: var(--text);
     }
 
-    .therapist-description {
-      color: var(--muted);
-      font-size: 17px;
+
+    /* =========================================================
+       THERAPIST
+    ========================================================= */
+
+    .therapist {
+      background:
+        radial-gradient(
+          circle at 85% 15%,
+          rgba(208,240,203,0.55),
+          transparent 35%
+        ),
+        #f4fbfa;
+    }
+
+    .therapist-grid {
+      max-width: 1280px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .therapist-photo {
+      background: white;
+      border-radius: 40px;
+      padding: 25px;
+      box-shadow: 0 20px 60px rgba(7,27,53,0.08);
+    }
+
+    .therapist-photo img {
+      width: 100%;
+      border-radius: 25px;
+      object-fit: contain;
+    }
+
+    .therapist-content h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 5vw, 75px);
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .qualification {
+      color: var(--blue);
+      font-size: 20px;
+      font-weight: 700;
       margin-bottom: 30px;
     }
 
-    .info-stack {
+    .therapist-content > p {
+      color: var(--text);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .contact-cards {
       display: grid;
-      gap: 16px;
+      gap: 15px;
     }
 
-    .info-card {
+    .contact-card {
       background: white;
-      border: 1px solid var(--line);
-      border-radius: 23px;
-      padding: 23px 28px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 22px 25px;
+
       display: flex;
-      gap: 18px;
       align-items: center;
+      gap: 20px;
     }
 
-    .info-icon {
+    .contact-icon {
       width: 52px;
       height: 52px;
-      flex: 0 0 52px;
-      border-radius: 16px;
+      border-radius: 15px;
       background: #edf8fc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 23px;
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-size: 20px;
+      flex-shrink: 0;
     }
 
-    .info-card strong {
+    .contact-card strong {
       display: block;
-      color: var(--navy);
       font-size: 17px;
     }
 
-    .info-card a,
-    .info-card span {
-      color: var(--muted);
+    .contact-card span {
+      color: var(--text);
     }
 
-    .info-card a:hover {
-      color: var(--blue);
-    }
 
-    /* =========================
-       INSTAGRAM
-    ========================= */
+    /* =========================================================
+       INSTAGRAM CARD
+    ========================================================= */
 
     .instagram-card {
-      margin-top: 16px;
-      border-radius: 23px;
-      padding: 23px 28px;
+      margin-top: 15px;
+
+      background:
+        linear-gradient(
+          100deg,
+          #833ab4,
+          #fd1d1d 50%,
+          #fcb045
+        );
+
       color: white;
-      background: linear-gradient(120deg,#833ab4,#fd1d1d 55%,#fcb045);
+      border-radius: 25px;
+      padding: 24px 28px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      box-shadow: 0 18px 40px rgba(253,29,29,.15);
-      transition: .25s ease;
+
+      box-shadow: 0 20px 45px rgba(131,58,180,0.20);
+      transition: 0.25s ease;
     }
 
     .instagram-card:hover {
@@ -769,183 +694,180 @@
     .instagram-card-left {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
     }
 
-    .instagram-large {
-      width: 54px;
-      height: 54px;
-      border: 3px solid white;
-      border-radius: 15px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .instagram-large::before {
-      content: "";
-      width: 18px;
-      height: 18px;
-      border: 3px solid white;
-      border-radius: 50%;
-    }
-
-    .instagram-large::after {
-      content: "";
-      position: absolute;
-      width: 5px;
-      height: 5px;
-      background: white;
-      border-radius: 50%;
-      top: 8px;
-      right: 8px;
+    .instagram-card i {
+      font-size: 38px;
     }
 
     .instagram-card strong {
       display: block;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     .instagram-card span {
-      opacity: .95;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .instagram-arrow {
-      font-size: 30px;
+      font-size: 28px !important;
     }
 
-    /* =========================
-       HOURS
-    ========================= */
 
-    .hours-card {
-      margin-top: 16px;
+    /* =========================================================
+       CLINIC INFORMATION
+    ========================================================= */
+
+    .clinic-info {
       background: white;
-      border: 1px solid var(--line);
-      border-radius: 25px;
-      padding: 27px 30px;
     }
 
-    .hours-card h3 {
-      color: var(--navy);
-      margin-bottom: 15px;
-      font-size: 19px;
+    .clinic-box {
+      max-width: 1050px;
+      margin: 45px auto 0;
+
+      background: #f7fbfa;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 35px;
+    }
+
+    .clinic-box h3 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .hours {
+      display: grid;
     }
 
     .hours-row {
+      padding: 16px 0;
+      border-bottom: 1px dashed #d6e1e5;
+
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      padding: 9px 0;
-      border-bottom: 1px dashed rgba(7,27,53,.12);
-      color: var(--muted);
+
+      color: var(--text);
     }
 
     .hours-row:last-child {
-      border-bottom: 0;
-    }
-
-    .hours-row strong {
-      color: var(--navy);
+      border-bottom: none;
     }
 
     .holiday {
-      color: #ad655b !important;
+      color: #a45151;
+      font-weight: 600;
     }
 
-    /* =========================
-       APPOINTMENT
-    ========================= */
+    .clinic-address {
+      margin-top: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+    }
 
-    .appointment {
+    .clinic-address strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .clinic-address span {
+      color: var(--text);
+    }
+
+
+    /* =========================================================
+       APPOINTMENT
+    ========================================================= */
+
+    .appointment-section {
       background: var(--navy);
       color: white;
       position: relative;
       overflow: hidden;
     }
 
-    .appointment::before {
+    .appointment-section::before {
       content: "";
       position: absolute;
-      width: 650px;
-      height: 650px;
-      border: 1px solid rgba(255,255,255,.08);
+      width: 450px;
+      height: 450px;
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 50%;
-      left: -420px;
-      top: -300px;
+      top: -250px;
+      left: -200px;
     }
 
-    .appointment::after {
+    .appointment-section::after {
       content: "";
       position: absolute;
       width: 500px;
       height: 500px;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 50%;
-      right: -280px;
-      bottom: -350px;
+      right: -250px;
+      bottom: -300px;
     }
 
     .appointment-grid {
+      max-width: 1400px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 75px;
+      align-items: center;
+
       position: relative;
       z-index: 2;
-      display: grid;
-      grid-template-columns: .85fr 1.15fr;
-      gap: 70px;
-      align-items: center;
     }
 
-    .appointment-copy .section-kicker {
-      color: #55cfff;
+    .appointment-copy .eyebrow {
+      color: #53d5ff;
     }
 
     .appointment-copy h2 {
-      font-family: "Playfair Display",Georgia,serif;
-      font-size: clamp(48px,6vw,82px);
-      line-height: .95;
-      letter-spacing: -3px;
-      margin-bottom: 25px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(55px, 6vw, 85px);
+      line-height: 0.98;
+      margin-bottom: 30px;
     }
 
     .appointment-copy p {
-      color: #bfd0e1;
-      font-size: 17px;
+      color: #c7d6e5;
+      font-size: 19px;
+      line-height: 1.8;
       margin-bottom: 25px;
     }
 
     .appointment-points {
       list-style: none;
       display: grid;
-      gap: 11px;
+      gap: 14px;
       color: white;
     }
 
-    .appointment-points li::before {
-      content: "✓";
-      color: #55d58b;
-      font-weight: 800;
-      margin-right: 9px;
-    }
-
-    .form-card {
+    .appointment-form {
       background: white;
-      color: var(--text);
-      border-radius: 32px;
-      padding: 38px;
-      box-shadow: 0 30px 80px rgba(0,0,0,.20);
+      color: var(--navy);
+      border-radius: 35px;
+      padding: 45px;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.18);
     }
 
-    .form-card h3 {
-      color: var(--navy);
-      font-size: 31px;
-      margin-bottom: 7px;
+    .appointment-form h3 {
+      font-size: 34px;
+      margin-bottom: 8px;
     }
 
     .form-subtitle {
-      color: var(--muted);
-      margin-bottom: 27px;
+      color: var(--text);
+      margin-bottom: 30px;
+      font-size: 18px;
     }
 
     .form-grid {
@@ -955,8 +877,7 @@
     }
 
     .form-group {
-      display: grid;
-      gap: 7px;
+      margin-bottom: 20px;
     }
 
     .form-group.full {
@@ -964,27 +885,30 @@
     }
 
     .form-group label {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--navy);
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      border: 1px solid #d9e3eb;
-      border-radius: 16px;
-      padding: 14px 16px;
+      border: 1px solid #d9e3e8;
+      border-radius: 17px;
+      padding: 17px;
+      font-size: 17px;
+      color: var(--navy);
+      background: #fbfdfd;
       outline: none;
-      color: var(--text);
-      background: #fbfdfe;
-      transition: .2s ease;
+      transition: 0.2s ease;
     }
 
-    .form-group input,
-    .form-group select {
-      height: 58px;
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(8,127,193,0.08);
     }
 
     .form-group textarea {
@@ -992,424 +916,354 @@
       resize: vertical;
     }
 
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--blue);
-      box-shadow: 0 0 0 4px rgba(8,127,197,.08);
-    }
-
-    .form-submit {
+    .submit-btn {
       width: 100%;
-      margin-top: 5px;
-      border: 0;
-      min-height: 58px;
-      border-radius: 999px;
+      border: none;
       background: var(--green);
       color: white;
-      font-weight: 800;
+      min-height: 64px;
+      border-radius: 35px;
+      font-size: 18px;
+      font-weight: 700;
       cursor: pointer;
-      font-size: 16px;
-      transition: .25s ease;
+      transition: 0.25s ease;
     }
 
-    .form-submit:hover {
+    .submit-btn:hover {
       background: var(--green-dark);
       transform: translateY(-2px);
     }
 
     .form-note {
+      color: #7b91a4;
       text-align: center;
-      color: #7890a6;
-      font-size: 12px;
-      margin-top: 12px;
+      margin-top: 15px;
+      font-size: 14px;
     }
 
-    /* =========================
+
+    /* =========================================================
        FAQ
-    ========================= */
+    ========================================================= */
 
     .faq {
-      background: #f7fbfa;
+      background: #f5fbfa;
     }
 
     .faq-list {
-      max-width: 900px;
-      margin: auto;
-      display: grid;
-      gap: 14px;
+      max-width: 950px;
+      margin: 55px auto 0;
     }
 
-    .faq-item {
+    details {
       background: white;
-      border: 1px solid var(--line);
-      border-radius: 19px;
-      overflow: hidden;
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 23px 27px;
-      border: 0;
-      background: white;
-      color: var(--navy);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      text-align: left;
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .faq-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: #edf8fc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--blue);
-      font-size: 20px;
-      flex: 0 0 30px;
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease;
-    }
-
-    .faq-answer p {
-      padding: 0 27px 24px;
-      color: var(--muted);
-    }
-
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
-    }
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      background: white;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 20px;
-    }
-
-    .contact-card {
-      padding: 32px;
-      background: #f8fcfb;
-      border: 1px solid var(--line);
-      border-radius: 25px;
-      text-align: center;
-    }
-
-    .contact-icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto 17px;
+      border: 1px solid var(--border);
       border-radius: 18px;
-      background: #eaf7fc;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 23px 25px;
+      font-size: 18px;
+      font-weight: 700;
+      list-style: none;
+
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      font-size: 25px;
     }
 
-    .contact-card h3 {
-      color: var(--navy);
-      margin-bottom: 5px;
+    summary::-webkit-details-marker {
+      display: none;
     }
 
-    .contact-card p {
-      color: var(--muted);
+    summary::after {
+      content: "+";
+      font-size: 26px;
+      font-weight: 400;
     }
 
-    .contact-card a:hover {
-      color: var(--blue);
+    details[open] summary::after {
+      content: "−";
     }
 
-    /* =========================
+    details p {
+      color: var(--text);
+      padding: 0 25px 25px;
+      line-height: 1.8;
+    }
+
+
+    /* =========================================================
        FINAL CTA
-    ========================= */
+    ========================================================= */
 
     .final-cta {
       background: var(--navy);
       color: white;
       text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .final-cta::before {
-      content: "";
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 50%;
-      left: -370px;
-      top: -280px;
-    }
-
-    .final-cta::after {
-      content: "";
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 50%;
-      right: -300px;
-      bottom: -350px;
-    }
-
-    .final-cta .container {
-      position: relative;
-      z-index: 2;
+      padding: 100px 28px;
     }
 
     .final-cta h2 {
-      max-width: 1100px;
-      margin: auto auto 24px;
-      font-family: "Playfair Display",Georgia,serif;
-      font-size: clamp(48px,6vw,82px);
-      line-height: .98;
-      letter-spacing: -3px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(50px, 6vw, 82px);
+      line-height: 1;
+      max-width: 1000px;
+      margin: auto auto 25px;
     }
 
     .final-cta p {
-      color: #bfd0e1;
-      font-size: 17px;
+      color: #c5d5e5;
       max-width: 850px;
-      margin: auto auto 32px;
+      margin: auto auto 35px;
+      font-size: 18px;
     }
 
     .final-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 16px;
     }
 
-    /* =========================
+
+    /* =========================================================
        FOOTER
-    ========================= */
+    ========================================================= */
 
     footer {
-      background: #041329;
+      background: #041529;
       color: white;
-      padding: 45px 0;
+      padding: 55px 28px 35px;
     }
 
-    .footer-grid {
+    .footer-inner {
+      max-width: 1280px;
+      margin: auto;
+
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 30px;
+      align-items: center;
     }
 
-    .footer-brand strong {
-      display: block;
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 700;
       letter-spacing: 2px;
-      font-size: 17px;
     }
 
-    .footer-brand span {
-      display: block;
-      margin-top: 5px;
-      color: #91a4ba;
-      letter-spacing: 2px;
-      font-size: 11px;
-      text-transform: uppercase;
+    .footer-subtitle {
+      color: #8ea3b7;
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-top: 8px;
     }
 
     .copyright {
-      color: #91a4ba;
-      font-size: 13px;
-      text-align: right;
+      color: #8297ad;
+      font-size: 14px;
     }
 
-    /* =========================
-       FLOATING WHATSAPP
-    ========================= */
 
-    .whatsapp-float {
+    /* =========================================================
+       FLOATING WHATSAPP
+    ========================================================= */
+
+    .floating-whatsapp {
       position: fixed;
       right: 25px;
       bottom: 25px;
+
       width: 78px;
       height: 78px;
+
       border-radius: 50%;
       background: var(--green);
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 31px;
-      box-shadow: 0 15px 35px rgba(32,201,107,.32);
-      z-index: 900;
-      transition: .25s ease;
+
+      display: grid;
+      place-items: center;
+
+      font-size: 32px;
+
+      box-shadow:
+        0 15px 35px rgba(32,207,114,0.35);
+
+      z-index: 2000;
+      transition: 0.25s ease;
     }
 
-    .whatsapp-float:hover {
-      transform: scale(1.07);
-      background: var(--green-dark);
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
     }
 
-    /* =========================
-       ANIMATION
-    ========================= */
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
+    /* =========================================================
+       RESPONSIVE
+    ========================================================= */
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
 
       .nav-links {
         gap: 18px;
       }
 
-      .brand {
-        font-size: 17px;
+      .nav-links a {
+        font-size: 15px;
       }
 
-      .hero-grid,
+      .appointment-btn {
+        padding: 14px 20px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr 0.8fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+
+    @media (max-width: 850px) {
+
+      header {
+        height: 75px;
+      }
+
+      .navbar {
+        padding: 0 18px;
+      }
+
+      .brand img {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+        letter-spacing: 1.5px;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        right: 0;
+
+        background: white;
+        padding: 25px;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        box-shadow: 0 15px 30px rgba(7,27,53,0.1);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 0;
+      }
+
+      .appointment-btn {
+        text-align: center;
+      }
+
+      .hero-inner,
       .about-grid,
-      .approach-grid,
       .therapist-grid,
       .appointment-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 130px;
-        padding-bottom: 80px;
+      .hero-inner {
+        padding-top: 65px;
+        padding-bottom: 65px;
       }
 
-      .hero-copy {
-        max-width: 800px;
+      .hero-image {
+        order: -1;
       }
 
-      .hero-visual {
-        min-height: auto;
+      .hero-image-card {
+        max-width: 430px;
       }
 
-      .service-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .contact-grid {
+      .services-grid {
         grid-template-columns: 1fr;
       }
 
-      .therapist-image {
-        max-width: 650px;
-        margin: auto;
+      .steps {
+        grid-template-columns: 1fr;
       }
 
       .appointment-copy {
-        max-width: 700px;
+        text-align: center;
       }
+
+      .appointment-copy .eyebrow {
+        text-align: center;
+      }
+
+      .appointment-points {
+        justify-items: center;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
     }
 
-    @media (max-width: 800px) {
 
-      .nav {
-        height: 78px;
-      }
+    @media (max-width: 600px) {
 
-      .brand img {
-        width: 48px;
-        height: 48px;
-      }
-
-      .brand {
-        font-size: 15px;
-        letter-spacing: 1.2px;
-      }
-
-      .menu-btn {
-        display: block;
-      }
-
-      .nav-links {
-        position: absolute;
-        top: 78px;
-        left: 15px;
-        right: 15px;
-        background: white;
-        border-radius: 18px;
-        padding: 20px;
-        box-shadow: var(--shadow);
-        border: 1px solid var(--line);
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 5px;
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .nav-links > a {
-        padding: 13px 10px;
-      }
-
-      .nav-cta {
-        text-align: center;
+      section {
+        padding: 75px 18px;
       }
 
       .hero {
         min-height: auto;
       }
 
+      .hero-inner {
+        min-height: auto;
+        padding: 60px 18px;
+      }
+
       .hero h1 {
-        font-size: clamp(52px,13vw,80px);
-        letter-spacing: -3px;
+        font-size: 58px;
       }
 
-      .logo-card {
-        min-height: 400px;
-        padding: 35px;
+      .hero-text {
+        font-size: 17px;
       }
 
-      .floating-label {
-        display: none;
+      .hero-buttons {
+        flex-direction: column;
       }
 
-      .trust-grid {
-        grid-template-columns: 1fr;
-        padding: 25px 0;
-        gap: 17px;
-      }
-
-      section {
-        padding: 80px 0;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
+      .hero-buttons .btn {
+        width: 100%;
       }
 
       .form-grid {
@@ -1420,222 +1274,178 @@
         grid-column: auto;
       }
 
-      .form-card {
-        padding: 27px 22px;
+      .appointment-form {
+        padding: 28px 20px;
       }
 
-      .appointment-copy h2,
-      .final-cta h2 {
-        letter-spacing: -2px;
+      .appointment-copy h2 {
+        font-size: 55px;
       }
 
-      .footer-grid {
-        flex-direction: column;
-        align-items: flex-start;
+      .contact-card {
+        padding: 18px;
       }
 
-      .copyright {
-        text-align: left;
-      }
-
-      .whatsapp-float {
-        width: 62px;
-        height: 62px;
-        right: 18px;
-        bottom: 18px;
-        font-size: 25px;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .container {
-        width: min(100% - 28px,1180px);
-      }
-
-      .brand {
-        gap: 8px;
-        font-size: 13px;
-      }
-
-      .brand img {
-        width: 43px;
-        height: 43px;
-      }
-
-      .hero {
-        padding-top: 115px;
-      }
-
-      .hero h1 {
-        font-size: 51px;
-      }
-
-      .hero-copy {
-        font-size: 16px;
-      }
-
-      .hero-buttons,
-      .final-buttons {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
-      .logo-card {
-        min-height: 320px;
-        padding: 25px;
-      }
-
-      .section-title {
-        font-size: 45px;
-      }
-
-      .therapist-content h2 {
-        font-size: 48px;
-      }
-
-      .info-card,
       .instagram-card {
-        padding: 19px;
+        padding: 20px;
       }
 
-      .hours-card {
-        padding: 22px;
+      .instagram-card-left {
+        gap: 13px;
+      }
+
+      .instagram-card i {
+        font-size: 30px;
+      }
+
+      .instagram-card strong {
+        font-size: 17px;
       }
 
       .hours-row {
-        font-size: 14px;
+        flex-direction: column;
+        gap: 3px;
       }
 
-      .faq-question {
-        padding: 19px;
+      .floating-whatsapp {
+        width: 64px;
+        height: 64px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 27px;
       }
 
-      .faq-answer p {
-        padding: 0 19px 20px;
-      }
     }
 
   </style>
 </head>
 
+
 <body>
 
-  <!-- =========================
+
+  <!-- =======================================================
        HEADER
-  ========================== -->
+  ======================================================== -->
 
   <header>
 
-    <div class="container nav">
+    <nav class="navbar">
 
       <a href="#home" class="brand">
 
         <img
           src="assets/logo.png"
-          alt="Growing Beyond Limits Rehab Center logo"
+          alt="Growing Beyond Limits Rehab Center Logo"
         >
 
-        <span>GROWING BEYOND LIMITS</span>
+        <span class="brand-name">
+          GROWING BEYOND LIMITS
+        </span>
 
       </a>
 
+
       <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open navigation"
-        aria-expanded="false"
+        class="mobile-menu"
+        id="mobileMenu"
+        aria-label="Open navigation menu"
       >
-        ☰
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <nav class="nav-links" id="navLinks">
 
-        <a href="#about">About</a>
+      <div class="nav-links" id="navLinks">
 
-        <a href="#services">Services</a>
+        <a href="#about">
+          About
+        </a>
 
-        <a href="#approach">Approach</a>
+        <a href="#services">
+          Services
+        </a>
 
-        <a href="#therapist">Dr Jeeva A</a>
+        <a href="#approach">
+          Approach
+        </a>
+
+        <a href="#therapist">
+          Dr Jeeva A
+        </a>
 
         <!-- INSTAGRAM -->
         <a
-          href="https://www.instagram.com/growingbeyondlimits_rehab?igsi=MTVwemI2MGFlMjB0Nw=="
+          class="instagram-nav"
+          href="https://www.instagram.com/growingbeyondlimits_rehab?igsh=MTVwemI2MGFlMjB0Nw=="
           target="_blank"
           rel="noopener noreferrer"
-          class="instagram-nav"
-          aria-label="Visit Growing Beyond Limits Instagram"
         >
-          <span class="instagram-icon"></span>
+          <i class="fa-brands fa-instagram"></i>
           Instagram
         </a>
 
-        <a href="#appointment" class="nav-cta">
+        <a
+          class="appointment-btn"
+          href="#appointment"
+        >
           Book an Appointment
         </a>
 
-      </nav>
+      </div>
 
-    </div>
+    </nav>
 
   </header>
 
 
-  <main id="home">
 
-    <!-- =========================
-         HERO
-    ========================== -->
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <main id="home">
 
     <section class="hero">
 
-      <div class="container hero-grid">
+      <div class="hero-inner">
 
-        <div class="hero-content reveal">
+        <div class="hero-content">
 
           <div class="eyebrow">
-            Occupational Therapy • Rehabilitation
+            OCCUPATIONAL THERAPY • REHABILITATION • DEVELOPMENT
           </div>
 
           <h1>
-            Growing<br>
-            <span class="blue">Beyond</span><br>
-            <span>Limits.</span>
+            <span>Empowering</span>
+            <span>potential.</span>
+            <span>Enriching lives.</span>
           </h1>
 
-          <p class="hero-copy">
-            Compassionate and purposeful occupational therapy focused on
-            meaningful skills, participation, confidence and greater
-            independence.
+          <p class="hero-text">
+            A compassionate, purposeful approach to occupational therapy —
+            helping individuals build meaningful skills, confidence,
+            participation and greater independence, one purposeful step
+            at a time.
           </p>
 
           <div class="hero-buttons">
 
-            <a href="#appointment" class="btn btn-primary">
+            <a
+              href="#appointment"
+              class="btn btn-primary"
+            >
+              <i class="fa-regular fa-calendar"></i>
               Book an Appointment
             </a>
 
             <a
-              href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20make%20an%20appointment."
+              href="https://wa.me/917812821216"
+              class="btn btn-whatsapp"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-green"
             >
-              💬 WhatsApp
-            </a>
-
-            <a
-              href="https://www.instagram.com/growingbeyondlimits_rehab?igsi=MTVwemI2MGFlMjB0Nw=="
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-instagram"
-            >
-              ◎ Instagram
+              <i class="fa-brands fa-whatsapp"></i>
+              WhatsApp Dr Jeeva A
             </a>
 
           </div>
@@ -1643,23 +1453,15 @@
         </div>
 
 
-        <div class="hero-visual reveal">
+        <div class="hero-image">
 
-          <div class="logo-card">
+          <div class="hero-image-card">
 
             <img
-              src="assets/logo.png"
-              alt="Growing Beyond Limits Rehab Center"
+              src="assets/therapist.png"
+              alt="Dr Jeeva A Occupational Therapist"
             >
 
-          </div>
-
-          <div class="floating-label label-top">
-            PURPOSEFUL CARE
-          </div>
-
-          <div class="floating-label label-bottom">
-            MEANINGFUL • INDIVIDUALIZED • COMPASSIONATE
           </div>
 
         </div>
@@ -1669,92 +1471,79 @@
     </section>
 
 
-    <!-- =========================
-         TRUST
-    ========================== -->
 
-    <div class="trust">
-
-      <div class="container trust-grid">
-
-        <div class="trust-item">
-          <span>Focus</span>
-          Occupational Therapy
-        </div>
-
-        <div class="trust-item">
-          <span>Approach</span>
-          Purposeful & Individualized
-        </div>
-
-        <div class="trust-item">
-          <span>Availability</span>
-          Monday – Friday
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- =========================
+    <!-- =====================================================
          ABOUT
-    ========================== -->
+    ====================================================== -->
 
     <section class="about" id="about">
 
-      <div class="container about-grid">
+      <div class="container">
 
-        <div class="about-card reveal">
+        <div class="about-grid">
 
-          <img
-            src="assets/logo.png"
-            alt="Growing Beyond Limits Rehab Center"
-          >
+          <div class="about-copy">
 
-        </div>
+            <div class="section-label" style="text-align:left;">
+              ABOUT GROWING BEYOND LIMITS
+            </div>
 
+            <h2>
+              Care with purpose.
+            </h2>
 
-        <div class="about-content reveal">
+            <p>
+              Growing Beyond Limits Rehab Center is focused on helping
+              individuals develop practical skills and confidence for
+              meaningful participation in everyday life.
+            </p>
 
-          <div class="section-kicker">
-            About Us
+            <p>
+              Our occupational therapy approach is compassionate,
+              individualized and centered around the person's goals,
+              strengths and potential.
+            </p>
+
+            <ul class="check-list">
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Individual-focused occupational therapy
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Meaningful daily-life skills
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Confidence and participation
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check"></i>
+                Building greater independence
+              </li>
+
+            </ul>
+
           </div>
 
-          <h2 class="section-title">
-            Helping people move beyond limits.
-          </h2>
 
-          <p>
-            Growing Beyond Limits Rehab Center is focused on compassionate,
-            purposeful occupational therapy that supports people in developing
-            meaningful skills and greater independence in everyday life.
-          </p>
+          <div class="about-card">
 
-          <p>
-            Our approach emphasizes participation, confidence and practical
-            abilities while respecting each individual's needs and goals.
-          </p>
+            <h3>
+              Empowering potential.
+            </h3>
 
-          <ul class="check-list">
+            <p>
+              Every person has potential. Our role is to create purposeful
+              opportunities for that potential to grow into meaningful,
+              confident participation in everyday life.
+            </p>
 
-            <li>
-              Meaningful everyday skills
-            </li>
-
-            <li>
-              Individualized occupational therapy
-            </li>
-
-            <li>
-              Confidence and participation
-            </li>
-
-            <li>
-              Greater independence
-            </li>
-
-          </ul>
+          </div>
 
         </div>
 
@@ -1763,128 +1552,140 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          SERVICES
-    ========================== -->
+    ====================================================== -->
 
     <section class="services" id="services">
 
       <div class="container">
 
-        <div class="section-heading reveal">
-
-          <div class="section-kicker">
-            Our Services
-          </div>
-
-          <h2 class="section-title">
-            Support that makes everyday life more meaningful.
-          </h2>
-
-          <p class="section-text">
-            Occupational therapy is centered around helping individuals
-            participate in the activities and routines that matter to them.
-          </p>
-
+        <div class="section-label">
+          WHAT WE DO
         </div>
 
+        <h2 class="section-title">
+          Occupational therapy<br>
+          with meaning.
+        </h2>
 
-        <div class="service-grid">
+        <p class="section-intro">
+          Support is shaped around meaningful goals and practical
+          participation, helping each individual move forward with confidence.
+        </p>
 
-          <article class="service-card reveal">
 
-            <div class="service-number">01</div>
+        <div class="services-grid">
 
-            <div class="service-icon">🧠</div>
 
-            <h3>Occupational Therapy</h3>
+          <article class="service-card">
+
+            <div class="service-icon">
+              <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h3>
+              Skill Development
+            </h3>
 
             <p>
-              Purposeful therapy designed around meaningful activities,
-              participation and functional independence.
+              Support for developing functional skills needed for everyday
+              activities and meaningful participation.
             </p>
 
           </article>
 
 
-          <article class="service-card reveal">
+          <article class="service-card">
 
-            <div class="service-number">02</div>
+            <div class="service-icon">
+              <i class="fa-solid fa-hands-holding-child"></i>
+            </div>
 
-            <div class="service-icon">🌱</div>
-
-            <h3>Skill Development</h3>
+            <h3>
+              Daily Living Skills
+            </h3>
 
             <p>
-              Supporting the development of practical skills needed for
-              everyday activities and routines.
+              Purposeful strategies that encourage greater independence
+              in everyday routines.
             </p>
 
           </article>
 
 
-          <article class="service-card reveal">
+          <article class="service-card">
 
-            <div class="service-number">03</div>
+            <div class="service-icon">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
 
-            <div class="service-icon">🤝</div>
-
-            <h3>Individualized Support</h3>
+            <h3>
+              Goal-Focused Therapy
+            </h3>
 
             <p>
-              Care that considers each person's abilities, goals, environment
-              and participation needs.
+              Therapy centered around meaningful individual goals and
+              achievable progress.
             </p>
 
           </article>
 
 
-          <article class="service-card reveal">
+          <article class="service-card">
 
-            <div class="service-number">04</div>
+            <div class="service-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
 
-            <div class="service-icon">⭐</div>
-
-            <h3>Confidence Building</h3>
+            <h3>
+              Confidence Building
+            </h3>
 
             <p>
-              Encouraging confidence and active participation through
-              meaningful, achievable activities.
+              Encouraging participation, confidence and a positive sense
+              of personal capability.
             </p>
 
           </article>
 
 
-          <article class="service-card reveal">
+          <article class="service-card">
 
-            <div class="service-number">05</div>
+            <div class="service-icon">
+              <i class="fa-solid fa-people-arrows"></i>
+            </div>
 
-            <div class="service-icon">🏠</div>
-
-            <h3>Daily Living Skills</h3>
+            <h3>
+              Functional Participation
+            </h3>
 
             <p>
-              Supporting greater independence in practical everyday
-              activities and routines.
+              Supporting individuals to participate more fully in activities
+              that matter to them.
             </p>
 
           </article>
 
 
-          <article class="service-card reveal">
+          <article class="service-card">
 
-            <div class="service-number">06</div>
+            <div class="service-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
 
-            <div class="service-icon">💙</div>
-
-            <h3>Purposeful Care</h3>
+            <h3>
+              Personalized Care
+            </h3>
 
             <p>
-              A compassionate approach that keeps meaningful goals and
-              quality of life at the center of therapy.
+              A compassionate approach that recognizes every individual's
+              strengths, needs and potential.
             </p>
 
           </article>
+
 
         </div>
 
@@ -1893,95 +1694,98 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          APPROACH
-    ========================== -->
+    ====================================================== -->
 
     <section class="approach" id="approach">
 
-      <div class="container approach-grid">
+      <div class="container">
 
-        <div class="reveal">
-
-          <div class="section-kicker">
-            Our Approach
-          </div>
-
-          <h2 class="section-title">
-            Therapy with purpose.
-          </h2>
-
-          <p class="section-text">
-            We believe therapy should connect with real life. Every step is
-            focused on meaningful participation, practical skills and
-            confidence.
-          </p>
-
+        <div class="section-label">
+          OUR APPROACH
         </div>
 
+        <h2 class="section-title">
+          Progress happens<br>
+          one step at a time.
+        </h2>
 
-        <div class="approach-list">
 
-          <div class="approach-item reveal">
+        <div class="steps">
 
-            <div class="approach-icon">🎯</div>
 
-            <div>
-              <strong>Goal Focused</strong>
+          <div class="step">
 
-              <p>
-                Therapy is connected to meaningful goals and everyday
-                participation.
-              </p>
+            <div class="step-number">
+              01
             </div>
+
+            <h3>
+              Understand
+            </h3>
+
+            <p>
+              Understand the individual's needs, strengths, goals and
+              everyday challenges.
+            </p>
 
           </div>
 
 
-          <div class="approach-item reveal">
+          <div class="step">
 
-            <div class="approach-icon">👤</div>
-
-            <div>
-              <strong>Individualized</strong>
-
-              <p>
-                Each person's abilities, needs and priorities are considered.
-              </p>
+            <div class="step-number">
+              02
             </div>
+
+            <h3>
+              Plan
+            </h3>
+
+            <p>
+              Develop a purposeful approach focused on meaningful,
+              practical outcomes.
+            </p>
 
           </div>
 
 
-          <div class="approach-item reveal">
+          <div class="step">
 
-            <div class="approach-icon">🌿</div>
-
-            <div>
-              <strong>Compassionate</strong>
-
-              <p>
-                A supportive environment that encourages confidence and
-                participation.
-              </p>
+            <div class="step-number">
+              03
             </div>
+
+            <h3>
+              Practice
+            </h3>
+
+            <p>
+              Build skills through structured and meaningful therapeutic
+              activities.
+            </p>
 
           </div>
 
 
-          <div class="approach-item reveal">
+          <div class="step">
 
-            <div class="approach-icon">🚀</div>
-
-            <div>
-              <strong>Progressive</strong>
-
-              <p>
-                Small meaningful steps can build toward greater independence.
-              </p>
+            <div class="step-number">
+              04
             </div>
 
+            <h3>
+              Grow
+            </h3>
+
+            <p>
+              Encourage confidence, participation and greater independence.
+            </p>
+
           </div>
+
 
         </div>
 
@@ -1990,190 +1794,259 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          THERAPIST
-    ========================== -->
+    ====================================================== -->
 
     <section class="therapist" id="therapist">
 
-      <div class="container therapist-grid">
+      <div class="therapist-grid">
 
-        <div class="therapist-image reveal">
+        <div class="therapist-photo">
 
           <img
             src="assets/therapist.png"
-            alt="Dr Jeeva A Occupational Therapist"
+            alt="Dr Jeeva A - Occupational Therapist"
           >
 
         </div>
 
 
-        <div class="therapist-content reveal">
+        <div class="therapist-content">
 
-          <div class="section-kicker">
-            Meet Your Therapist
+          <div class="section-label" style="text-align:left;">
+            MEET YOUR THERAPIST
           </div>
 
           <h2>
             Dr Jeeva A
           </h2>
 
-          <div class="therapist-role">
+          <div class="qualification">
             B.O.T — Occupational Therapist
           </div>
 
-          <p class="therapist-description">
+          <p>
             Providing compassionate and purposeful occupational therapy
             with a focus on meaningful skills, participation, confidence
             and greater independence.
           </p>
 
 
-          <div class="info-stack">
+          <div class="contact-cards">
+
 
             <!-- MAP -->
-            <div class="info-card">
-
-              <div class="info-icon">
-                📍
-              </div>
-
-              <div>
-
-                <strong>Clinic</strong>
-
-                <a
-                  href="https://www.google.com/maps/place/Valarmathi+nagar+street/@13.1374392,80.1570307,17z/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View clinic location on Google Maps
-                </a>
-
-              </div>
-
-            </div>
-
-
-            <!-- WHATSAPP -->
-            <div class="info-card">
-
-              <div class="info-icon">
-                💬
-              </div>
-
-              <div>
-
-                <strong>WhatsApp</strong>
-
-                <a
-                  href="https://wa.me/917812821216"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  +91 78128 21216
-                </a>
-
-              </div>
-
-            </div>
-
-
-            <!-- EMAIL -->
-            <div class="info-card">
-
-              <div class="info-icon">
-                ✉️
-              </div>
-
-              <div>
-
-                <strong>Email</strong>
-
-                <a href="mailto:growingbeyondlimits3@gmail.com">
-                  growingbeyondlimits3@gmail.com
-                </a>
-
-              </div>
-
-            </div>
-
-
-            <!-- INSTAGRAM -->
             <a
-              href="https://www.instagram.com/growingbeyondlimits_rehab?igsi=MTVwemI2MGFlMjB0Nw=="
+              class="contact-card"
+              href="https://www.google.com/maps/dir/?api=1&destination=13.1374392,80.1570307"
               target="_blank"
               rel="noopener noreferrer"
-              class="instagram-card"
             >
 
-              <div class="instagram-card-left">
-
-                <div class="instagram-large"></div>
-
-                <div>
-
-                  <strong>Follow us on Instagram</strong>
-
-                  <span>
-                    @growingbeyondlimits_rehab
-                  </span>
-
-                </div>
-
+              <div class="contact-icon">
+                <i class="fa-solid fa-location-dot"></i>
               </div>
 
-              <div class="instagram-arrow">
-                →
+              <div>
+
+                <strong>
+                  Clinic
+                </strong>
+
+                <span>
+                  Open clinic location and navigation in Google Maps
+                </span>
+
               </div>
 
             </a>
 
 
-            <!-- HOURS -->
-            <div class="hours-card">
+            <!-- WHATSAPP -->
+            <a
+              class="contact-card"
+              href="https://wa.me/917812821216"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
 
-              <h3>
-                Working Hours
-              </h3>
+              <div class="contact-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
 
-              <div class="hours-row">
-
-                <span>
-                  Monday – Friday
-                </span>
+              <div>
 
                 <strong>
-                  10:00 AM – 7:00 PM
+                  WhatsApp
                 </strong>
+
+                <span>
+                  +91 78128 21216
+                </span>
 
               </div>
 
-              <div class="hours-row">
+            </a>
+
+
+            <!-- EMAIL -->
+            <a
+              class="contact-card"
+              href="mailto:growingbeyondlimits3@gmail.com"
+            >
+
+              <div class="contact-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div>
+
+                <strong>
+                  Email
+                </strong>
 
                 <span>
-                  Saturday
+                  growingbeyondlimits3@gmail.com
                 </span>
-
-                <strong class="holiday">
-                  Holiday
-                </strong>
 
               </div>
 
-              <div class="hours-row">
+            </a>
+
+
+          </div>
+
+
+          <!-- INSTAGRAM -->
+          <a
+            class="instagram-card"
+            href="https://www.instagram.com/growingbeyondlimits_rehab?igsh=MTVwemI2MGFlMjB0Nw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <div class="instagram-card-left">
+
+              <i class="fa-brands fa-instagram"></i>
+
+              <div>
+
+                <strong>
+                  Follow us on Instagram
+                </strong>
 
                 <span>
-                  Sunday
+                  @growingbeyondlimits_rehab
                 </span>
-
-                <strong class="holiday">
-                  Holiday
-                </strong>
 
               </div>
 
             </div>
+
+            <i class="fa-solid fa-arrow-right instagram-arrow"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CLINIC INFORMATION
+    ====================================================== -->
+
+    <section class="clinic-info">
+
+      <div class="container">
+
+        <div class="section-label">
+          CLINIC INFORMATION
+        </div>
+
+        <h2 class="section-title">
+          Working Hours
+        </h2>
+
+
+        <div class="clinic-box">
+
+          <h3>
+            Clinic Hours
+          </h3>
+
+
+          <div class="hours">
+
+            <div class="hours-row">
+
+              <span>
+                Monday – Friday
+              </span>
+
+              <strong>
+                10:00 AM – 7:00 PM
+              </strong>
+
+            </div>
+
+
+            <div class="hours-row">
+
+              <span>
+                Saturday
+              </span>
+
+              <strong class="holiday">
+                Holiday
+              </strong>
+
+            </div>
+
+
+            <div class="hours-row">
+
+              <span>
+                Sunday
+              </span>
+
+              <strong class="holiday">
+                Holiday
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="clinic-address">
+
+            <strong>
+              <i class="fa-solid fa-location-dot"></i>
+              Clinic Location
+            </strong>
+
+            <span>
+              Valarmathi Nagar Street, Chennai, Tamil Nadu
+            </span>
+
+            <br><br>
+
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=13.1374392,80.1570307"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="min-height:48px;padding:0 22px;font-size:15px;"
+            >
+              <i class="fa-solid fa-diamond-turn-right"></i>
+              Get Directions
+            </a>
 
           </div>
 
@@ -2184,18 +2057,23 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          APPOINTMENT
-    ========================== -->
+    ====================================================== -->
 
-    <section class="appointment" id="appointment">
+    <section
+      class="appointment-section"
+      id="appointment"
+    >
 
-      <div class="container appointment-grid">
+      <div class="appointment-grid">
 
-        <div class="appointment-copy reveal">
 
-          <div class="section-kicker">
-            Book an Appointment
+        <div class="appointment-copy">
+
+          <div class="eyebrow">
+            BOOK AN APPOINTMENT
           </div>
 
           <h2>
@@ -2208,22 +2086,23 @@
             a message for Dr Jeeva A.
           </p>
 
+
           <ul class="appointment-points">
 
             <li>
-              Simple appointment enquiry
+              ✓ Simple appointment enquiry
             </li>
 
             <li>
-              Direct WhatsApp communication
+              ✓ Direct WhatsApp communication
             </li>
 
             <li>
-              Monday – Friday availability
+              ✓ Monday – Friday availability
             </li>
 
             <li>
-              Purposeful, individualized care
+              ✓ Purposeful, individualized care
             </li>
 
           </ul>
@@ -2231,7 +2110,8 @@
         </div>
 
 
-        <div class="form-card reveal">
+
+        <div class="appointment-form">
 
           <h3>
             Appointment Enquiry
@@ -2244,7 +2124,9 @@
 
           <form id="appointmentForm">
 
+
             <div class="form-grid">
+
 
               <div class="form-group">
 
@@ -2255,7 +2137,6 @@
                 <input
                   type="text"
                   id="name"
-                  name="name"
                   placeholder="Enter your name"
                   required
                 >
@@ -2272,7 +2153,6 @@
                 <input
                   type="tel"
                   id="phone"
-                  name="phone"
                   placeholder="Enter phone number"
                   required
                 >
@@ -2289,7 +2169,6 @@
                 <input
                   type="date"
                   id="date"
-                  name="date"
                   required
                 >
 
@@ -2302,49 +2181,49 @@
                   Preferred Time
                 </label>
 
-                <select id="time" name="time" required>
+                <select id="time" required>
 
                   <option value="">
                     Select a time
                   </option>
 
-                  <option value="10:00 AM">
+                  <option>
                     10:00 AM
                   </option>
 
-                  <option value="11:00 AM">
+                  <option>
                     11:00 AM
                   </option>
 
-                  <option value="12:00 PM">
+                  <option>
                     12:00 PM
                   </option>
 
-                  <option value="1:00 PM">
+                  <option>
                     1:00 PM
                   </option>
 
-                  <option value="2:00 PM">
+                  <option>
                     2:00 PM
                   </option>
 
-                  <option value="3:00 PM">
+                  <option>
                     3:00 PM
                   </option>
 
-                  <option value="4:00 PM">
+                  <option>
                     4:00 PM
                   </option>
 
-                  <option value="5:00 PM">
+                  <option>
                     5:00 PM
                   </option>
 
-                  <option value="6:00 PM">
+                  <option>
                     6:00 PM
                   </option>
 
-                  <option value="7:00 PM">
+                  <option>
                     7:00 PM
                   </option>
 
@@ -2355,14 +2234,14 @@
 
               <div class="form-group full">
 
-                <label for="reason">
+                <label for="message">
                   How can we help?
                 </label>
 
                 <textarea
-                  id="reason"
-                  name="reason"
+                  id="message"
                   placeholder="Briefly describe what you would like to discuss..."
+                  required
                 ></textarea>
 
               </div>
@@ -2372,19 +2251,26 @@
 
                 <button
                   type="submit"
-                  class="form-submit"
+                  class="submit-btn"
                 >
-                  💬 Send Appointment Enquiry on WhatsApp
-                </button>
 
-                <p class="form-note">
-                  Your enquiry will open in WhatsApp.
-                  No information is stored on this website.
-                </p>
+                  <i class="fa-brands fa-whatsapp"></i>
+
+                  Send Appointment Enquiry on WhatsApp
+
+                </button>
 
               </div>
 
+
             </div>
+
+
+            <p class="form-note">
+              Your enquiry will open in WhatsApp.
+              No information is stored on this website.
+            </p>
+
 
           </form>
 
@@ -2395,196 +2281,99 @@
     </section>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          FAQ
-    ========================== -->
+    ====================================================== -->
 
     <section class="faq">
 
       <div class="container">
 
-        <div
-          class="section-heading reveal"
-          style="text-align:center;"
-        >
-
-          <div class="section-kicker">
-            Frequently Asked Questions
-          </div>
-
-          <h2 class="section-title">
-            Questions, answered.
-          </h2>
-
+        <div class="section-label">
+          FREQUENTLY ASKED QUESTIONS
         </div>
+
+        <h2 class="section-title">
+          Questions, answered.
+        </h2>
 
 
         <div class="faq-list">
 
-          <div class="faq-item reveal">
 
-            <button class="faq-question">
+          <details>
 
-              <span>
-                What is occupational therapy?
-              </span>
+            <summary>
+              What is occupational therapy?
+            </summary>
 
-              <span class="faq-icon">
-                +
-              </span>
+            <p>
+              Occupational therapy supports people in developing or
+              improving skills needed to participate more meaningfully
+              and independently in everyday activities.
+            </p>
 
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Occupational therapy supports people in developing or
-                improving skills needed to participate more meaningfully
-                and independently in everyday activities.
-              </p>
-
-            </div>
-
-          </div>
+          </details>
 
 
-          <div class="faq-item reveal">
+          <details>
 
-            <button class="faq-question">
+            <summary>
+              How do I book an appointment?
+            </summary>
 
-              <span>
-                How do I book an appointment?
-              </span>
+            <p>
+              You can use the appointment enquiry form on this website
+              or contact Dr Jeeva A directly through WhatsApp.
+            </p>
 
-              <span class="faq-icon">
-                +
-              </span>
-
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                You can use the appointment enquiry form on this website
-                or contact Dr Jeeva A directly through WhatsApp.
-              </p>
-
-            </div>
-
-          </div>
+          </details>
 
 
-          <div class="faq-item reveal">
+          <details>
 
-            <button class="faq-question">
+            <summary>
+              How can I contact the clinic?
+            </summary>
 
-              <span>
-                How can I contact the clinic?
-              </span>
+            <p>
+              You can contact the clinic through WhatsApp at
+              +91 78128 21216 or email
+              growingbeyondlimits3@gmail.com.
+            </p>
 
-              <span class="faq-icon">
-                +
-              </span>
-
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                You can contact the clinic through WhatsApp at
-                +91 78128 21216 or email
-                growingbeyondlimits3@gmail.com.
-              </p>
-
-            </div>
-
-          </div>
+          </details>
 
 
-          <div class="faq-item reveal">
+          <details>
 
-            <button class="faq-question">
+            <summary>
+              What are the clinic working hours?
+            </summary>
 
-              <span>
-                What are the clinic working hours?
-              </span>
+            <p>
+              The clinic is open Monday to Friday from 10:00 AM
+              to 7:00 PM. Saturday and Sunday are holidays.
+            </p>
 
-              <span class="faq-icon">
-                +
-              </span>
-
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                The clinic is open Monday to Friday from 10:00 AM to
-                7:00 PM. Saturday and Sunday are holidays.
-              </p>
-
-            </div>
-
-          </div>
+          </details>
 
 
-          <div class="faq-item reveal">
+          <details>
 
-            <button class="faq-question">
+            <summary>
+              Where is the clinic located?
+            </summary>
 
-              <span>
-                Where is the clinic located?
-              </span>
+            <p>
+              The clinic location is in the Valarmathi Nagar Street
+              area of Chennai. Use the Google Maps navigation button
+              on this website for directions.
+            </p>
 
-              <span class="faq-icon">
-                +
-              </span>
+          </details>
 
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Click the clinic Google Maps link to view the clinic
-                location and get navigation directions.
-              </p>
-
-            </div>
-
-          </div>
-
-
-          <div class="faq-item reveal">
-
-            <button class="faq-question">
-
-              <span>
-                Can I follow Growing Beyond Limits on Instagram?
-              </span>
-
-              <span class="faq-icon">
-                +
-              </span>
-
-            </button>
-
-            <div class="faq-answer">
-
-              <p>
-                Yes. Follow
-                <a
-                  href="https://www.instagram.com/growingbeyondlimits_rehab?igsi=MTVwemI2MGFlMjB0Nw=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style="color:#087fc5;font-weight:700;"
-                >
-                  @growingbeyondlimits_rehab
-                </a>
-                on Instagram for updates and information.
-              </p>
-
-            </div>
-
-          </div>
 
         </div>
 
@@ -2593,158 +2382,57 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
 
-    <section class="contact">
-
-      <div class="container">
-
-        <div
-          class="section-heading reveal"
-          style="text-align:center;"
-        >
-
-          <div class="section-kicker">
-            Get in Touch
-          </div>
-
-          <h2 class="section-title">
-            We're here to help.
-          </h2>
-
-        </div>
-
-
-        <div class="contact-grid">
-
-          <!-- WHATSAPP -->
-
-          <div class="contact-card reveal">
-
-            <div class="contact-icon">
-              💬
-            </div>
-
-            <h3>
-              WhatsApp
-            </h3>
-
-            <p>
-              <a
-                href="https://wa.me/917812821216"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                +91 78128 21216
-              </a>
-            </p>
-
-          </div>
-
-
-          <!-- EMAIL -->
-
-          <div class="contact-card reveal">
-
-            <div class="contact-icon">
-              ✉️
-            </div>
-
-            <h3>
-              Email
-            </h3>
-
-            <p>
-              <a href="mailto:growingbeyondlimits3@gmail.com">
-                growingbeyondlimits3@gmail.com
-              </a>
-            </p>
-
-          </div>
-
-
-          <!-- MAP -->
-
-          <div class="contact-card reveal">
-
-            <div class="contact-icon">
-              📍
-            </div>
-
-            <h3>
-              Clinic
-            </h3>
-
-            <p>
-              <a
-                href="https://www.google.com/maps/place/Valarmathi+nagar+street/@13.1374392,80.1570307,17z/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Find the clinic on Google Maps
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
+    <!-- =====================================================
          FINAL CTA
-    ========================== -->
+    ====================================================== -->
 
     <section class="final-cta">
 
-      <div class="container reveal">
+      <h2>
+        Ready to take the next purposeful step?
+      </h2>
 
-        <h2>
-          Ready to take the next purposeful step?
-        </h2>
-
-        <p>
-          Get in touch to enquire about occupational therapy
-          and schedule an appointment with Dr Jeeva A.
-        </p>
-
-        <div class="final-buttons">
-
-          <a
-            href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20book%20an%20appointment."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-green"
-          >
-            💬 WhatsApp Dr Jeeva A
-          </a>
+      <p>
+        Get in touch to enquire about occupational therapy and schedule
+        an appointment with Dr Jeeva A.
+      </p>
 
 
-          <a
-            href="https://www.google.com/maps/place/Valarmathi+nagar+street/@13.1374392,80.1570307,17z/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-light"
-          >
-            📍 Find the Clinic
-          </a>
+      <div class="final-buttons">
 
 
-          <a
-            href="https://www.instagram.com/growingbeyondlimits_rehab?igsi=MTVwemI2MGFlMjB0Nw=="
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-instagram"
-          >
-            ◎ Instagram
-          </a>
+        <a
+          href="https://wa.me/917812821216"
+          class="btn btn-whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp Dr Jeeva A
+        </a>
 
-        </div>
+
+        <a
+          href="https://www.google.com/maps/dir/?api=1&destination=13.1374392,80.1570307"
+          class="btn btn-map"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-solid fa-location-dot"></i>
+          Find the Clinic
+        </a>
+
+
+        <a
+          href="https://www.instagram.com/growingbeyondlimits_rehab?igsh=MTVwemI2MGFlMjB0Nw=="
+          class="btn btn-instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa-brands fa-instagram"></i>
+          Instagram
+        </a>
 
       </div>
 
@@ -2753,30 +2441,34 @@
   </main>
 
 
-  <!-- =========================
+
+  <!-- =======================================================
        FOOTER
-  ========================== -->
+  ======================================================== -->
 
   <footer>
 
-    <div class="container footer-grid">
+    <div class="footer-inner">
 
-      <div class="footer-brand">
 
-        <strong>
+      <div>
+
+        <div class="footer-brand">
           GROWING BEYOND LIMITS
-        </strong>
+        </div>
 
-        <span>
-          Rehab Center • Occupational Therapy
-        </span>
+        <div class="footer-subtitle">
+          REHAB CENTER • OCCUPATIONAL THERAPY
+        </div>
 
       </div>
 
 
       <div class="copyright">
+
         © 2026 Growing Beyond Limits Rehab Center.
         All rights reserved.
+
       </div>
 
     </div>
@@ -2784,128 +2476,146 @@
   </footer>
 
 
-  <!-- =========================
+
+  <!-- =======================================================
        FLOATING WHATSAPP
-  ========================== -->
+  ======================================================== -->
 
   <a
-    class="whatsapp-float"
-    href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20make%20an%20appointment."
+    href="https://wa.me/917812821216"
+    class="floating-whatsapp"
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Contact Dr Jeeva A on WhatsApp"
-    title="WhatsApp Dr Jeeva A"
+    aria-label="Contact Growing Beyond Limits on WhatsApp"
   >
-    💬
+
+    <i class="fa-brands fa-whatsapp"></i>
+
   </a>
 
 
-  <!-- =========================
+
+  <!-- =======================================================
        JAVASCRIPT
-  ========================== -->
+  ======================================================== -->
 
   <script>
 
-    /* =========================
+    /* =====================================================
        MOBILE MENU
-    ========================= */
+    ====================================================== */
 
-    const menuBtn = document.getElementById("menuBtn");
-    const navLinks = document.getElementById("navLinks");
+    const mobileMenu =
+      document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener("click", function () {
+    const navLinks =
+      document.getElementById("navLinks");
 
-      const isOpen =
-        navLinks.classList.toggle("open");
 
-      menuBtn.setAttribute(
-        "aria-expanded",
-        isOpen ? "true" : "false"
-      );
+    mobileMenu.addEventListener("click", function () {
 
-      menuBtn.textContent =
-        isOpen ? "✕" : "☰";
+      navLinks.classList.toggle("active");
+
+      const icon =
+        mobileMenu.querySelector("i");
+
+      if (navLinks.classList.contains("active")) {
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      } else {
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
 
     });
 
 
+    /* =====================================================
+       CLOSE MOBILE MENU AFTER CLICK
+    ====================================================== */
+
     document
-      .querySelectorAll(".nav-links a")
-      .forEach(function(link) {
+      .querySelectorAll("#navLinks a")
+      .forEach(function (link) {
 
-        link.addEventListener("click", function() {
+        link.addEventListener("click", function () {
 
-          navLinks.classList.remove("open");
+          navLinks.classList.remove("active");
 
-          menuBtn.setAttribute(
-            "aria-expanded",
-            "false"
-          );
+          const icon =
+            mobileMenu.querySelector("i");
 
-          menuBtn.textContent = "☰";
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
 
         });
 
       });
 
 
-    /* =========================
-       APPOINTMENT FORM
-    ========================= */
+    /* =====================================================
+       APPOINTMENT FORM → WHATSAPP
+    ====================================================== */
 
     const appointmentForm =
       document.getElementById("appointmentForm");
 
-    appointmentForm.addEventListener(
-      "submit",
-      function(event) {
 
-        event.preventDefault();
+    appointmentForm.addEventListener("submit", function (event) {
 
-        const name =
-          document.getElementById("name")
-            .value.trim();
-
-        const phone =
-          document.getElementById("phone")
-            .value.trim();
-
-        const date =
-          document.getElementById("date")
-            .value;
-
-        const time =
-          document.getElementById("time")
-            .value;
-
-        const reason =
-          document.getElementById("reason")
-            .value.trim();
+      event.preventDefault();
 
 
-        let formattedDate =
-          "Not specified";
+      const name =
+        document.getElementById("name").value.trim();
+
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const date =
+        document.getElementById("date").value;
+
+      const time =
+        document.getElementById("time").value;
+
+      const message =
+        document.getElementById("message").value.trim();
 
 
-        if (date) {
+      if (
+        !name ||
+        !phone ||
+        !date ||
+        !time ||
+        !message
+      ) {
 
-          const dateObject =
-            new Date(date + "T00:00:00");
+        alert(
+          "Please complete all appointment fields."
+        );
 
-          formattedDate =
-            dateObject.toLocaleDateString(
-              "en-IN",
-              {
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-              }
-            );
+        return;
 
-        }
+      }
 
 
-        const message =
+      const formattedDate =
+        new Date(date + "T00:00:00")
+          .toLocaleDateString(
+            "en-IN",
+            {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric"
+            }
+          );
+
+
+      const whatsappMessage =
 `Hello Dr Jeeva A,
 
 I would like to enquire about an appointment.
@@ -2916,171 +2626,122 @@ Preferred Date: ${formattedDate}
 Preferred Time: ${time}
 
 How can we help:
-${reason || "Not specified"}
+${message}
 
-Thank you.`;
-
-
-        const whatsappURL =
-          "https://wa.me/917812821216?text=" +
-          encodeURIComponent(message);
+Thank you.
+Growing Beyond Limits Rehab Center`;
 
 
-        window.open(
-          whatsappURL,
-          "_blank",
-          "noopener"
-        );
-
-      }
-    );
+      const whatsappURL =
+        "https://wa.me/917812821216?text=" +
+        encodeURIComponent(whatsappMessage);
 
 
-    /* =========================
-       FAQ ACCORDION
-    ========================= */
+      window.open(
+        whatsappURL,
+        "_blank",
+        "noopener,noreferrer"
+      );
 
-    document
-      .querySelectorAll(".faq-question")
-      .forEach(function(button) {
-
-        button.addEventListener(
-          "click",
-          function() {
-
-            const item =
-              button.closest(".faq-item");
-
-            const answer =
-              item.querySelector(".faq-answer");
+    });
 
 
-            document
-              .querySelectorAll(".faq-item")
-              .forEach(function(otherItem) {
-
-                if (otherItem !== item) {
-
-                  otherItem.classList.remove(
-                    "active"
-                  );
-
-                  const otherAnswer =
-                    otherItem.querySelector(
-                      ".faq-answer"
-                    );
-
-                  otherAnswer.style.maxHeight =
-                    null;
-
-                }
-
-              });
-
-
-            item.classList.toggle("active");
-
-
-            if (
-              item.classList.contains("active")
-            ) {
-
-              answer.style.maxHeight =
-                answer.scrollHeight + "px";
-
-            } else {
-
-              answer.style.maxHeight =
-                null;
-
-            }
-
-          }
-        );
-
-      });
-
-
-    /* =========================
-       SCROLL REVEAL
-    ========================= */
-
-    const revealElements =
-      document.querySelectorAll(".reveal");
-
-
-    if ("IntersectionObserver" in window) {
-
-      const revealObserver =
-        new IntersectionObserver(
-          function(entries, observer) {
-
-            entries.forEach(function(entry) {
-
-              if (entry.isIntersecting) {
-
-                entry.target.classList.add(
-                  "visible"
-                );
-
-                observer.unobserve(
-                  entry.target
-                );
-
-              }
-
-            });
-
-          },
-          {
-            threshold: 0.12
-          }
-        );
-
-
-      revealElements.forEach(function(element) {
-
-        revealObserver.observe(element);
-
-      });
-
-    } else {
-
-      revealElements.forEach(function(element) {
-
-        element.classList.add("visible");
-
-      });
-
-    }
-
-
-    /* =========================
-       PREVENT PAST APPOINTMENT DATES
-    ========================= */
+    /* =====================================================
+       PREVENT WEEKEND APPOINTMENT DATES
+    ====================================================== */
 
     const dateInput =
       document.getElementById("date");
 
 
-    const now = new Date();
+    dateInput.addEventListener("change", function () {
 
-    const year =
-      now.getFullYear();
+      const selectedDate =
+        new Date(this.value + "T00:00:00");
 
-    const month =
-      String(now.getMonth() + 1)
-        .padStart(2, "0");
-
-    const day =
-      String(now.getDate())
-        .padStart(2, "0");
+      const day =
+        selectedDate.getDay();
 
 
-    dateInput.setAttribute(
-      "min",
-      `${year}-${month}-${day}`
-    );
+      if (day === 0 || day === 6) {
+
+        alert(
+          "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
+        );
+
+        this.value = "";
+
+      }
+
+    });
+
+
+  </script>
+
+
+
+  <!-- =======================================================
+       STRUCTURED DATA / SEO
+  ======================================================== -->
+
+  <script type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+
+    "name": "Growing Beyond Limits Rehab Center",
+
+    "description": "Growing Beyond Limits Rehab Center provides compassionate and purposeful occupational therapy focused on meaningful skills, participation, confidence and greater independence.",
+
+    "url": "https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/",
+
+    "image": "https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/assets/logo.png",
+
+    "telephone": "+91 78128 21216",
+
+    "email": "growingbeyondlimits3@gmail.com",
+
+    "sameAs": [
+      "https://www.instagram.com/growingbeyondlimits_rehab/"
+    ],
+
+    "employee": {
+      "@type": "Person",
+      "name": "Dr Jeeva A",
+      "jobTitle": "Occupational Therapist"
+    },
+
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Valarmathi Nagar Street",
+      "addressLocality": "Chennai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600053",
+      "addressCountry": "IN"
+    },
+
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "13.1374392",
+      "longitude": "80.1570307"
+    },
+
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      }
+    ]
+  }
 
   </script>
 

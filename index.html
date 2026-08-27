@@ -1,40 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Growing Beyond Limits Rehab Center | Occupational Therapy</title>
 
   <meta
     name="description"
-    content="Growing Beyond Limits Rehab Center — compassionate and purposeful occupational therapy focused on skills, confidence, participation and greater independence."
-  />
+    content="Growing Beyond Limits Rehab Center provides compassionate and purposeful occupational therapy focused on meaningful skills, confidence, participation and greater independence."
+  >
 
-  <meta name="theme-color" content="#071b35" />
+  <meta
+    name="keywords"
+    content="Growing Beyond Limits Rehab Center, occupational therapy, rehabilitation, Dr Jeeva A, occupational therapist, rehab center"
+  >
+
+  <meta name="author" content="Growing Beyond Limits Rehab Center">
+
+  <meta name="theme-color" content="#071b35">
+
+  <meta property="og:title" content="Growing Beyond Limits Rehab Center">
+  <meta
+    property="og:description"
+    content="Empowering potential. Enriching lives."
+  >
+  <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
   <style>
     :root {
       --navy: #071b35;
-      --navy-2: #0d2949;
-      --blue: #087fc2;
+      --navy-2: #0c2949;
+      --blue: #087fc5;
       --green: #55b52a;
-      --green-dark: #378e1c;
-      --text: #17304c;
-      --muted: #58718d;
+      --green-dark: #3d9820;
+      --mint: #eef8f4;
+      --sky: #edf7fc;
       --white: #ffffff;
-      --soft: #f5faf9;
+      --text: #16314d;
+      --muted: #617993;
       --line: rgba(7, 27, 53, 0.10);
-      --shadow: 0 24px 60px rgba(7, 27, 53, 0.10);
-      --radius: 28px;
+      --shadow: 0 22px 60px rgba(7, 27, 53, 0.10);
+      --radius: 26px;
     }
 
     * {
@@ -45,19 +61,15 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       font-family: "DM Sans", Arial, sans-serif;
       color: var(--text);
-      background: #ffffff;
+      background: #f8fcfb;
+      line-height: 1.7;
       overflow-x: hidden;
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
     }
 
     img {
@@ -65,34 +77,40 @@
       display: block;
     }
 
-    button,
     a {
-      -webkit-tap-highlight-color: transparent;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
     }
 
     .container {
-      width: min(1240px, calc(100% - 48px));
+      width: min(1180px, calc(100% - 40px));
       margin: 0 auto;
     }
 
     /* =========================
        HEADER
-    ========================== */
+    ========================= */
 
     header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      right: 0;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.94);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(7, 27, 53, 0.07);
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(7,27,53,0.08);
     }
 
     .nav {
-      min-height: 88px;
+      height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -102,64 +120,42 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
-      flex-shrink: 0;
+      gap: 16px;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      color: var(--navy);
+      white-space: nowrap;
     }
 
     .brand img {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       object-fit: contain;
-    }
-
-    .brand-name {
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--navy);
-      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 36px;
+      gap: 34px;
     }
 
     .nav-links a {
-      font-size: 16px;
       font-weight: 700;
-      color: var(--text);
+      color: var(--navy);
       transition: 0.25s ease;
-      position: relative;
-    }
-
-    .nav-links a:not(.nav-cta)::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 2px;
-      background: var(--blue);
-      transition: width 0.25s ease;
     }
 
     .nav-links a:hover {
       color: var(--blue);
     }
 
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
     .nav-cta {
       background: var(--navy);
-      color: #fff !important;
-      padding: 16px 26px;
+      color: white !important;
+      padding: 16px 25px;
       border-radius: 999px;
-      box-shadow: 0 12px 30px rgba(7, 27, 53, 0.16);
-      transition: 0.25s ease !important;
+      box-shadow: 0 12px 30px rgba(7,27,53,0.18);
     }
 
     .nav-cta:hover {
@@ -169,54 +165,31 @@
 
     .menu-btn {
       display: none;
-      width: 46px;
-      height: 46px;
-      border: 0;
-      background: #f2f6f8;
+      width: 45px;
+      height: 45px;
+      border: 1px solid var(--line);
+      background: white;
       border-radius: 12px;
       cursor: pointer;
-    }
-
-    .menu-btn span,
-    .menu-btn span::before,
-    .menu-btn span::after {
-      width: 22px;
-      height: 2px;
-      background: var(--navy);
-      display: block;
-      position: relative;
-      margin: auto;
-      transition: 0.25s ease;
-    }
-
-    .menu-btn span::before,
-    .menu-btn span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-    }
-
-    .menu-btn span::before {
-      top: -7px;
-    }
-
-    .menu-btn span::after {
-      top: 7px;
+      color: var(--navy);
+      font-size: 22px;
     }
 
     /* =========================
        HERO
-    ========================== */
+    ========================= */
 
     .hero {
-      min-height: 100vh;
-      padding: 150px 0 80px;
+      min-height: 850px;
+      padding-top: 88px;
       position: relative;
+      display: flex;
+      align-items: center;
       overflow: hidden;
       background:
-        radial-gradient(circle at 86% 22%, rgba(160, 214, 84, 0.25), transparent 29%),
-        radial-gradient(circle at 8% 84%, rgba(61, 178, 224, 0.17), transparent 28%),
-        linear-gradient(135deg, #ffffff 0%, #f8fcfa 52%, #eef8f2 100%);
+        radial-gradient(circle at 88% 18%, rgba(123, 198, 50, 0.23), transparent 30%),
+        radial-gradient(circle at 7% 90%, rgba(0, 145, 210, 0.15), transparent 32%),
+        linear-gradient(135deg, #ffffff 0%, #f5faf8 55%, #edf8f2 100%);
     }
 
     .hero::before {
@@ -224,82 +197,69 @@
       position: absolute;
       width: 650px;
       height: 650px;
-      border: 1px solid rgba(73, 160, 109, 0.12);
+      border: 1px solid rgba(77, 169, 57, 0.12);
       border-radius: 50%;
-      right: -250px;
+      right: -230px;
       top: 80px;
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 430px;
-      height: 430px;
-      border: 1px solid rgba(61, 128, 183, 0.10);
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(0, 125, 190, 0.10);
       border-radius: 50%;
       left: -260px;
-      bottom: -200px;
+      bottom: -220px;
     }
 
     .hero-grid {
-      min-height: calc(100vh - 230px);
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
-      gap: 65px;
       position: relative;
       z-index: 2;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 70px;
+      align-items: center;
     }
 
     .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--blue);
+      color: #0786b4;
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 4px;
       text-transform: uppercase;
-      margin-bottom: 34px;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 48px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--blue), var(--green));
+      margin-bottom: 28px;
     }
 
     .hero h1 {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(68px, 7.2vw, 112px);
+      font-size: clamp(58px, 7vw, 102px);
       line-height: 0.91;
       letter-spacing: -4px;
       color: var(--navy);
-      max-width: 850px;
+      margin-bottom: 34px;
     }
 
-    .hero h1 .blue {
+    .hero h1 span:nth-child(2) {
       color: var(--blue);
     }
 
-    .hero h1 .green {
+    .hero h1 span:nth-child(4) {
       color: var(--green);
     }
 
-    .hero-description {
-      max-width: 700px;
-      margin-top: 40px;
-      font-size: 19px;
-      line-height: 1.8;
-      color: var(--muted);
+    .hero-copy {
+      max-width: 650px;
+      font-size: 18px;
+      color: #5c7590;
+      margin-bottom: 36px;
     }
 
     .hero-buttons {
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 36px;
     }
 
     .btn {
@@ -307,19 +267,19 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 17px 27px;
+      min-height: 56px;
+      padding: 0 27px;
       border-radius: 999px;
-      font-size: 16px;
+      border: 1px solid transparent;
       font-weight: 800;
-      border: 2px solid transparent;
       transition: 0.25s ease;
       cursor: pointer;
     }
 
     .btn-primary {
       background: var(--navy);
-      color: #fff;
-      box-shadow: 0 15px 35px rgba(7, 27, 53, 0.17);
+      color: white;
+      box-shadow: 0 15px 30px rgba(7,27,53,0.17);
     }
 
     .btn-primary:hover {
@@ -327,138 +287,223 @@
       transform: translateY(-3px);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.8);
-      color: var(--navy);
-      border-color: rgba(7, 27, 53, 0.12);
+    .btn-green {
+      background: #21c96b;
+      color: white;
+      box-shadow: 0 15px 30px rgba(33,201,107,0.18);
     }
 
-    .btn-secondary:hover {
-      border-color: var(--blue);
-      color: var(--blue);
+    .btn-green:hover {
+      background: #17b75d;
       transform: translateY(-3px);
+    }
+
+    .btn-light {
+      background: white;
+      border-color: var(--line);
+      color: var(--navy);
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
     }
 
     .hero-visual {
       position: relative;
-      min-height: 590px;
+      min-height: 570px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .hero-glow {
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(
-        circle,
-        rgba(117, 192, 76, 0.22),
-        rgba(31, 143, 199, 0.06) 48%,
-        transparent 70%
-      );
-      filter: blur(2px);
-    }
-
-    .hero-logo-card {
+    .logo-card {
       width: min(530px, 100%);
-      min-height: 500px;
-      padding: 42px;
+      min-height: 510px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(255,255,255,0.9);
       border-radius: 34px;
-      background: rgba(255, 255, 255, 0.78);
-      border: 1px solid rgba(255, 255, 255, 0.85);
-      box-shadow: 0 30px 80px rgba(7, 27, 53, 0.12);
-      backdrop-filter: blur(10px);
+      box-shadow: 0 35px 80px rgba(7,27,53,0.13);
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 50px;
       position: relative;
-      z-index: 2;
     }
 
-    .hero-logo-card img {
+    .logo-card img {
       width: 100%;
-      max-width: 430px;
-      max-height: 450px;
+      max-width: 440px;
       object-fit: contain;
     }
 
-    .floating-tag {
+    .floating-label {
       position: absolute;
-      z-index: 5;
       background: var(--navy);
       color: white;
-      padding: 17px 24px;
+      padding: 15px 23px;
       border-radius: 20px;
       font-size: 13px;
       font-weight: 800;
-      letter-spacing: 0.5px;
-      box-shadow: 0 18px 35px rgba(7, 27, 53, 0.18);
+      letter-spacing: 1px;
+      box-shadow: 0 18px 35px rgba(7,27,53,0.22);
     }
 
-    .tag-top {
-      right: -5px;
-      top: 65px;
+    .label-top {
+      top: 45px;
+      right: -15px;
     }
 
-    .tag-bottom {
-      left: -35px;
-      bottom: 45px;
+    .label-bottom {
+      bottom: 25px;
+      left: -30px;
       background: white;
       color: var(--navy);
     }
 
     /* =========================
-       GENERAL SECTIONS
-    ========================== */
+       TRUST STRIP
+    ========================= */
 
-    section {
-      scroll-margin-top: 90px;
+    .trust {
+      background: white;
+      border-bottom: 1px solid var(--line);
     }
 
-    .section {
+    .trust-grid {
+      min-height: 105px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .trust-item {
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .trust-item span {
+      display: block;
+      color: var(--blue);
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       SECTION BASICS
+    ========================= */
+
+    section {
       padding: 110px 0;
     }
 
-    .section-soft {
-      background:
-        radial-gradient(circle at 90% 15%, rgba(124, 194, 71, 0.12), transparent 30%),
-        linear-gradient(180deg, #f8fcfb, #ffffff);
-    }
-
-    .section-heading {
-      max-width: 780px;
-      margin-bottom: 55px;
-    }
-
-    .section-label {
+    .section-kicker {
       color: var(--blue);
+      font-size: 13px;
       font-weight: 800;
       letter-spacing: 3px;
       text-transform: uppercase;
-      font-size: 13px;
-      margin-bottom: 14px;
+      margin-bottom: 13px;
     }
 
-    .section-heading h2 {
+    .section-title {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(48px, 5.2vw, 76px);
-      line-height: 1.02;
       color: var(--navy);
+      font-size: clamp(44px, 5vw, 70px);
+      line-height: 1.02;
       letter-spacing: -2px;
+      margin-bottom: 20px;
     }
 
-    .section-heading p {
-      margin-top: 20px;
-      font-size: 18px;
+    .section-text {
       color: var(--muted);
-      line-height: 1.8;
+      font-size: 17px;
+      max-width: 720px;
+    }
+
+    .section-heading {
+      margin-bottom: 55px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #f8fcfb;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 32px;
+      padding: 38px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .about-card img {
+      width: 100%;
+      max-height: 470px;
+      object-fit: contain;
+    }
+
+    .about-content h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 40px;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 22px;
+      font-size: 17px;
+    }
+
+    .check-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .check {
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #e8f7df;
+      color: var(--green-dark);
+      font-weight: 900;
     }
 
     /* =========================
        SERVICES
-    ========================== */
+    ========================= */
+
+    .services {
+      background: white;
+    }
 
     .services-grid {
       display: grid;
@@ -467,315 +512,222 @@
     }
 
     .service-card {
-      padding: 36px;
-      min-height: 285px;
-      border-radius: var(--radius);
-      background: white;
+      background: linear-gradient(145deg, #ffffff, #f3faf7);
       border: 1px solid var(--line);
-      box-shadow: 0 14px 40px rgba(7, 27, 53, 0.05);
+      border-radius: 25px;
+      padding: 34px;
+      min-height: 245px;
       transition: 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::after {
-      content: "";
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: rgba(82, 181, 42, 0.08);
-      right: -65px;
-      bottom: -65px;
     }
 
     .service-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow);
-      border-color: rgba(8, 127, 194, 0.16);
     }
 
     .service-icon {
-      width: 58px;
-      height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 55px;
+      height: 55px;
       border-radius: 17px;
-      background: #edf8f3;
-      font-size: 27px;
-      margin-bottom: 25px;
+      display: grid;
+      place-items: center;
+      background: #e9f6fb;
+      font-size: 25px;
+      margin-bottom: 24px;
     }
 
     .service-card h3 {
-      font-size: 23px;
       color: var(--navy);
-      margin-bottom: 13px;
+      font-size: 21px;
+      margin-bottom: 10px;
     }
 
     .service-card p {
       color: var(--muted);
-      line-height: 1.75;
     }
 
     /* =========================
        APPROACH
-    ========================== */
+    ========================= */
+
+    .approach {
+      background:
+        radial-gradient(circle at 90% 10%, rgba(89,180,46,0.15), transparent 30%),
+        #eef8f5;
+    }
 
     .approach-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 70px;
       align-items: center;
     }
 
-    .approach-visual {
-      min-height: 480px;
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at 25% 25%, rgba(85, 181, 42, 0.28), transparent 25%),
-        radial-gradient(circle at 80% 75%, rgba(8, 127, 194, 0.24), transparent 30%),
-        var(--navy);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow);
+    .approach-steps {
+      display: grid;
+      gap: 18px;
     }
 
-    .approach-visual::before,
-    .approach-visual::after {
-      content: "";
-      position: absolute;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+    .step {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 23px;
+      display: grid;
+      grid-template-columns: 55px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-    }
-
-    .approach-visual::before {
-      width: 500px;
-      height: 500px;
-      left: -270px;
-      top: -250px;
-    }
-
-    .approach-visual::after {
-      width: 430px;
-      height: 430px;
-      right: -250px;
-      bottom: -240px;
-    }
-
-    .approach-message {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 55px;
-      text-align: center;
-    }
-
-    .approach-message h3 {
-      font-family: "Playfair Display", Georgia, serif;
+      background: var(--navy);
       color: white;
-      font-size: clamp(40px, 4.2vw, 62px);
-      line-height: 1.1;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
     }
 
-    .approach-message span {
-      color: #83d55b;
-    }
-
-    .approach-content h2 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(46px, 5vw, 70px);
-      line-height: 1.04;
+    .step h3 {
       color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .approach-quote {
+      padding: 48px;
+      border-radius: 32px;
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 25px 55px rgba(7,27,53,0.17);
+    }
+
+    .approach-quote h3 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 46px;
+      line-height: 1.1;
       margin-bottom: 22px;
     }
 
-    .approach-content > p {
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.85;
-      margin-bottom: 28px;
-    }
-
-    .approach-list {
-      display: grid;
-      gap: 15px;
-    }
-
-    .approach-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      padding: 18px 20px;
-      background: #f7fbfa;
-      border-radius: 18px;
-    }
-
-    .check {
-      width: 28px;
-      height: 28px;
-      min-width: 28px;
-      border-radius: 50%;
-      background: var(--green);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .approach-item strong {
-      display: block;
-      color: var(--navy);
-      margin-bottom: 2px;
-    }
-
-    .approach-item span {
-      color: var(--muted);
-      font-size: 14px;
+    .approach-quote p {
+      color: #c9d9e8;
+      font-size: 17px;
     }
 
     /* =========================
        THERAPIST
-    ========================== */
+    ========================= */
 
     .therapist {
-      background:
-        radial-gradient(circle at 92% 20%, rgba(110, 194, 76, 0.17), transparent 32%),
-        linear-gradient(135deg, #f5fbfa, #ffffff);
+      background: #f8fcfb;
     }
 
     .therapist-grid {
       display: grid;
-      grid-template-columns: 0.72fr 1.28fr;
-      gap: 75px;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 70px;
       align-items: center;
     }
 
     .therapist-image {
       background: white;
-      border-radius: 34px;
+      border-radius: 35px;
       padding: 25px;
-      min-height: 590px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
       box-shadow: var(--shadow);
-      overflow: hidden;
       border: 1px solid var(--line);
     }
 
     .therapist-image img {
       width: 100%;
-      max-height: 590px;
+      height: 520px;
       object-fit: contain;
-      object-position: bottom center;
     }
 
-    .therapist-content h2 {
+    .therapist-info h2 {
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(52px, 5.2vw, 76px);
-      line-height: 1.02;
+      font-size: clamp(46px, 5vw, 68px);
       color: var(--navy);
+      line-height: 1;
+      margin-bottom: 12px;
     }
 
-    .therapist-name {
-      font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(38px, 4vw, 58px);
-      margin-top: 28px;
-      color: var(--navy);
-    }
-
-    .designation {
+    .qualification {
       color: var(--blue);
-      font-size: 19px;
-      font-weight: 800;
-      margin-top: 8px;
+      font-weight: 900;
+      font-size: 20px;
+      margin-bottom: 25px;
     }
 
-    .therapist-description {
-      margin: 27px 0;
+    .therapist-info > p {
       color: var(--muted);
-      font-size: 18px;
-      line-height: 1.85;
-      max-width: 780px;
+      font-size: 17px;
+      margin-bottom: 30px;
     }
 
-    .contact-stack {
+    .info-list {
       display: grid;
-      gap: 15px;
-      margin-top: 28px;
+      gap: 14px;
     }
 
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px 25px;
+    .info-row {
       background: white;
       border: 1px solid var(--line);
-      border-radius: 20px;
-      transition: 0.25s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateX(5px);
-      border-color: rgba(8, 127, 194, 0.2);
-      box-shadow: 0 10px 30px rgba(7, 27, 53, 0.06);
-    }
-
-    .contact-icon {
-      width: 42px;
-      height: 42px;
-      min-width: 42px;
-      border-radius: 13px;
+      border-radius: 19px;
+      padding: 19px 22px;
       display: flex;
+      gap: 18px;
       align-items: center;
-      justify-content: center;
-      background: #eef7f5;
-      font-size: 19px;
     }
 
-    .contact-card strong {
+    .info-icon {
+      font-size: 23px;
+      width: 40px;
+      text-align: center;
+    }
+
+    .info-row strong {
       display: block;
       color: var(--navy);
-      font-size: 16px;
     }
 
-    .contact-card span {
-      display: block;
+    .info-row span {
       color: var(--muted);
-      font-size: 15px;
-      margin-top: 2px;
     }
 
     /* =========================
        HOURS
-    ========================== */
+    ========================= */
 
-    .hours-card {
-      margin-top: 25px;
-      padding: 28px;
+    .hours {
       background: white;
-      border-radius: 25px;
-      border: 1px solid var(--line);
     }
 
-    .hours-card h3 {
+    .hours-box {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 35px;
+      background: #f6faf8;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+    }
+
+    .hours-box h3 {
       color: var(--navy);
-      font-size: 20px;
-      margin-bottom: 12px;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
     .hours-row {
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      padding: 11px 0;
-      border-bottom: 1px dashed rgba(7, 27, 53, 0.12);
+      padding: 17px 0;
+      border-bottom: 1px dashed rgba(7,27,53,0.15);
       color: var(--muted);
     }
 
@@ -784,162 +736,372 @@
     }
 
     .hours-row strong {
-      color: var(--text);
+      color: var(--navy);
     }
 
     .holiday {
-      color: #a35b50 !important;
+      color: #9a5c55 !important;
     }
 
     /* =========================
-       CTA
-    ========================== */
+       APPOINTMENT
+    ========================= */
 
-    .cta {
-      padding: 115px 0;
-      background: var(--navy);
+    .appointment {
+      background:
+        radial-gradient(circle at 15% 10%, rgba(20,140,200,0.14), transparent 28%),
+        radial-gradient(circle at 90% 90%, rgba(89,180,46,0.15), transparent 30%),
+        var(--navy);
       color: white;
-      position: relative;
-      overflow: hidden;
+    }
+
+    .appointment-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .appointment-copy .section-kicker {
+      color: #5fd0ef;
+    }
+
+    .appointment-copy .section-title {
+      color: white;
+    }
+
+    .appointment-copy p {
+      color: #c4d5e4;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .appointment-points {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+    }
+
+    .appointment-points li {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: #e1edf6;
+    }
+
+    .form-card {
+      background: white;
+      border-radius: 30px;
+      padding: 35px;
+      color: var(--text);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.20);
+    }
+
+    .form-card h3 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 7px;
+    }
+
+    .form-card > p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: grid;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #dce5ec;
+      border-radius: 13px;
+      padding: 13px 14px;
+      outline: none;
+      color: var(--text);
+      background: #fbfdfd;
+    }
+
+    .form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(8,127,197,0.10);
+    }
+
+    .form-submit {
+      width: 100%;
+      margin-top: 18px;
+      border: 0;
+      background: #20c96b;
+      color: white;
+      min-height: 55px;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
+
+    .form-submit:hover {
+      background: #16b65b;
+      transform: translateY(-2px);
+    }
+
+    .form-note {
+      margin-top: 13px;
+      color: #8090a0;
+      font-size: 12px;
       text-align: center;
     }
 
-    .cta::before,
-    .cta::after {
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq {
+      background: #f8fcfb;
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 13px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: 0;
+      background: white;
+      padding: 22px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      cursor: pointer;
+      color: var(--navy);
+      text-align: left;
+      font-weight: 800;
+      font-size: 16px;
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      transition: 0.25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 24px 22px;
+      color: var(--muted);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      background: #f7fbfa;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+    }
+
+    .contact-card .contact-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .contact-card h3 {
+      color: var(--navy);
+      margin-bottom: 7px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+    }
+
+    .contact-card a {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    /* =========================
+       FINAL CTA
+    ========================= */
+
+    .final-cta {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before,
+    .final-cta::after {
       content: "";
       position: absolute;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255,255,255,0.10);
       border-radius: 50%;
     }
 
-    .cta::before {
-      width: 520px;
-      height: 520px;
-      left: -290px;
-      top: -280px;
+    .final-cta::before {
+      width: 450px;
+      height: 450px;
+      left: -270px;
+      top: -220px;
     }
 
-    .cta::after {
-      width: 480px;
-      height: 480px;
-      right: -270px;
-      bottom: -300px;
+    .final-cta::after {
+      width: 400px;
+      height: 400px;
+      right: -220px;
+      bottom: -230px;
     }
 
-    .cta-inner {
+    .final-cta .container {
       position: relative;
       z-index: 2;
     }
 
-    .cta h2 {
+    .final-cta h2 {
+      max-width: 950px;
+      margin: 0 auto 20px;
       font-family: "Playfair Display", Georgia, serif;
-      font-size: clamp(52px, 6vw, 86px);
-      line-height: 1.03;
-      max-width: 1050px;
-      margin: 0 auto;
-      color: white;
+      font-size: clamp(44px, 6vw, 75px);
+      line-height: 1;
     }
 
-    .cta p {
-      max-width: 760px;
-      margin: 25px auto 35px;
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 18px;
+    .final-cta p {
+      color: #bfd0df;
+      max-width: 700px;
+      margin: 0 auto 32px;
     }
 
-    .cta-buttons {
+    .final-buttons {
       display: flex;
       justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 16px;
-    }
-
-    .whatsapp-btn {
-      background: #20d26b;
-      color: white;
-    }
-
-    .whatsapp-btn:hover {
-      background: #16b95a;
-      transform: translateY(-3px);
-    }
-
-    .clinic-btn {
-      background: white;
-      color: var(--navy);
-    }
-
-    .clinic-btn:hover {
-      background: #f0f5f8;
-      transform: translateY(-3px);
     }
 
     /* =========================
        FOOTER
-    ========================== */
+    ========================= */
 
     footer {
       background: #041426;
       color: white;
-      padding: 48px 0;
+      padding: 40px 0;
     }
 
-    .footer-inner {
+    .footer-grid {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
-    .footer-brand {
-      font-size: 20px;
-      font-weight: 800;
+    .footer-brand strong {
+      display: block;
+      font-size: 19px;
       letter-spacing: 2px;
     }
 
-    .footer-sub {
-      margin-top: 7px;
-      color: #91a1b5;
+    .footer-brand span {
+      display: block;
+      margin-top: 5px;
+      color: #8297ab;
       font-size: 12px;
-      font-weight: 800;
       letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     .copyright {
-      color: #8b9caf;
-      font-size: 14px;
-      text-align: right;
+      color: #8297ab;
+      font-size: 13px;
     }
 
     /* =========================
        FLOATING WHATSAPP
-    ========================== */
+    ========================= */
 
-    .floating-whatsapp {
+    .whatsapp-float {
       position: fixed;
-      right: 24px;
+      right: 25px;
       bottom: 24px;
       width: 64px;
       height: 64px;
+      z-index: 900;
       border-radius: 50%;
-      background: #20d26b;
+      display: grid;
+      place-items: center;
+      background: #20c96b;
       color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      z-index: 999;
-      box-shadow: 0 15px 35px rgba(32, 210, 107, 0.32);
+      font-size: 28px;
+      box-shadow: 0 15px 35px rgba(32,201,107,0.35);
       transition: 0.25s ease;
     }
 
-    .floating-whatsapp:hover {
-      transform: scale(1.08);
+    .whatsapp-float:hover {
+      transform: translateY(-5px) scale(1.04);
+      background: #17b75d;
     }
 
     /* =========================
-       ANIMATIONS
-    ========================== */
+       REVEAL ANIMATION
+    ========================= */
 
     .reveal {
       opacity: 0;
@@ -953,45 +1115,67 @@
     }
 
     /* =========================
-       RESPONSIVE
-    ========================== */
+       MOBILE
+    ========================= */
 
-    @media (max-width: 1050px) {
+    @media (max-width: 980px) {
+
       .nav-links {
-        gap: 20px;
+        gap: 18px;
       }
 
-      .hero-grid {
-        gap: 35px;
-      }
-
-      .hero h1 {
-        font-size: clamp(60px, 7vw, 88px);
-      }
-
+      .hero-grid,
+      .about-grid,
+      .approach-grid,
       .therapist-grid,
-      .approach-grid {
+      .appointment-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 125px;
+        padding-bottom: 80px;
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .approach-grid,
+      .therapist-grid,
+      .appointment-grid {
         gap: 45px;
       }
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 760px) {
+
       .container {
-        width: min(100% - 34px, 680px);
+        width: min(100% - 28px, 1180px);
       }
 
       .nav {
-        min-height: 76px;
+        height: 76px;
+      }
+
+      .brand {
+        font-size: 14px;
+        letter-spacing: 1.1px;
+        gap: 9px;
       }
 
       .brand img {
-        width: 48px;
-        height: 48px;
-      }
-
-      .brand-name {
-        font-size: 16px;
-        letter-spacing: 1.5px;
+        width: 45px;
+        height: 45px;
       }
 
       .menu-btn {
@@ -999,19 +1183,19 @@
       }
 
       .nav-links {
+        display: none;
         position: absolute;
         top: 76px;
-        left: 15px;
-        right: 15px;
-        display: none;
+        left: 14px;
+        right: 14px;
+        padding: 18px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
         flex-direction: column;
         align-items: stretch;
-        gap: 0;
-        background: white;
-        padding: 12px;
-        border-radius: 20px;
-        box-shadow: 0 20px 50px rgba(7, 27, 53, 0.15);
-        border: 1px solid var(--line);
+        gap: 5px;
       }
 
       .nav-links.open {
@@ -1019,197 +1203,118 @@
       }
 
       .nav-links a {
-        padding: 14px 16px;
-      }
-
-      .nav-links a:not(.nav-cta)::after {
-        display: none;
+        padding: 12px;
       }
 
       .nav-cta {
         text-align: center;
-        margin-top: 5px;
       }
 
       .hero {
-        padding-top: 125px;
-      }
-
-      .hero-grid,
-      .approach-grid,
-      .therapist-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-grid {
         min-height: auto;
-      }
-
-      .hero-content {
-        text-align: center;
-      }
-
-      .eyebrow {
-        justify-content: center;
+        padding-top: 120px;
       }
 
       .hero h1 {
-        font-size: clamp(56px, 12vw, 80px);
-        letter-spacing: -2px;
+        font-size: clamp(55px, 17vw, 84px);
+        letter-spacing: -3px;
       }
 
-      .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-      }
-
-      .hero-visual {
-        min-height: 460px;
-      }
-
-      .hero-logo-card {
-        min-height: 420px;
-      }
-
-      .tag-top {
-        right: 0;
-        top: 25px;
-      }
-
-      .tag-bottom {
-        left: 0;
-        bottom: 20px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .therapist-image {
-        min-height: 500px;
-      }
-
-      .therapist-content {
-        text-align: center;
-      }
-
-      .therapist-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .contact-card {
-        text-align: left;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .copyright {
-        text-align: center;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .container {
-        width: min(100% - 26px, 680px);
-      }
-
-      .brand-name {
-        font-size: 14px;
-      }
-
-      .brand img {
-        width: 43px;
-        height: 43px;
-      }
-
-      .hero {
-        padding-bottom: 60px;
-      }
-
-      .hero h1 {
-        font-size: 54px;
-        line-height: 0.95;
-      }
-
-      .hero-description {
+      .hero-copy {
         font-size: 16px;
       }
 
-      .hero-buttons,
-      .cta-buttons {
+      .hero-buttons {
         flex-direction: column;
       }
 
-      .btn {
+      .hero-buttons .btn {
         width: 100%;
       }
 
       .hero-visual {
-        min-height: 360px;
+        min-height: 400px;
       }
 
-      .hero-logo-card {
-        min-height: 330px;
-        padding: 25px;
+      .logo-card {
+        min-height: 370px;
+        padding: 28px;
         border-radius: 25px;
       }
 
-      .floating-tag {
+      .floating-label {
         font-size: 10px;
         padding: 12px 15px;
       }
 
-      .section {
+      .label-top {
+        right: -4px;
+        top: 25px;
+      }
+
+      .label-bottom {
+        left: -4px;
+        bottom: 15px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        padding: 25px 0;
+        gap: 18px;
+      }
+
+      section {
         padding: 75px 0;
       }
 
-      .section-heading h2,
-      .approach-content h2 {
-        font-size: 47px;
+      .section-title {
+        font-size: 48px;
       }
 
-      .service-card {
-        padding: 27px;
+      .services-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
       }
 
-      .approach-visual {
-        min-height: 350px;
+      .about-card {
+        padding: 18px;
       }
 
-      .therapist-image {
-        min-height: 400px;
-        padding: 15px;
+      .therapist-image img {
+        height: 400px;
       }
 
-      .therapist-name {
-        font-size: 40px;
+      .form-grid {
+        grid-template-columns: 1fr;
       }
 
-      .hours-row {
-        font-size: 14px;
+      .form-group.full {
+        grid-column: auto;
       }
 
-      .cta {
-        padding: 80px 0;
+      .form-card {
+        padding: 24px;
       }
 
-      .cta h2 {
-        font-size: 49px;
+      .approach-quote {
+        padding: 30px;
       }
 
-      .floating-whatsapp {
-        width: 58px;
-        height: 58px;
-        right: 17px;
-        bottom: 17px;
+      .approach-quote h3 {
+        font-size: 38px;
+      }
+
+      .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .whatsapp-float {
+        width: 57px;
+        height: 57px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 25px;
       }
     }
   </style>
@@ -1225,11 +1330,8 @@
     <div class="container nav">
 
       <a href="#home" class="brand">
-        <img
-          src="assets/logo.png"
-          alt="Growing Beyond Limits Rehab Center"
-        />
-        <span class="brand-name">GROWING BEYOND LIMITS</span>
+        <img src="assets/logo.png" alt="Growing Beyond Limits Rehab Center logo">
+        <span>GROWING BEYOND LIMITS</span>
       </a>
 
       <button
@@ -1238,7 +1340,7 @@
         aria-label="Open navigation menu"
         aria-expanded="false"
       >
-        <span></span>
+        ☰
       </button>
 
       <nav class="nav-links" id="navLinks">
@@ -1246,14 +1348,7 @@
         <a href="#services">Services</a>
         <a href="#approach">Approach</a>
         <a href="#therapist">Dr Jeeva A</a>
-        <a
-          class="nav-cta"
-          href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20book%20an%20appointment."
-          target="_blank"
-          rel="noopener"
-        >
-          Book an Appointment
-        </a>
+        <a href="#appointment" class="nav-cta">Book an Appointment</a>
       </nav>
 
     </div>
@@ -1273,40 +1368,35 @@
         <div class="hero-content reveal">
 
           <div class="eyebrow">
-            Occupational Therapy
-            <span>•</span>
-            Rehabilitation
-            <span>•</span>
-            Development
+            Occupational Therapy • Rehabilitation • Development
           </div>
 
           <h1>
-            Empowering<br>
-            <span class="blue">potential.</span><br>
-            Enriching<br>
-            <span class="green">lives.</span>
+            <span>Empowering</span><br>
+            <span>potential.</span><br>
+            <span>Enriching</span><br>
+            <span>lives.</span>
           </h1>
 
-          <p class="hero-description">
+          <p class="hero-copy">
             A compassionate, purposeful approach to occupational therapy —
             helping individuals build meaningful skills, confidence,
-            participation and greater independence, one purposeful step
-            at a time.
+            participation and greater independence, one purposeful step at a time.
           </p>
 
           <div class="hero-buttons">
 
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20book%20an%20appointment."
-              target="_blank"
-              rel="noopener"
-            >
-              💬 Book an Appointment
+            <a href="#appointment" class="btn btn-primary">
+              📅 Book an Appointment
             </a>
 
-            <a class="btn btn-secondary" href="#services">
-              Explore Services →
+            <a
+              href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20know%20more%20about%20occupational%20therapy."
+              target="_blank"
+              rel="noopener"
+              class="btn btn-green"
+            >
+              💬 WhatsApp Dr Jeeva A
             </a>
 
           </div>
@@ -1316,23 +1406,21 @@
 
         <div class="hero-visual reveal">
 
-          <div class="hero-glow"></div>
-
-          <div class="hero-logo-card">
+          <div class="logo-card">
 
             <img
               src="assets/logo.png"
-              alt="Growing Beyond Limits Rehab Center logo"
-            />
+              alt="Growing Beyond Limits Rehab Center"
+            >
 
-          </div>
+            <div class="floating-label label-top">
+              PURPOSEFUL CARE
+            </div>
 
-          <div class="floating-tag tag-top">
-            PURPOSEFUL CARE
-          </div>
+            <div class="floating-label label-bottom">
+              SKILLS • CONFIDENCE • INDEPENDENCE
+            </div>
 
-          <div class="floating-tag tag-bottom">
-            SKILLS • CONFIDENCE • INDEPENDENCE
           </div>
 
         </div>
@@ -1343,29 +1431,95 @@
 
 
     <!-- =========================
+         TRUST STRIP
+    ========================== -->
+
+    <div class="trust">
+
+      <div class="container trust-grid">
+
+        <div class="trust-item">
+          Occupational Therapy
+          <span>Purposeful intervention</span>
+        </div>
+
+        <div class="trust-item">
+          Meaningful Skills
+          <span>Confidence & participation</span>
+        </div>
+
+        <div class="trust-item">
+          Greater Independence
+          <span>One purposeful step at a time</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
          ABOUT
     ========================== -->
 
-    <section class="section section-soft" id="about">
+    <section class="about" id="about">
 
-      <div class="container">
+      <div class="container about-grid">
 
-        <div class="section-heading reveal">
+        <div class="about-card reveal">
 
-          <div class="section-label">
+          <img
+            src="assets/logo.png"
+            alt="Growing Beyond Limits Rehab Center"
+          >
+
+        </div>
+
+
+        <div class="about-content reveal">
+
+          <div class="section-kicker">
             About Growing Beyond Limits
           </div>
 
-          <h2>
-            Meaningful progress starts with purposeful care.
+          <h2 class="section-title">
+            Care with purpose.
           </h2>
 
           <p>
-            We believe rehabilitation is not only about completing exercises.
-            It is about helping individuals participate more confidently in
-            everyday life, develop meaningful skills and move towards greater
-            independence.
+            Growing Beyond Limits Rehab Center is focused on helping individuals
+            develop practical skills and confidence for meaningful participation
+            in everyday life.
           </p>
+
+          <p>
+            Our occupational therapy approach is compassionate, individualized
+            and centered around the person's goals, strengths and potential.
+          </p>
+
+          <ul class="check-list">
+
+            <li>
+              <span class="check">✓</span>
+              Individual-focused occupational therapy
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Meaningful daily-life skills
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Confidence and participation
+            </li>
+
+            <li>
+              <span class="check">✓</span>
+              Building greater independence
+            </li>
+
+          </ul>
 
         </div>
 
@@ -1378,23 +1532,24 @@
          SERVICES
     ========================== -->
 
-    <section class="section" id="services">
+    <section class="services" id="services">
 
       <div class="container">
 
         <div class="section-heading reveal">
 
-          <div class="section-label">
+          <div class="section-kicker">
             What We Do
           </div>
 
-          <h2>
-            Occupational therapy with purpose.
+          <h2 class="section-title">
+            Occupational therapy<br>
+            with meaning.
           </h2>
 
-          <p>
-            Individualised support designed around the person's abilities,
-            goals, routines and meaningful participation in daily life.
+          <p class="section-text">
+            Support is shaped around meaningful goals and practical participation,
+            helping each individual move forward with confidence.
           </p>
 
         </div>
@@ -1404,72 +1559,60 @@
 
           <article class="service-card reveal">
             <div class="service-icon">🧠</div>
-
-            <h3>Development & Skills</h3>
-
+            <h3>Skill Development</h3>
             <p>
-              Supporting the development of functional, cognitive,
-              sensory and everyday skills through purposeful activities.
-            </p>
-          </article>
-
-
-          <article class="service-card reveal">
-            <div class="service-icon">🌱</div>
-
-            <h3>Independence</h3>
-
-            <p>
-              Building confidence and practical abilities for greater
-              participation and independence in everyday routines.
+              Support for developing functional skills needed for everyday
+              activities and meaningful participation.
             </p>
           </article>
 
 
           <article class="service-card reveal">
             <div class="service-icon">🤝</div>
-
-            <h3>Meaningful Participation</h3>
-
+            <h3>Daily Living Skills</h3>
             <p>
-              Focusing therapy around meaningful activities so progress
-              connects naturally with real-life goals.
+              Purposeful strategies that encourage greater independence
+              in everyday routines.
             </p>
           </article>
 
 
           <article class="service-card reveal">
-            <div class="service-icon">💪</div>
-
-            <h3>Functional Rehabilitation</h3>
-
+            <div class="service-icon">🎯</div>
+            <h3>Goal-Focused Therapy</h3>
             <p>
-              Purposeful therapeutic activities designed to support
-              functional abilities and everyday participation.
+              Therapy centered around meaningful individual goals and
+              achievable progress.
+            </p>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">🌱</div>
+            <h3>Confidence Building</h3>
+            <p>
+              Encouraging participation, confidence and a positive sense
+              of personal capability.
+            </p>
+          </article>
+
+
+          <article class="service-card reveal">
+            <div class="service-icon">👐</div>
+            <h3>Functional Participation</h3>
+            <p>
+              Supporting individuals to participate more fully in activities
+              that matter to them.
             </p>
           </article>
 
 
           <article class="service-card reveal">
             <div class="service-icon">✨</div>
-
-            <h3>Confidence Building</h3>
-
+            <h3>Personalized Care</h3>
             <p>
-              Encouraging confidence through achievable steps,
-              positive reinforcement and meaningful progress.
-            </p>
-          </article>
-
-
-          <article class="service-card reveal">
-            <div class="service-icon">❤️</div>
-
-            <h3>Compassionate Care</h3>
-
-            <p>
-              A supportive environment where every individual's journey,
-              strengths and goals are valued.
+              A compassionate approach that recognizes every individual's
+              strengths, needs and potential.
             </p>
           </article>
 
@@ -1484,79 +1627,86 @@
          APPROACH
     ========================== -->
 
-    <section class="section section-soft" id="approach">
+    <section class="approach" id="approach">
 
       <div class="container approach-grid">
 
-        <div class="approach-visual reveal">
+        <div class="reveal">
 
-          <div class="approach-message">
+          <div class="section-kicker">
+            Our Approach
+          </div>
 
-            <h3>
-              One purposeful<br>
-              <span>step at a time.</span>
-            </h3>
+          <h2 class="section-title">
+            Progress happens<br>
+            one step at a time.
+          </h2>
+
+          <div class="approach-steps">
+
+            <div class="step">
+              <div class="step-number">01</div>
+              <div>
+                <h3>Understand</h3>
+                <p>
+                  Understand the individual's needs, strengths, goals and
+                  everyday challenges.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="step">
+              <div class="step-number">02</div>
+              <div>
+                <h3>Plan</h3>
+                <p>
+                  Develop a purposeful approach focused on meaningful,
+                  practical outcomes.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="step">
+              <div class="step-number">03</div>
+              <div>
+                <h3>Practice</h3>
+                <p>
+                  Build skills through structured and meaningful therapeutic
+                  activities.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="step">
+              <div class="step-number">04</div>
+              <div>
+                <h3>Grow</h3>
+                <p>
+                  Encourage confidence, participation and greater independence.
+                </p>
+              </div>
+            </div>
 
           </div>
 
         </div>
 
 
-        <div class="approach-content reveal">
+        <div class="approach-quote reveal">
 
-          <div class="section-label">
-            Our Approach
-          </div>
-
-          <h2>
-            Care that connects therapy to real life.
-          </h2>
+          <h3>
+            Empowering potential.<br>
+            Enriching lives.
+          </h3>
 
           <p>
-            Our approach centres on meaningful occupations and practical
-            participation. Therapy is shaped around individual needs,
-            strengths and goals rather than a one-size-fits-all routine.
+            Every person has potential. Our role is to create purposeful
+            opportunities for that potential to grow into meaningful,
+            confident participation in everyday life.
           </p>
-
-
-          <div class="approach-list">
-
-            <div class="approach-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Individualised care</strong>
-                <span>Therapy designed around each person's unique needs.</span>
-              </div>
-            </div>
-
-
-            <div class="approach-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Purposeful activities</strong>
-                <span>Meaningful tasks that connect with everyday life.</span>
-              </div>
-            </div>
-
-
-            <div class="approach-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Confidence through progress</strong>
-                <span>Small achievements that build towards independence.</span>
-              </div>
-            </div>
-
-
-            <div class="approach-item">
-              <div class="check">✓</div>
-              <div>
-                <strong>Family-centred support</strong>
-                <span>Clear communication and supportive collaboration.</span>
-              </div>
-            </div>
-
-          </div>
 
         </div>
 
@@ -1569,7 +1719,7 @@
          THERAPIST
     ========================== -->
 
-    <section class="section therapist" id="therapist">
+    <section class="therapist" id="therapist">
 
       <div class="container therapist-grid">
 
@@ -1577,126 +1727,79 @@
 
           <img
             src="assets/therapist.png"
-            alt="Dr Jeeva A - Occupational Therapist"
-          />
+            alt="Dr Jeeva A Occupational Therapist"
+          >
 
         </div>
 
 
-        <div class="therapist-content reveal">
+        <div class="therapist-info reveal">
 
-          <h2>
-            Meet your therapist.
-          </h2>
-
-          <div class="therapist-name">
-            Dr Jeeva A
+          <div class="section-kicker">
+            Meet Your Therapist
           </div>
 
-          <div class="designation">
+          <h2>
+            Dr Jeeva A
+          </h2>
+
+          <div class="qualification">
             B.O.T — Occupational Therapist
           </div>
 
-          <p class="therapist-description">
+          <p>
             Providing compassionate and purposeful occupational therapy
             with a focus on meaningful skills, participation, confidence
             and greater independence.
           </p>
 
 
-          <div class="contact-stack">
+          <div class="info-list">
 
-            <!-- CLINIC -->
+            <div class="info-row">
 
-            <a
-              class="contact-card"
-              href="https://www.google.com/maps/search/?api=1&query=Growing+Beyond+Limits+Rehab+Center"
-              target="_blank"
-              rel="noopener"
-            >
-
-              <div class="contact-icon">📍</div>
+              <div class="info-icon">📍</div>
 
               <div>
                 <strong>Clinic</strong>
-                <span>View clinic location on Google Maps</span>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Growing+Beyond+Limits+Rehab+Center"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  View clinic location on Google Maps
+                </a>
               </div>
 
-            </a>
+            </div>
 
 
-            <!-- WHATSAPP -->
+            <div class="info-row">
 
-            <a
-              class="contact-card"
-              href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20know%20more%20about%20occupational%20therapy."
-              target="_blank"
-              rel="noopener"
-            >
-
-              <div class="contact-icon">💬</div>
+              <div class="info-icon">💬</div>
 
               <div>
                 <strong>WhatsApp</strong>
-                <span>+91 78128 21216</span>
+                <a href="https://wa.me/917812821216">
+                  +91 78128 21216
+                </a>
               </div>
 
-            </a>
+            </div>
 
 
-            <!-- EMAIL -->
+            <div class="info-row">
 
-            <a
-              class="contact-card"
-              href="mailto:growingbeyondlimits3@gmail.com"
-            >
-
-              <div class="contact-icon">✉️</div>
+              <div class="info-icon">✉️</div>
 
               <div>
                 <strong>Email</strong>
-                <span>growingbeyondlimits3@gmail.com</span>
+                <a href="mailto:growingbeyondlimits3@gmail.com">
+                  growingbeyondlimits3@gmail.com
+                </a>
               </div>
 
-            </a>
-
-          </div>
-
-
-          <!-- WORKING HOURS -->
-
-          <div class="hours-card">
-
-            <h3>Working Hours</h3>
-
-            <div class="hours-row">
-              <span>Monday – Friday</span>
-              <strong>10:00 AM – 7:00 PM</strong>
             </div>
-
-            <div class="hours-row">
-              <span>Saturday</span>
-              <strong class="holiday">Holiday</strong>
-            </div>
-
-            <div class="hours-row">
-              <span>Sunday</span>
-              <strong class="holiday">Holiday</strong>
-            </div>
-
-          </div>
-
-
-          <div style="margin-top: 25px;">
-
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20book%20an%20appointment."
-              target="_blank"
-              rel="noopener"
-            >
-              💬 Contact Dr Jeeva A
-            </a>
 
           </div>
 
@@ -1708,40 +1811,449 @@
 
 
     <!-- =========================
-         CTA
+         HOURS
     ========================== -->
 
-    <section class="cta">
+    <section class="hours">
 
-      <div class="container cta-inner reveal">
+      <div class="container">
+
+        <div class="section-heading reveal" style="text-align:center;">
+
+          <div class="section-kicker">
+            Clinic Information
+          </div>
+
+          <h2 class="section-title">
+            Working Hours
+          </h2>
+
+        </div>
+
+
+        <div class="hours-box reveal">
+
+          <h3>Clinic Hours</h3>
+
+          <div class="hours-row">
+            <span>Monday – Friday</span>
+            <strong>10:00 AM – 7:00 PM</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Saturday</span>
+            <strong class="holiday">Holiday</strong>
+          </div>
+
+          <div class="hours-row">
+            <span>Sunday</span>
+            <strong class="holiday">Holiday</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPOINTMENT
+    ========================== -->
+
+    <section class="appointment" id="appointment">
+
+      <div class="container appointment-grid">
+
+        <div class="appointment-copy reveal">
+
+          <div class="section-kicker">
+            Book an Appointment
+          </div>
+
+          <h2 class="section-title">
+            Let's take the next purposeful step.
+          </h2>
+
+          <p>
+            Send an appointment enquiry directly through WhatsApp.
+            Fill in the form and your information will be prepared as
+            a message for Dr Jeeva A.
+          </p>
+
+          <ul class="appointment-points">
+
+            <li>
+              ✓ Simple appointment enquiry
+            </li>
+
+            <li>
+              ✓ Direct WhatsApp communication
+            </li>
+
+            <li>
+              ✓ Monday – Friday availability
+            </li>
+
+            <li>
+              ✓ Purposeful, individualized care
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="form-card reveal">
+
+          <h3>Appointment Enquiry</h3>
+
+          <p>
+            Complete the form below to continue to WhatsApp.
+          </p>
+
+
+          <form id="appointmentForm">
+
+            <div class="form-grid">
+
+              <div class="form-group">
+
+                <label for="name">
+                  Your Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone Number
+                </label>
+
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Enter phone number"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="date">
+                  Preferred Date
+                </label>
+
+                <input
+                  id="date"
+                  type="date"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="time">
+                  Preferred Time
+                </label>
+
+                <select id="time" required>
+
+                  <option value="">
+                    Select a time
+                  </option>
+
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>2:00 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:00 PM</option>
+                  <option>5:00 PM</option>
+                  <option>6:00 PM</option>
+
+                </select>
+
+              </div>
+
+
+              <div class="form-group full">
+
+                <label for="reason">
+                  How can we help?
+                </label>
+
+                <textarea
+                  id="reason"
+                  placeholder="Briefly describe what you would like to discuss..."
+                ></textarea>
+
+              </div>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="form-submit"
+            >
+              💬 Send Appointment Enquiry on WhatsApp
+            </button>
+
+            <div class="form-note">
+              Your enquiry will open in WhatsApp. No information is stored on this website.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq">
+
+      <div class="container">
+
+        <div class="section-heading reveal" style="text-align:center;">
+
+          <div class="section-kicker">
+            Frequently Asked Questions
+          </div>
+
+          <h2 class="section-title">
+            Questions, answered.
+          </h2>
+
+        </div>
+
+
+        <div class="faq-list">
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question">
+              <span>What is occupational therapy?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Occupational therapy supports people in developing or improving
+                skills needed to participate more meaningfully and independently
+                in everyday activities.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question">
+              <span>How do I book an appointment?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                You can use the appointment enquiry form on this website or
+                contact Dr Jeeva A directly through WhatsApp.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question">
+              <span>How can I contact the clinic?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                You can contact the clinic through WhatsApp at
+                +91 78128 21216 or email
+                growingbeyondlimits3@gmail.com.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question">
+              <span>What are the clinic working hours?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                The clinic is open Monday to Friday from 10:00 AM to 7:00 PM.
+                Saturday and Sunday are holidays.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="faq-item reveal">
+
+            <button class="faq-question">
+              <span>Where is the clinic located?</span>
+              <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+              <p>
+                Use the "View clinic location on Google Maps" link in the
+                therapist section to open the clinic search in Google Maps.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact">
+
+      <div class="container">
+
+        <div class="section-heading reveal" style="text-align:center;">
+
+          <div class="section-kicker">
+            Get in Touch
+          </div>
+
+          <h2 class="section-title">
+            We're here to help.
+          </h2>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card reveal">
+
+            <div class="contact-icon">💬</div>
+
+            <h3>WhatsApp</h3>
+
+            <p>
+              <a href="https://wa.me/917812821216">
+                +91 78128 21216
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="contact-card reveal">
+
+            <div class="contact-icon">✉️</div>
+
+            <h3>Email</h3>
+
+            <p>
+              <a href="mailto:growingbeyondlimits3@gmail.com">
+                growingbeyondlimits3@gmail.com
+              </a>
+            </p>
+
+          </div>
+
+
+          <div class="contact-card reveal">
+
+            <div class="contact-icon">📍</div>
+
+            <h3>Clinic</h3>
+
+            <p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Growing+Beyond+Limits+Rehab+Center"
+                target="_blank"
+                rel="noopener"
+              >
+                Find the clinic on Google Maps
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL CTA
+    ========================== -->
+
+    <section class="final-cta">
+
+      <div class="container reveal">
 
         <h2>
           Ready to take the next purposeful step?
         </h2>
 
         <p>
-          Get in touch to enquire about occupational therapy and
-          schedule an appointment.
+          Get in touch to enquire about occupational therapy
+          and schedule an appointment with Dr Jeeva A.
         </p>
 
-
-        <div class="cta-buttons">
+        <div class="final-buttons">
 
           <a
-            class="btn whatsapp-btn"
             href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20book%20an%20appointment."
             target="_blank"
             rel="noopener"
+            class="btn btn-green"
           >
             💬 WhatsApp Dr Jeeva A
           </a>
 
-
           <a
-            class="btn clinic-btn"
             href="https://www.google.com/maps/search/?api=1&query=Growing+Beyond+Limits+Rehab+Center"
             target="_blank"
             rel="noopener"
+            class="btn btn-light"
           >
             📍 Find the Clinic
           </a>
@@ -1761,23 +2273,22 @@
 
   <footer>
 
-    <div class="container footer-inner">
+    <div class="container footer-grid">
 
-      <div>
+      <div class="footer-brand">
 
-        <div class="footer-brand">
+        <strong>
           GROWING BEYOND LIMITS
-        </div>
+        </strong>
 
-        <div class="footer-sub">
-          REHAB CENTER • OCCUPATIONAL THERAPY
-        </div>
+        <span>
+          Rehab Center • Occupational Therapy
+        </span>
 
       </div>
 
       <div class="copyright">
-        © 2026 Growing Beyond Limits Rehab Center.
-        All rights reserved.
+        © 2026 Growing Beyond Limits Rehab Center. All rights reserved.
       </div>
 
     </div>
@@ -1790,8 +2301,8 @@
   ========================== -->
 
   <a
-    class="floating-whatsapp"
-    href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+    class="whatsapp-float"
+    href="https://wa.me/917812821216?text=Hello%20Dr%20Jeeva%20A%2C%20I%20would%20like%20to%20make%20an%20appointment."
     target="_blank"
     rel="noopener"
     aria-label="Contact Dr Jeeva A on WhatsApp"
@@ -1807,7 +2318,9 @@
 
   <script>
 
-    /* Mobile menu */
+    /* =========================
+       MOBILE MENU
+    ========================== */
 
     const menuBtn = document.getElementById("menuBtn");
     const navLinks = document.getElementById("navLinks");
@@ -1816,75 +2329,203 @@
 
       const isOpen = navLinks.classList.toggle("open");
 
-      menuBtn.setAttribute("aria-expanded", isOpen);
+      menuBtn.setAttribute(
+        "aria-expanded",
+        isOpen ? "true" : "false"
+      );
+
+      menuBtn.textContent = isOpen ? "✕" : "☰";
 
     });
 
 
-    /* Close mobile menu after clicking a link */
-
-    document.querySelectorAll("#navLinks a").forEach(function(link) {
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
 
       link.addEventListener("click", function() {
 
         navLinks.classList.remove("open");
 
-        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuBtn.textContent = "☰";
 
       });
 
     });
 
 
-    /* Reveal animation */
+    /* =========================
+       APPOINTMENT FORM
+    ========================== */
 
-    const observer = new IntersectionObserver(
-      function(entries) {
+    const appointmentForm =
+      document.getElementById("appointmentForm");
 
-        entries.forEach(function(entry) {
+    appointmentForm.addEventListener("submit", function(event) {
 
-          if (entry.isIntersecting) {
+      event.preventDefault();
 
-            entry.target.classList.add("visible");
+      const name =
+        document.getElementById("name").value.trim();
 
-            observer.unobserve(entry.target);
+      const phone =
+        document.getElementById("phone").value.trim();
+
+      const date =
+        document.getElementById("date").value;
+
+      const time =
+        document.getElementById("time").value;
+
+      const reason =
+        document.getElementById("reason").value.trim();
+
+
+      const formattedDate = date
+        ? new Date(date + "T00:00:00")
+            .toLocaleDateString("en-IN", {
+              day: "numeric",
+              month: "long",
+              year: "numeric"
+            })
+        : "Not specified";
+
+
+      const message =
+`Hello Dr Jeeva A,
+
+I would like to enquire about an appointment.
+
+Name: ${name}
+Phone: ${phone}
+Preferred Date: ${formattedDate}
+Preferred Time: ${time}
+
+How can we help:
+${reason || "Not specified"}
+
+Thank you.`;
+
+
+      const whatsappURL =
+        "https://wa.me/917812821216?text=" +
+        encodeURIComponent(message);
+
+
+      window.open(
+        whatsappURL,
+        "_blank",
+        "noopener"
+      );
+
+    });
+
+
+    /* =========================
+       FAQ ACCORDION
+    ========================== */
+
+    document.querySelectorAll(".faq-question").forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const item =
+          button.closest(".faq-item");
+
+        const answer =
+          item.querySelector(".faq-answer");
+
+
+        document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+
+          if (otherItem !== item) {
+
+            otherItem.classList.remove("active");
+
+            const otherAnswer =
+              otherItem.querySelector(".faq-answer");
+
+            otherAnswer.style.maxHeight = null;
 
           }
 
         });
 
-      },
-      {
-        threshold: 0.12
-      }
+
+        item.classList.toggle("active");
+
+
+        if (item.classList.contains("active")) {
+
+          answer.style.maxHeight =
+            answer.scrollHeight + "px";
+
+        } else {
+
+          answer.style.maxHeight = null;
+
+        }
+
+      });
+
+    });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        function(entries, observer) {
+
+          entries.forEach(function(entry) {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(function(element) {
+
+      revealObserver.observe(element);
+
+    });
+
+
+    /* =========================
+       PREVENT PAST DATES
+    ========================== */
+
+    const dateInput =
+      document.getElementById("date");
+
+    const today =
+      new Date().toISOString().split("T")[0];
+
+    dateInput.setAttribute(
+      "min",
+      today
     );
-
-
-    document.querySelectorAll(".reveal").forEach(function(element) {
-
-      observer.observe(element);
-
-    });
-
-
-    /* Header shadow on scroll */
-
-    const header = document.querySelector("header");
-
-    window.addEventListener("scroll", function() {
-
-      if (window.scrollY > 20) {
-
-        header.style.boxShadow =
-          "0 8px 30px rgba(7, 27, 53, 0.08)";
-
-      } else {
-
-        header.style.boxShadow = "none";
-
-      }
-
-    });
 
   </script>
 

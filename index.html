@@ -2189,12 +2189,12 @@
 
               <div class="form-group">
                 <label for="parentName">Parent / Guardian Name</label>
-                <input type="text" id="parentName" placeholder="Enter parent / guardian name" required>
+                <input type="text" id="parentName" placeholder="Enter parent / guardian name" minlength="2" required>
               </div>
 
               <div class="form-group">
                 <label for="patientName">Patient Name</label>
-                <input type="text" id="patientName" placeholder="Enter patient name" required>
+                <input type="text" id="patientName" placeholder="Enter patient name" minlength="2" required>
               </div>
 
               <div class="form-group">
@@ -2204,7 +2204,7 @@
 
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter phone number" required>
+                <input type="tel" id="phone" placeholder="Enter phone number" inputmode="tel" minlength="10" maxlength="15" required>
               </div>
 
               <div class="form-group">
@@ -2242,7 +2242,7 @@
 
               <div class="form-group full">
                 <label for="message">How can we help?</label>
-                <textarea id="message" placeholder="Briefly describe the patient's needs or your enquiry..." required></textarea>
+                <textarea id="message" placeholder="Briefly describe the patient's needs or your enquiry..." minlength="2" required></textarea>
               </div>
 
               <div class="form-group full">
@@ -2571,7 +2571,10 @@
 
     appointmentForm.addEventListener("submit", function (event) {
 
-      event.preventDefault();
+      // Do not submit or open WhatsApp until every required field passes validation.
+      if (!appointmentForm.reportValidity()) {
+        return;
+      }
 
       const parentName =
         document.getElementById("parentName").value.trim();
@@ -2597,6 +2600,10 @@
       const message =
         document.getElementById("message").value.trim();
 
+      // Extra validation for values that may technically be non-empty but invalid.
+      const ageNumber = Number(age);
+      const phoneDigits = phone.replace(/\D/g, "");
+
       if (
         !parentName ||
         !patientName ||
@@ -2607,7 +2614,25 @@
         !time ||
         !message
       ) {
-        alert("Please complete all appointment fields.");
+        alert("Please complete all appointment fields before submitting.");
+        return;
+      }
+
+      if (!Number.isInteger(ageNumber) || ageNumber < 0 || ageNumber > 120) {
+        alert("Please enter a valid patient age.");
+        document.getElementById("age").focus();
+        return;
+      }
+
+      if (phoneDigits.length < 10 || phoneDigits.length > 15) {
+        alert("Please enter a valid phone number.");
+        document.getElementById("phone").focus();
+        return;
+      }
+
+      if (message.length < 2) {
+        alert("Please enter some details about your enquiry.");
+        document.getElementById("message").focus();
         return;
       }
 

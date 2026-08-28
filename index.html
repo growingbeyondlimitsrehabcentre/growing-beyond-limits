@@ -2185,153 +2185,78 @@
 
           <form id="appointmentForm">
 
-
             <div class="form-grid">
 
-
               <div class="form-group">
-
-                <label for="name">
-                  Your Name
-                </label>
-
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Enter your name"
-                  required
-                >
-
+                <label for="parentName">Parent / Guardian Name</label>
+                <input type="text" id="parentName" placeholder="Enter parent / guardian name" required>
               </div>
 
-
               <div class="form-group">
-
-                <label for="phone">
-                  Phone Number
-                </label>
-
-                <input
-                  type="tel"
-                  id="phone"
-                  placeholder="Enter phone number"
-                  required
-                >
-
+                <label for="patientName">Patient Name</label>
+                <input type="text" id="patientName" placeholder="Enter patient name" required>
               </div>
 
-
               <div class="form-group">
-
-                <label for="date">
-                  Preferred Date
-                </label>
-
-                <input
-                  type="date"
-                  id="date"
-                  required
-                >
-
+                <label for="age">Patient Age</label>
+                <input type="number" id="age" min="0" max="120" placeholder="Age" required>
               </div>
 
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter phone number" required>
+              </div>
 
               <div class="form-group">
-
-                <label for="time">
-                  Preferred Time
-                </label>
-
-                <select id="time" required>
-
-                  <option value="">
-                    Select a time
-                  </option>
-
-                  <option>
-                    10:00 AM
-                  </option>
-
-                  <option>
-                    11:00 AM
-                  </option>
-
-                  <option>
-                    12:00 PM
-                  </option>
-
-                  <option>
-                    1:00 PM
-                  </option>
-
-                  <option>
-                    2:00 PM
-                  </option>
-
-                  <option>
-                    3:00 PM
-                  </option>
-
-                  <option>
-                    4:00 PM
-                  </option>
-
-                  <option>
-                    5:00 PM
-                  </option>
-
-                  <option>
-                    6:00 PM
-                  </option>
-
-                  <option>
-                    7:00 PM
-                  </option>
-
+                <label for="therapy">Therapy Required</label>
+                <select id="therapy" required>
+                  <option value="">Select therapy</option>
+                  <option>Occupational Therapy</option>
+                  <option>Physiotherapy</option>
+                  <option>Speech Therapy</option>
+                  <option>Not Sure / Need Guidance</option>
                 </select>
-
               </div>
 
-
-              <div class="form-group full">
-
-                <label for="message">
-                  How can we help?
-                </label>
-
-                <textarea
-                  id="message"
-                  placeholder="Briefly describe what you would like to discuss..."
-                  required
-                ></textarea>
-
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" required>
               </div>
 
+              <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" required>
+                  <option value="">Select a time</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>1:00 PM</option>
+                  <option>2:00 PM</option>
+                  <option>3:00 PM</option>
+                  <option>4:00 PM</option>
+                  <option>5:00 PM</option>
+                  <option>6:00 PM</option>
+                  <option>7:00 PM</option>
+                </select>
+              </div>
 
               <div class="form-group full">
+                <label for="message">How can we help?</label>
+                <textarea id="message" placeholder="Briefly describe the patient's needs or your enquiry..." required></textarea>
+              </div>
 
-                <button
-                  type="submit"
-                  class="submit-btn"
-                >
-
+              <div class="form-group full">
+                <button type="submit" class="submit-btn">
                   <i class="fa-brands fa-whatsapp"></i>
-
                   Send Appointment Enquiry on WhatsApp
-
                 </button>
-
               </div>
-
 
             </div>
 
-
             <p class="form-note">
-              Your enquiry will open in WhatsApp.
-              No information is stored on this website.
+              Your enquiry will be added to the clinic's Google Sheet and opened in WhatsApp for quick communication.
             </p>
-
 
           </form>
 
@@ -2634,23 +2559,34 @@
 
 
     /* =====================================================
-       APPOINTMENT FORM → WHATSAPP
+       APPOINTMENT FORM → GOOGLE SHEET + WHATSAPP
     ====================================================== */
+
+    // Paste the deployed Google Apps Script Web App URL here.
+    const GOOGLE_SCRIPT_URL =
+      "PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE";
 
     const appointmentForm =
       document.getElementById("appointmentForm");
-
 
     appointmentForm.addEventListener("submit", function (event) {
 
       event.preventDefault();
 
+      const parentName =
+        document.getElementById("parentName").value.trim();
 
-      const name =
-        document.getElementById("name").value.trim();
+      const patientName =
+        document.getElementById("patientName").value.trim();
+
+      const age =
+        document.getElementById("age").value.trim();
 
       const phone =
         document.getElementById("phone").value.trim();
+
+      const therapy =
+        document.getElementById("therapy").value;
 
       const date =
         document.getElementById("date").value;
@@ -2661,43 +2597,38 @@
       const message =
         document.getElementById("message").value.trim();
 
-
       if (
-        !name ||
+        !parentName ||
+        !patientName ||
+        !age ||
         !phone ||
+        !therapy ||
         !date ||
         !time ||
         !message
       ) {
-
-        alert(
-          "Please complete all appointment fields."
-        );
-
+        alert("Please complete all appointment fields.");
         return;
-
       }
-
 
       const formattedDate =
         new Date(date + "T00:00:00")
-          .toLocaleDateString(
-            "en-IN",
-            {
-              day: "2-digit",
-              month: "2-digit",
-              year: "numeric"
-            }
-          );
-
+          .toLocaleDateString("en-IN", {
+            day: "2-digit",
+            month: "2-digit",
+            year: "numeric"
+          });
 
       const whatsappMessage =
 `Hello Dr Jeeva A,
 
 I would like to enquire about an appointment.
 
-Name: ${name}
+Parent / Guardian: ${parentName}
+Patient: ${patientName}
+Age: ${age}
 Phone: ${phone}
+Therapy: ${therapy}
 Preferred Date: ${formattedDate}
 Preferred Time: ${time}
 
@@ -2707,18 +2638,59 @@ ${message}
 Thank you.
 Growing Beyond Limits Rehab Center`;
 
-
       const whatsappURL =
         "https://wa.me/917812821216?text=" +
         encodeURIComponent(whatsappMessage);
 
-
+      // Open WhatsApp immediately so browser popup blockers do not interfere.
       window.open(
         whatsappURL,
         "_blank",
         "noopener,noreferrer"
       );
 
+      // Send the enquiry to Google Apps Script.
+      // no-cors is intentional: the browser does not need to read the response.
+      if (
+        GOOGLE_SCRIPT_URL &&
+        !GOOGLE_SCRIPT_URL.includes("PASTE_YOUR_GOOGLE_APPS_SCRIPT")
+      ) {
+
+        const formData = new URLSearchParams();
+
+        formData.append("source", "Website");
+        formData.append("parentName", parentName);
+        formData.append("patientName", patientName);
+        formData.append("age", age);
+        formData.append("phone", phone);
+        formData.append("therapy", therapy);
+        formData.append("preferredDate", date);
+        formData.append("preferredTime", time);
+        formData.append("message", message);
+        formData.append("pageUrl", window.location.href);
+
+        fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+          },
+          body: formData.toString()
+        }).catch(function (error) {
+          console.error("Google Sheet submission failed:", error);
+        });
+
+      } else {
+        console.warn(
+          "Google Apps Script URL has not been configured yet."
+        );
+      }
+
+      alert(
+        "Thank you. Your enquiry has been prepared for WhatsApp and submitted to the clinic."
+      );
+
+      appointmentForm.reset();
     });
 
 

@@ -2204,7 +2204,7 @@
 
               <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Enter phone number" inputmode="tel" minlength="10" maxlength="15" required>
+                <input type="tel" id="phone" placeholder="Enter 10-digit mobile number" inputmode="numeric" autocomplete="tel" minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" required>
               </div>
 
               <div class="form-group">
@@ -2569,6 +2569,14 @@
     const appointmentForm =
       document.getElementById("appointmentForm");
 
+    const phoneInput =
+      document.getElementById("phone");
+
+    // Allow only digits and limit the field to exactly 10 digits.
+    phoneInput.addEventListener("input", function () {
+      this.value = this.value.replace(/\D/g, "").slice(0, 10);
+    });
+
     appointmentForm.addEventListener("submit", function (event) {
 
       // Do not submit or open WhatsApp until every required field passes validation.
@@ -2602,7 +2610,8 @@
 
       // Extra validation for values that may technically be non-empty but invalid.
       const ageNumber = Number(age);
-      const phoneDigits = phone.replace(/\D/g, "");
+      // Indian mobile number must be exactly 10 digits, without +91/country code.
+      const phoneDigits = phone;
 
       if (
         !parentName ||
@@ -2624,8 +2633,8 @@
         return;
       }
 
-      if (phoneDigits.length < 10 || phoneDigits.length > 15) {
-        alert("Please enter a valid phone number.");
+      if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) {
+        alert("Please enter a valid 10-digit Indian mobile number without country code (for example, 9876543210).");
         document.getElementById("phone").focus();
         return;
       }

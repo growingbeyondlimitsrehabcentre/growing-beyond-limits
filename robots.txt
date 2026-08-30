@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/sitemap.xml

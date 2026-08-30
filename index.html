@@ -1,410 +1,478 @@
-/****************************************************
- * GROWING BEYOND LIMITS REHAB CENTER
- * WEBSITE JAVASCRIPT
- ****************************************************/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Growing Beyond Limits Rehab Center</title>
+
+    <!-- Your CSS -->
+    <style>
+        /* Your existing CSS goes here */
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         YOUR WEBSITE HTML
+    ====================================================== -->
+
+    <!-- Your existing website HTML goes here -->
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
-const mobileMenu = document.getElementById("mobileMenu");
-const navLinks = document.getElementById("navLinks");
+    <script>
 
-mobileMenu.addEventListener("click", function () {
-    navLinks.classList.toggle("active");
+        /****************************************************
+         * GROWING BEYOND LIMITS REHAB CENTER
+         * APPOINTMENT SYSTEM
+         ****************************************************/
 
-    const icon = mobileMenu.querySelector("i");
+        /* =====================================================
+           MOBILE MENU
+        ===================================================== */
 
-    if (navLinks.classList.contains("active")) {
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-xmark");
-    } else {
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-    }
-});
+        const mobileMenu =
+            document.getElementById("mobileMenu");
 
-
-/* =====================================================
-   CLOSE MOBILE MENU AFTER CLICK
-===================================================== */
-
-document.querySelectorAll("#navLinks a").forEach(function (link) {
-    link.addEventListener("click", function () {
-        navLinks.classList.remove("active");
-
-        const icon = mobileMenu.querySelector("i");
-
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-    });
-});
+        const navLinks =
+            document.getElementById("navLinks");
 
 
-/* =====================================================
-   GOOGLE APPS SCRIPT
-===================================================== */
+        mobileMenu.addEventListener("click", function () {
 
-const GOOGLE_SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyRPqWZ_7ZONDEhUsKzHEvwFbvfAGlVZIIA57jCayNgQIXwO8uB8-ZioL8Trt5ijHqp/exec";
+            navLinks.classList.toggle("active");
 
+            const icon =
+                mobileMenu.querySelector("i");
 
-/* =====================================================
-   APPOINTMENT FORM
-===================================================== */
+            if (navLinks.classList.contains("active")) {
 
-const appointmentForm =
-    document.getElementById("appointmentForm");
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-xmark");
 
-const phoneInput =
-    document.getElementById("phone");
+            } else {
 
-const emailInput =
-    document.getElementById("email");
+                icon.classList.remove("fa-xmark");
+                icon.classList.add("fa-bars");
 
-const visitTypeInput =
-    document.getElementById("visitType");
+            }
 
-const homeLocationGroup =
-    document.getElementById("homeLocationGroup");
-
-const homeLocationInput =
-    document.getElementById("homeLocation");
+        });
 
 
-/* =====================================================
-   HOME VISIT FIELDS
-===================================================== */
+        /* =====================================================
+           CLOSE MOBILE MENU AFTER CLICK
+        ===================================================== */
 
-function updateHomeVisitFields() {
-    const isHomeVisit =
-        visitTypeInput.value === "Home Visit";
+        document
+            .querySelectorAll("#navLinks a")
+            .forEach(function (link) {
 
-    homeLocationGroup.style.display =
-        isHomeVisit ? "block" : "none";
+                link.addEventListener("click", function () {
 
-    homeLocationInput.required =
-        isHomeVisit;
+                    navLinks.classList.remove("active");
 
-    if (!isHomeVisit) {
-        homeLocationInput.value = "";
-    }
-}
+                    const icon =
+                        mobileMenu.querySelector("i");
 
-visitTypeInput.addEventListener(
-    "change",
-    updateHomeVisitFields
-);
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa-bars");
 
-updateHomeVisitFields();
+                });
+
+            });
 
 
-/* =====================================================
-   SUBMIT BUTTON
-===================================================== */
+        /* =====================================================
+           GOOGLE APPS SCRIPT
+        ===================================================== */
 
-const submitBtn =
-    document.getElementById("submitBtn");
-
-
-/* =====================================================
-   PHONE INPUT
-===================================================== */
-
-phoneInput.addEventListener("input", function () {
-    this.value = this.value
-        .replace(/\D/g, "")
-        .slice(0, 10);
-});
+        const GOOGLE_SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbyRPqWZ_7ZONDEhUsKzHEvwFbvfAGlVZIIA57jCayNgQIXwO8uB8-ZioL8Trt5ijHqp/exec";
 
 
-/* =====================================================
-   EMAIL INPUT
-===================================================== */
+        /* =====================================================
+           APPOINTMENT FORM
+        ===================================================== */
 
-emailInput.addEventListener("input", function () {
-    /*
-     * Remove spaces from email address.
-     * Convert email to lowercase.
-     */
-    this.value = this.value
-        .replace(/\s/g, "")
-        .toLowerCase();
-});
+        const appointmentForm =
+            document.getElementById("appointmentForm");
 
+        const phoneInput =
+            document.getElementById("phone");
 
-/* =====================================================
-   EMAIL VALIDATION
-===================================================== */
+        const emailInput =
+            document.getElementById("email");
 
-function isValidEmail(email) {
-    const emailPattern =
-        /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+        const visitTypeInput =
+            document.getElementById("visitType");
 
-    return emailPattern.test(email);
-}
+        const homeLocationGroup =
+            document.getElementById("homeLocationGroup");
 
+        const homeLocationInput =
+            document.getElementById("homeLocation");
 
-/* =====================================================
-   APPOINTMENT FORM SUBMIT
-===================================================== */
-
-appointmentForm.addEventListener(
-    "submit",
-    function (event) {
-
-        event.preventDefault();
+        const submitBtn =
+            document.getElementById("submitBtn");
 
 
-        /* ===============================================
-           BROWSER VALIDATION
-        =============================================== */
+        /* =====================================================
+           HOME VISIT FIELDS
+        ===================================================== */
 
-        if (!appointmentForm.reportValidity()) {
-            return;
+        function updateHomeVisitFields() {
+
+            const isHomeVisit =
+                visitTypeInput.value === "Home Visit";
+
+            homeLocationGroup.style.display =
+                isHomeVisit ? "block" : "none";
+
+            homeLocationInput.required =
+                isHomeVisit;
+
+            if (!isHomeVisit) {
+
+                homeLocationInput.value = "";
+
+            }
+
         }
 
 
-        /* ===============================================
-           GET FORM VALUES
-        =============================================== */
+        visitTypeInput.addEventListener(
+            "change",
+            updateHomeVisitFields
+        );
 
-        const parentName =
-            document
-                .getElementById("parentName")
-                .value
-                .trim();
-
-        const patientName =
-            document
-                .getElementById("patientName")
-                .value
-                .trim();
-
-        const age =
-            document
-                .getElementById("age")
-                .value
-                .trim();
-
-        const phone =
-            document
-                .getElementById("phone")
-                .value
-                .trim();
-
-        const email =
-            document
-                .getElementById("email")
-                .value
-                .trim()
-                .toLowerCase();
-
-        const gender =
-            document
-                .getElementById("gender")
-                .value;
-
-        const visitType =
-            document
-                .getElementById("visitType")
-                .value;
-
-        const homeLocation =
-            document
-                .getElementById("homeLocation")
-                .value
-                .trim();
-
-        const therapy =
-            document
-                .getElementById("therapy")
-                .value;
-
-        const date =
-            document
-                .getElementById("date")
-                .value;
-
-        const time =
-            document
-                .getElementById("time")
-                .value;
-
-        const message =
-            document
-                .getElementById("message")
-                .value
-                .trim();
+        updateHomeVisitFields();
 
 
-        /* ===============================================
-           REQUIRED FIELD VALIDATION
-        =============================================== */
+        /* =====================================================
+           PHONE INPUT
+        ===================================================== */
 
-        if (
-            !parentName ||
-            !patientName ||
-            !age ||
-            !phone ||
-            !email ||
-            !gender ||
-            !visitType ||
-            (visitType === "Home Visit" && !homeLocation) ||
-            !therapy ||
-            !date ||
-            !time ||
-            !message
-        ) {
-            alert(
-                "Please complete all appointment fields, including your email address, before submitting."
-            );
+        phoneInput.addEventListener(
+            "input",
+            function () {
 
-            return;
-        }
+                this.value =
+                    this.value
+                        .replace(/\D/g, "")
+                        .slice(0, 10);
+
+            }
+        );
 
 
-        /* ===============================================
-           HOME VISIT LOCATION VALIDATION
-        =============================================== */
+        /* =====================================================
+           EMAIL INPUT
+        ===================================================== */
 
-        if (
-            visitType === "Home Visit" &&
-            homeLocation.length < 5
-        ) {
-            alert(
-                "Please enter the complete location for the home visit."
-            );
+        emailInput.addEventListener(
+            "input",
+            function () {
 
-            document
-                .getElementById("homeLocation")
-                .focus();
+                this.value =
+                    this.value
+                        .replace(/\s/g, "")
+                        .toLowerCase();
 
-            return;
-        }
+            }
+        );
 
 
-        /* ===============================================
-           AGE VALIDATION
-        =============================================== */
-
-        const ageNumber = Number(age);
-
-        if (
-            !Number.isInteger(ageNumber) ||
-            ageNumber < 0 ||
-            ageNumber > 120
-        ) {
-            alert(
-                "Please enter a valid patient age."
-            );
-
-            document
-                .getElementById("age")
-                .focus();
-
-            return;
-        }
-
-
-        /* ===============================================
-           PHONE VALIDATION
-        =============================================== */
-
-        const phoneDigits = phone;
-
-        if (!/^[6-9][0-9]{9}$/.test(phoneDigits)) {
-            alert(
-                "Please enter a valid 10-digit Indian mobile number without country code (for example, 9876543210)."
-            );
-
-            document
-                .getElementById("phone")
-                .focus();
-
-            return;
-        }
-
-
-        /* ===============================================
+        /* =====================================================
            EMAIL VALIDATION
-        =============================================== */
+        ===================================================== */
 
-        if (!isValidEmail(email)) {
-            alert(
-                "Please enter a valid email address."
-            );
+        function isValidEmail(email) {
 
-            emailInput.focus();
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
-            return;
+            return emailPattern.test(email);
+
         }
 
 
-        /* ===============================================
-           MESSAGE VALIDATION
-        =============================================== */
+        /* =====================================================
+           APPOINTMENT FORM SUBMIT
+        ===================================================== */
 
-        if (message.length < 2) {
-            alert(
-                "Please enter some details about your enquiry."
-            );
+        appointmentForm.addEventListener(
+            "submit",
+            function (event) {
 
-            document
-                .getElementById("message")
-                .focus();
-
-            return;
-        }
+                event.preventDefault();
 
 
-        /* ===============================================
-           DATE VALIDATION
-        =============================================== */
+                /* =============================================
+                   BROWSER VALIDATION
+                ============================================= */
 
-        const selectedDate =
-            new Date(date + "T00:00:00");
-
-        const selectedDay =
-            selectedDate.getDay();
-
-        if (
-            selectedDay === 0 ||
-            selectedDay === 6
-        ) {
-            alert(
-                "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
-            );
-
-            document
-                .getElementById("date")
-                .focus();
-
-            return;
-        }
-
-
-        /* ===============================================
-           FORMAT DATE
-        =============================================== */
-
-        const formattedDate =
-            selectedDate.toLocaleDateString(
-                "en-IN",
-                {
-                    day: "2-digit",
-                    month: "2-digit",
-                    year: "numeric"
+                if (!appointmentForm.reportValidity()) {
+                    return;
                 }
-            );
 
 
-        /* ===============================================
-           CREATE WHATSAPP MESSAGE
-        =============================================== */
+                /* =============================================
+                   GET FORM VALUES
+                ============================================= */
 
-        const whatsappMessage = `Hello Dr Jeeva A,
+                const parentName =
+                    document
+                        .getElementById("parentName")
+                        .value
+                        .trim();
+
+                const patientName =
+                    document
+                        .getElementById("patientName")
+                        .value
+                        .trim();
+
+                const age =
+                    document
+                        .getElementById("age")
+                        .value
+                        .trim();
+
+                const phone =
+                    document
+                        .getElementById("phone")
+                        .value
+                        .trim();
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim()
+                        .toLowerCase();
+
+                const gender =
+                    document
+                        .getElementById("gender")
+                        .value;
+
+                const visitType =
+                    document
+                        .getElementById("visitType")
+                        .value;
+
+                const homeLocation =
+                    document
+                        .getElementById("homeLocation")
+                        .value
+                        .trim();
+
+                const therapy =
+                    document
+                        .getElementById("therapy")
+                        .value;
+
+                const date =
+                    document
+                        .getElementById("date")
+                        .value;
+
+                const time =
+                    document
+                        .getElementById("time")
+                        .value;
+
+                const message =
+                    document
+                        .getElementById("message")
+                        .value
+                        .trim();
+
+
+                /* =============================================
+                   REQUIRED FIELD VALIDATION
+                ============================================= */
+
+                if (
+                    !parentName ||
+                    !patientName ||
+                    !age ||
+                    !phone ||
+                    !email ||
+                    !gender ||
+                    !visitType ||
+                    (
+                        visitType === "Home Visit" &&
+                        !homeLocation
+                    ) ||
+                    !therapy ||
+                    !date ||
+                    !time ||
+                    !message
+                ) {
+
+                    alert(
+                        "Please complete all appointment fields, including your email address, before submitting."
+                    );
+
+                    return;
+                }
+
+
+                /* =============================================
+                   HOME VISIT LOCATION VALIDATION
+                ============================================= */
+
+                if (
+                    visitType === "Home Visit" &&
+                    homeLocation.length < 5
+                ) {
+
+                    alert(
+                        "Please enter the complete location for the home visit."
+                    );
+
+                    homeLocationInput.focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   AGE VALIDATION
+                ============================================= */
+
+                const ageNumber =
+                    Number(age);
+
+                if (
+                    !Number.isInteger(ageNumber) ||
+                    ageNumber < 0 ||
+                    ageNumber > 120
+                ) {
+
+                    alert(
+                        "Please enter a valid patient age."
+                    );
+
+                    document
+                        .getElementById("age")
+                        .focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   PHONE VALIDATION
+                ============================================= */
+
+                if (
+                    !/^[6-9][0-9]{9}$/.test(phone)
+                ) {
+
+                    alert(
+                        "Please enter a valid 10-digit Indian mobile number without country code (for example, 9876543210)."
+                    );
+
+                    phoneInput.focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   EMAIL VALIDATION
+                ============================================= */
+
+                if (!isValidEmail(email)) {
+
+                    alert(
+                        "Please enter a valid email address."
+                    );
+
+                    emailInput.focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   MESSAGE VALIDATION
+                ============================================= */
+
+                if (message.length < 2) {
+
+                    alert(
+                        "Please enter some details about your enquiry."
+                    );
+
+                    document
+                        .getElementById("message")
+                        .focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   DATE VALIDATION
+                ============================================= */
+
+                const selectedDate =
+                    new Date(
+                        date + "T00:00:00"
+                    );
+
+                const selectedDay =
+                    selectedDate.getDay();
+
+
+                if (
+                    selectedDay === 0 ||
+                    selectedDay === 6
+                ) {
+
+                    alert(
+                        "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
+                    );
+
+                    document
+                        .getElementById("date")
+                        .focus();
+
+                    return;
+                }
+
+
+                /* =============================================
+                   FORMAT DATE
+                ============================================= */
+
+                const formattedDate =
+                    selectedDate.toLocaleDateString(
+                        "en-IN",
+                        {
+                            day: "2-digit",
+                            month: "2-digit",
+                            year: "numeric"
+                        }
+                    );
+
+
+                /* =============================================
+                   WHATSAPP MESSAGE
+                ============================================= */
+
+                const whatsappMessage =
+`Hello Dr Jeeva A,
 
 I would like to enquire about an appointment.
 
@@ -430,274 +498,270 @@ Thank you.
 Growing Beyond Limits Rehab Center`;
 
 
-        /* ===============================================
-           CREATE WHATSAPP URL
-        =============================================== */
+                /* =============================================
+                   WHATSAPP URL
+                ============================================= */
 
-        const whatsappURL =
-            "https://wa.me/917812821216?text=" +
-            encodeURIComponent(whatsappMessage);
-
-
-        /* ===============================================
-           OPEN WHATSAPP
-        =============================================== */
-
-        window.open(
-            whatsappURL,
-            "_blank",
-            "noopener,noreferrer"
-        );
-
-
-        /* ===============================================
-           DISABLE BUTTON
-        =============================================== */
-
-        submitBtn.disabled = true;
-
-        submitBtn.innerHTML =
-            '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
-
-
-        /* ===============================================
-           SEND DATA TO GOOGLE APPS SCRIPT
-        =============================================== */
-
-        if (
-            GOOGLE_SCRIPT_URL &&
-            !GOOGLE_SCRIPT_URL.includes(
-                "PASTE_YOUR_GOOGLE_APPS_SCRIPT"
-            )
-        ) {
-
-            const formData =
-                new URLSearchParams();
-
-
-            formData.append(
-                "source",
-                "Website"
-            );
-
-            formData.append(
-                "parentName",
-                parentName
-            );
-
-            formData.append(
-                "patientName",
-                patientName
-            );
-
-            formData.append(
-                "age",
-                age
-            );
-
-            formData.append(
-                "phone",
-                phone
-            );
-
-            formData.append(
-                "email",
-                email
-            );
-
-            formData.append(
-                "gender",
-                gender
-            );
-
-            formData.append(
-                "visitType",
-                visitType
-            );
-
-            formData.append(
-                "homeLocation",
-                visitType === "Home Visit"
-                    ? homeLocation
-                    : ""
-            );
-
-            formData.append(
-                "therapy",
-                therapy
-            );
-
-            formData.append(
-                "preferredDate",
-                date
-            );
-
-            formData.append(
-                "preferredTime",
-                time
-            );
-
-            formData.append(
-                "message",
-                message
-            );
-
-            formData.append(
-                "pageUrl",
-                window.location.href
-            );
-
-
-            /* ===========================================
-               SEND REQUEST
-            =========================================== */
-
-            fetch(
-                GOOGLE_SCRIPT_URL,
-                {
-                    method: "POST",
-
-                    mode: "no-cors",
-
-                    headers: {
-                        "Content-Type":
-                            "application/x-www-form-urlencoded;charset=UTF-8"
-                    },
-
-                    body:
-                        formData.toString()
-                }
-            )
-                .then(function () {
-
-                    console.log(
-                        "Appointment enquiry submitted successfully."
+                const whatsappURL =
+                    "https://wa.me/917812821216?text=" +
+                    encodeURIComponent(
+                        whatsappMessage
                     );
 
-                })
-                .catch(function (error) {
 
-                    console.error(
-                        "Google Sheet submission failed:",
-                        error
+                /* =============================================
+                   OPEN WHATSAPP
+                ============================================= */
+
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+
+                /* =============================================
+                   DISABLE SUBMIT BUTTON
+                ============================================= */
+
+                submitBtn.disabled = true;
+
+                submitBtn.innerHTML =
+                    '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+
+                /* =============================================
+                   SEND DATA TO GOOGLE SHEETS
+                ============================================= */
+
+                if (
+                    GOOGLE_SCRIPT_URL &&
+                    !GOOGLE_SCRIPT_URL.includes(
+                        "PASTE_YOUR_GOOGLE_APPS_SCRIPT"
+                    )
+                ) {
+
+                    const formData =
+                        new URLSearchParams();
+
+
+                    formData.append(
+                        "source",
+                        "Website"
                     );
 
-                })
-                .finally(function () {
+                    formData.append(
+                        "parentName",
+                        parentName
+                    );
+
+                    formData.append(
+                        "patientName",
+                        patientName
+                    );
+
+                    formData.append(
+                        "age",
+                        age
+                    );
+
+                    formData.append(
+                        "phone",
+                        phone
+                    );
+
+                    formData.append(
+                        "email",
+                        email
+                    );
+
+                    formData.append(
+                        "gender",
+                        gender
+                    );
+
+                    formData.append(
+                        "visitType",
+                        visitType
+                    );
+
+                    formData.append(
+                        "homeLocation",
+                        visitType === "Home Visit"
+                            ? homeLocation
+                            : ""
+                    );
+
+                    formData.append(
+                        "therapy",
+                        therapy
+                    );
+
+                    formData.append(
+                        "preferredDate",
+                        date
+                    );
+
+                    formData.append(
+                        "preferredTime",
+                        time
+                    );
+
+                    formData.append(
+                        "message",
+                        message
+                    );
+
+                    formData.append(
+                        "pageUrl",
+                        window.location.href
+                    );
+
+
+                    fetch(
+                        GOOGLE_SCRIPT_URL,
+                        {
+                            method: "POST",
+
+                            mode: "no-cors",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/x-www-form-urlencoded;charset=UTF-8"
+                            },
+
+                            body:
+                                formData.toString()
+                        }
+                    )
+                        .then(function () {
+
+                            console.log(
+                                "Appointment enquiry submitted successfully."
+                            );
+
+                        })
+                        .catch(function (error) {
+
+                            console.error(
+                                "Google Sheet submission failed:",
+                                error
+                            );
+
+                        })
+                        .finally(function () {
+
+                            submitBtn.disabled = false;
+
+                            submitBtn.innerHTML =
+                                '<i class="fa-brands fa-whatsapp"></i> Send Appointment Enquiry on WhatsApp';
+
+                        });
+
+                } else {
+
+                    console.warn(
+                        "Google Apps Script URL has not been configured yet."
+                    );
 
                     submitBtn.disabled = false;
 
                     submitBtn.innerHTML =
                         '<i class="fa-brands fa-whatsapp"></i> Send Appointment Enquiry on WhatsApp';
 
-                });
+                }
 
 
-        } else {
+                /* =============================================
+                   SUCCESS MESSAGE
+                ============================================= */
 
-            console.warn(
-                "Google Apps Script URL has not been configured yet."
-            );
-
-            submitBtn.disabled = false;
-
-            submitBtn.innerHTML =
-                '<i class="fa-brands fa-whatsapp"></i> Send Appointment Enquiry on WhatsApp';
-        }
+                alert(
+                    "Thank you. Your appointment enquiry has been submitted. Please check WhatsApp for the enquiry message."
+                );
 
 
-        /* ===============================================
-           SUCCESS MESSAGE
-        =============================================== */
+                /* =============================================
+                   RESET FORM
+                ============================================= */
 
-        alert(
-            "Thank you. Your appointment enquiry has been submitted. Please check WhatsApp for the enquiry message."
+                appointmentForm.reset();
+
+            }
         );
 
 
-        /* ===============================================
-           RESET FORM
-        =============================================== */
+        /* =====================================================
+           PREVENT WEEKEND APPOINTMENT DATES
+        ===================================================== */
 
-        appointmentForm.reset();
-
-    }
-);
+        const dateInput =
+            document.getElementById("date");
 
 
-/* =====================================================
-   PREVENT WEEKEND APPOINTMENT DATES
-===================================================== */
+        dateInput.addEventListener(
+            "change",
+            function () {
 
-const dateInput =
-    document.getElementById("date");
-
-dateInput.addEventListener(
-    "change",
-    function () {
-
-        if (!this.value) {
-            return;
-        }
+                if (!this.value) {
+                    return;
+                }
 
 
-        const selectedDate =
-            new Date(
-                this.value + "T00:00:00"
-            );
+                const selectedDate =
+                    new Date(
+                        this.value + "T00:00:00"
+                    );
+
+                const day =
+                    selectedDate.getDay();
+
+
+                if (
+                    day === 0 ||
+                    day === 6
+                ) {
+
+                    alert(
+                        "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
+                    );
+
+                    this.value = "";
+
+                }
+
+            }
+        );
+
+
+        /* =====================================================
+           SET MINIMUM DATE
+        ===================================================== */
+
+        const today =
+            new Date();
+
+        const year =
+            today.getFullYear();
+
+        const month =
+            String(
+                today.getMonth() + 1
+            ).padStart(2, "0");
 
         const day =
-            selectedDate.getDay();
+            String(
+                today.getDate()
+            ).padStart(2, "0");
 
+        const todayString =
+            `${year}-${month}-${day}`;
 
-        if (
-            day === 0 ||
-            day === 6
-        ) {
+        dateInput.min =
+            todayString;
 
-            alert(
-                "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
-            );
+    </script>
 
-            this.value = "";
-        }
-    }
-);
+</body>
 
-
-/* =====================================================
-   SET MINIMUM DATE
-===================================================== */
-
-/*
- * Prevent patients from selecting
- * a date in the past.
- */
-
-const today =
-    new Date();
-
-const year =
-    today.getFullYear();
-
-const month =
-    String(
-        today.getMonth() + 1
-    ).padStart(
-        2,
-        "0"
-    );
-
-const day =
-    String(
-        today.getDate()
-    ).padStart(
-        2,
-        "0"
-    );
-
-const todayString =
-    `${year}-${month}-${day}`;
-
-dateInput.min =
-    todayString;
+</html>

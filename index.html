@@ -1908,6 +1908,20 @@
 
   </style>
 
+
+<style>
+  .team-card { transition: transform .25s ease, box-shadow .25s ease; }
+  .team-card:hover { transform: translateY(-5px); box-shadow: 0 22px 50px rgba(7,27,53,.12) !important; }
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: 1fr !important; }
+    .team-card > div { padding: 22px !important; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .team-card { transition: none; }
+    .team-card:hover { transform: none; }
+  }
+</style>
+
 </head>
 
 
@@ -1972,7 +1986,7 @@
         </a>
 
         <a href="#approach">
-          Approach
+          How It Works
         </a>
 
         <a href="#therapist">
@@ -2452,109 +2466,63 @@
 
       <div class="container">
 
-
         <div class="section-label">
-          OUR APPROACH
+          HOW THERAPY WORKS
         </div>
 
-
         <h2 class="section-title">
-
-          Progress happens<br>
-
-          one step at a time.
-
+          A clear path<br>
+          toward progress.
         </h2>
 
+        <p class="section-intro">
+          From your first enquiry to ongoing progress reviews, we keep the therapy journey
+          clear, purposeful and centered around the individual's needs and goals.
+        </p>
 
         <div class="steps">
 
-
           <div class="step">
-
-            <div class="step-number">
-              01
-            </div>
-
-            <h3>
-              Understand
-            </h3>
-
-            <p>
-
-              Understand the individual's needs, strengths, goals and
-              everyday challenges.
-
-            </p>
-
+            <div class="step-number">01</div>
+            <h3>Enquiry</h3>
+            <p>Contact us through WhatsApp, phone or the appointment form and tell us how we can help.</p>
           </div>
 
-
           <div class="step">
-
-            <div class="step-number">
-              02
-            </div>
-
-            <h3>
-              Plan
-            </h3>
-
-            <p>
-
-              Develop a purposeful approach focused on meaningful,
-              practical outcomes.
-
-            </p>
-
+            <div class="step-number">02</div>
+            <h3>Initial Assessment</h3>
+            <p>Understand strengths, needs, challenges and meaningful goals through an individualized assessment.</p>
           </div>
 
-
           <div class="step">
-
-            <div class="step-number">
-              03
-            </div>
-
-            <h3>
-              Practice
-            </h3>
-
-            <p>
-
-              Build skills through structured and meaningful therapeutic
-              activities.
-
-            </p>
-
+            <div class="step-number">03</div>
+            <h3>Personalized Plan</h3>
+            <p>Create a purposeful therapy plan focused on practical, functional and measurable goals.</p>
           </div>
 
-
           <div class="step">
-
-            <div class="step-number">
-              04
-            </div>
-
-            <h3>
-              Grow
-            </h3>
-
-            <p>
-
-              Encourage confidence, participation and greater independence.
-
-            </p>
-
+            <div class="step-number">04</div>
+            <h3>Therapy & Family Support</h3>
+            <p>Build skills through structured therapy with practical guidance for families and caregivers.</p>
           </div>
 
+          <div class="step">
+            <div class="step-number">05</div>
+            <h3>Progress Review</h3>
+            <p>Review progress, celebrate gains and adjust goals or therapy strategies when needed.</p>
+          </div>
 
+        </div>
+
+        <div style="text-align:center; margin-top:42px;">
+          <a href="#appointment" class="btn btn-primary">
+            Book an Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
         </div>
 
       </div>
 
     </section>
-
 
 
     <!-- =====================================================
@@ -3314,6 +3282,56 @@
 
 
     <!-- =====================================================
+     OUR TEAM
+====================================================== -->
+
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-label">OUR TEAM</div>
+    <h2 class="section-title">People behind the care.</h2>
+    <p class="section-intro">
+      Meet the professional at the heart of Growing Beyond Limits Rehab Center,
+      with care centered around meaningful goals, participation and greater independence.
+    </p>
+
+    <div class="team-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));max-width:1100px;margin:42px auto 0;gap:28px;">
+      <article class="team-card" style="background:#fff;border:1px solid rgba(7,27,53,.10);border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(7,27,53,.08);">
+        <div style="padding:28px;">
+          <img src="assets/therapist.png" alt="Dr Jeeva A, Occupational Therapist" style="width:100%;max-width:260px;aspect-ratio:1/1;object-fit:cover;border-radius:20px;display:block;margin:0 auto 24px;">
+          <div class="section-label" style="text-align:left;margin-bottom:10px;">OCCUPATIONAL THERAPY</div>
+          <h3 style="font-size:28px;margin:0 0 10px;">Dr Jeeva A</h3>
+          <p style="margin:0 0 18px;font-weight:600;">Occupational Therapist</p>
+          <p style="margin:0;line-height:1.75;">
+            Providing individualized occupational therapy focused on meaningful daily-life skills,
+            confidence, participation and building greater independence.
+          </p>
+          <div style="margin-top:24px;">
+            <a href="#appointment" class="btn btn-primary">Book an Assessment</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="team-card" style="background:#fff;border:1px solid rgba(7,27,53,.10);border-radius:24px;overflow:hidden;box-shadow:0 16px 40px rgba(7,27,53,.08);">
+        <div style="padding:28px;">
+          <img src="assets/thulasi.png" alt="Dr Thulasi A, MPT, Neuro Physiotherapist" style="width:100%;max-width:260px;aspect-ratio:1/1;object-fit:cover;border-radius:20px;display:block;margin:0 auto 24px;">
+          <div class="section-label" style="text-align:left;margin-bottom:10px;">PHYSIOTHERAPY</div>
+          <h3 style="font-size:28px;margin:0 0 10px;">Dr Thulasi A</h3>
+          <p style="margin:0 0 8px;font-weight:600;">Physiotherapist · MPT</p>
+          <p style="margin:0 0 18px;font-weight:600;">Neuro Physiotherapy</p>
+          <p style="margin:0;line-height:1.75;">
+            Providing physiotherapy care with a focus on neuro rehabilitation,
+            individualized goals, functional movement and greater independence.
+          </p>
+          <div style="margin-top:24px;">
+            <a href="#appointment" class="btn btn-primary">Book an Assessment</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================
          FAQ
     ====================================================== -->
 

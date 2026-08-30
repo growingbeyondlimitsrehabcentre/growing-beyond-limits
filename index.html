@@ -10,17 +10,17 @@
   >
 
   <title>
-    Occupational Therapy, Physiotherapy & Speech Therapy in Ambattur, Chennai | Growing Beyond Limits Rehab Center
+    Occupational Therapy, Physiotherapy, Speech Therapy & Audiology in Ambattur, Chennai | Growing Beyond Limits Rehab Center
   </title>
 
   <meta
     name="description"
-    content="Growing Beyond Limits Rehab Center in Ambattur, Chennai provides occupational therapy, physiotherapy and speech therapy focused on meaningful skills, communication, mobility, participation and greater independence."
+    content="Growing Beyond Limits Rehab Center in Ambattur, Chennai provides occupational therapy, physiotherapy, speech therapy and audiology services focused on communication, mobility, participation, hearing and greater independence."
   >
 
   <meta
     name="keywords"
-    content="Growing Beyond Limits Rehab Center, occupational therapy Ambattur, occupational therapy Chennai, physiotherapy Ambattur, physiotherapy Chennai, speech therapy Ambattur, speech therapy Chennai, rehabilitation centre Ambattur, occupational therapist Chennai, Dr Jeeva A"
+    content="Growing Beyond Limits Rehab Center, occupational therapy Ambattur, occupational therapy Chennai, physiotherapy Ambattur, physiotherapy Chennai, speech therapy Ambattur, speech therapy Chennai, audiology Ambattur, audiology Chennai, hearing assessment Ambattur, rehabilitation centre Ambattur, occupational therapist Chennai, Dr Jeeva A"
   >
 
   <meta
@@ -60,7 +60,7 @@
 
   <meta
     property="og:description"
-    content="Occupational therapy, physiotherapy and speech therapy in Ambattur, Chennai, focused on meaningful skills, communication, mobility, participation and greater independence."
+    content="Occupational therapy, physiotherapy, speech therapy and audiology in Ambattur, Chennai, focused on meaningful skills, communication, mobility, hearing, participation and greater independence."
   >
 
   <meta
@@ -95,7 +95,7 @@
 
   <meta
     name="twitter:description"
-    content="Occupational therapy, physiotherapy and speech therapy in Ambattur, Chennai, helping individuals build meaningful skills, communication, confidence and independence."
+    content="Occupational therapy, physiotherapy, speech therapy and audiology in Ambattur, Chennai, helping individuals build meaningful skills, communication, hearing, confidence and independence."
   >
 
   <meta
@@ -778,10 +778,13 @@
     }
 
     #occupationalTherapyCard { order: 1; }
-    #physiotherapyCard { order: 2; }
-    .service-card[data-therapy="Speech Therapy"] { order: 3; }
-    #otDetails { order: 4; }
-    #physioDetails { order: 5; }
+    #otDetails { order: 2; }
+    #physiotherapyCard { order: 3; }
+    #physioDetails { order: 4; }
+    .service-card[data-therapy="Speech Therapy"] { order: 5; }
+    #speechDetails { order: 6; }
+    .service-card[data-therapy="Audiology"] { order: 7; }
+    #audiologyDetails { order: 8; }
 
     .ot-detail-card {
       background: white;
@@ -2215,8 +2218,8 @@
 
         <p class="section-intro">
 
-          Personalized occupational therapy, physiotherapy and speech therapy
-          designed around meaningful goals, practical participation and progress.
+          Personalized occupational therapy, physiotherapy, speech therapy and audiology
+          designed around meaningful goals, communication, hearing, practical participation and progress.
 
         </p>
 
@@ -2269,7 +2272,7 @@
           </div>
 
           <!-- SPEECH THERAPY -->
-          <button type="button" class="service-card" data-therapy="Speech Therapy" aria-label="Select Speech Therapy and go to appointment enquiry">
+          <button type="button" class="service-card" id="speechTherapyCard" data-therapy="Speech Therapy" aria-expanded="false" aria-controls="speechDetails">
             <div class="service-icon">
               <i class="fa-solid fa-comments"></i>
             </div>
@@ -2279,10 +2282,55 @@
               understanding and participation in everyday life.
             </p>
             <span class="service-card-action">
-              Enquire about Speech Therapy
-              <i class="fa-solid fa-arrow-right"></i>
+              Explore Speech Therapy skills
+              <i class="fa-solid fa-chevron-down"></i>
             </span>
           </button>
+
+          <!-- SPEECH THERAPY DETAIL CARDS -->
+          <div class="ot-details" id="speechDetails">
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-volume-high"></i></div><div><h4>Speech sounds &amp; articulation</h4><p>Supporting clearer speech sound production and articulation for effective communication.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-language"></i></div><div><h4>Language skills</h4><p>Supporting understanding and use of language for everyday communication.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-book-open"></i></div><div><h4>Vocabulary &amp; sentence development</h4><p>Building vocabulary and developing age-appropriate sentence structure and expression.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-ear-listen"></i></div><div><h4>Receptive language</h4><p>Supporting the ability to understand words, questions, directions and spoken information.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-brain"></i></div><div><h4>Cognitive-communication skills</h4><p>Supporting attention, memory, organization, problem-solving and communication in daily life.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-people-group"></i></div><div><h4>Social communication</h4><p>Developing communication skills for interaction, conversation, social understanding and participation.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-microphone"></i></div><div><h4>Voice &amp; fluency</h4><p>Supporting functional voice use and smoother, more confident communication.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-tablet-screen-button"></i></div><div><h4>Alternative &amp; Augmentative Communication (AAC)</h4><p>Supporting communication through appropriate alternative and augmentative communication systems.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-child-reaching"></i></div><div><h4>Early communication</h4><p>Supporting early interaction, communication intent, gestures, sounds and emerging language skills.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-utensils"></i></div><div><h4>Feeding &amp; swallowing</h4><p>Supporting functional feeding and swallowing skills through individualized therapy approaches.</p></div></article>
+          </div>
+
+          <!-- AUDIOLOGY -->
+          <button type="button" class="service-card" id="audiologyCard" data-therapy="Audiology" aria-expanded="false" aria-controls="audiologyDetails">
+            <div class="service-icon">
+              <i class="fa-solid fa-ear-listen"></i>
+            </div>
+            <h3>Audiology</h3>
+            <p>
+              Hearing and communication support through assessment, hearing
+              management, listening skills and family guidance.
+            </p>
+            <span class="service-card-action">
+              Explore Audiology services
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </button>
+
+          <!-- AUDIOLOGY DETAIL CARDS -->
+          <div class="ot-details" id="audiologyDetails">
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-clipboard-check"></i></div><div><h4>Hearing assessment</h4><p>Comprehensive hearing assessment to understand hearing ability and communication needs.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-child"></i></div><div><h4>Pediatric hearing</h4><p>Hearing support for infants, children and young people across developmental stages.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-ear-deaf"></i></div><div><h4>Hearing loss management</h4><p>Individualized support and guidance for managing hearing loss and its impact on daily life.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-headphones"></i></div><div><h4>Hearing aids &amp; assistive devices</h4><p>Guidance with hearing aids and appropriate assistive listening devices to support communication.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-ear-listen"></i></div><div><h4>Listening &amp; communication skills</h4><p>Supporting listening strategies and effective communication in everyday environments.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-wave-square"></i></div><div><h4>Auditory processing</h4><p>Supporting assessment and strategies related to how the brain processes and uses auditory information.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-person-walking"></i></div><div><h4>Vestibular assessment</h4><p>Assessment of balance-related vestibular function to better understand dizziness and balance concerns.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-volume-xmark"></i></div><div><h4>Tinnitus management</h4><p>Supportive strategies and guidance for managing tinnitus and its impact on everyday wellbeing.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-school"></i></div><div><h4>Educational support</h4><p>Supporting access, listening and communication needs in educational settings.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-comments"></i></div><div><h4>Supporting communication</h4><p>Helping individuals use effective communication strategies across home, school and community settings.</p></div></article>
+            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-people-group"></i></div><div><h4>Family guidance</h4><p>Practical guidance for families to support hearing, listening and communication needs.</p></div></article>
+          </div>
 
           <!-- OCCUPATIONAL THERAPY DETAIL CARDS -->
           <div class="ot-details" id="otDetails">
@@ -3024,6 +3072,10 @@
                   </option>
 
                   <option>
+                    Audiology
+                  </option>
+
+                  <option>
                     Not Sure / Need Guidance
                   </option>
 
@@ -3651,6 +3703,18 @@
     const physioDetails =
       document.getElementById("physioDetails");
 
+    const speechTherapyCard =
+      document.getElementById("speechTherapyCard");
+
+    const speechDetails =
+      document.getElementById("speechDetails");
+
+    const audiologyCard =
+      document.getElementById("audiologyCard");
+
+    const audiologyDetails =
+      document.getElementById("audiologyDetails");
+
     occupationalTherapyCard.addEventListener("click", function () {
       const isOpen = otDetails.classList.toggle("open");
 
@@ -3677,7 +3741,47 @@
       }
     });
 
+    speechTherapyCard.addEventListener("click", function () {
+      const isOpen = speechDetails.classList.toggle("open");
+
+      speechTherapyCard.classList.toggle("active", isOpen);
+      speechTherapyCard.setAttribute("aria-expanded", String(isOpen));
+
+      const therapySelect = document.getElementById("therapy");
+
+      if (therapySelect) {
+        therapySelect.value = "Speech Therapy";
+      }
+
+      if (isOpen) {
+        setTimeout(function () {
+          speechDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 50);
+      }
+    });
+
+    audiologyCard.addEventListener("click", function () {
+      const isOpen = audiologyDetails.classList.toggle("open");
+
+      audiologyCard.classList.toggle("active", isOpen);
+      audiologyCard.setAttribute("aria-expanded", String(isOpen));
+
+      const therapySelect = document.getElementById("therapy");
+
+      if (therapySelect) {
+        therapySelect.value = "Audiology";
+      }
+
+      if (isOpen) {
+        setTimeout(function () {
+          audiologyDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 50);
+      }
+    });
+
     document.querySelectorAll(".service-card[data-therapy]").forEach(function (card) {
+      if (card.id === "speechTherapyCard" || card.id === "audiologyCard") return;
+
       card.addEventListener("click", function () {
         const therapyValue = card.getAttribute("data-therapy");
         const therapySelect = document.getElementById("therapy");
@@ -4330,7 +4434,7 @@ Growing Beyond Limits Rehab Center`;
 
     "name": "Growing Beyond Limits Rehab Center",
 
-    "description": "Growing Beyond Limits Rehab Center in Ambattur, Chennai provides occupational therapy, physiotherapy and speech therapy focused on meaningful skills, communication, mobility, participation and greater independence.",
+    "description": "Growing Beyond Limits Rehab Center in Ambattur, Chennai provides occupational therapy, physiotherapy, speech therapy and audiology services focused on communication, mobility, participation, hearing and greater independence.",
 
     "url": "https://growingbeyondlimitsrehabcentre.github.io/growing-beyond-limits/",
 
@@ -4445,6 +4549,22 @@ Growing Beyond Limits Rehab Center`;
             "@type": "Service",
 
             "name": "Speech Therapy",
+
+            "areaServed": "Ambattur, Chennai"
+
+          }
+
+        },
+
+        {
+
+          "@type": "Offer",
+
+          "itemOffered": {
+
+            "@type": "Service",
+
+            "name": "Audiology",
 
             "areaServed": "Ambattur, Chennai"
 

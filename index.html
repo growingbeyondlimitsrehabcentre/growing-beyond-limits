@@ -1408,6 +1408,42 @@
 
 
     /* =========================================================
+       APPOINTMENT & ENQUIRY UX UPGRADES
+    ========================================================= */
+
+    .appointment-next {
+      margin-top: 30px;
+      padding: 24px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      background: rgba(255,255,255,.05);
+    }
+
+    .appointment-next h3 { margin-bottom: 15px; font-size: 18px; }
+    .appointment-next-list { list-style: none; display: grid; gap: 12px; }
+    .appointment-next-list li { display:flex; gap:11px; color:#dce8f2; font-size:14px; line-height:1.55; }
+    .appointment-next-list i { color:#53d5ff; margin-top:4px; flex-shrink:0; }
+
+    .therapy-guidance {
+      display:none; margin-top:-8px; margin-bottom:18px; padding:13px 15px;
+      border:1px solid #d5eee5; border-radius:13px; background:#eff9f6;
+      color:#42667f; font-size:13px; line-height:1.6;
+    }
+    .therapy-guidance.show { display:block; }
+
+    .privacy-consent {
+      display:flex; align-items:flex-start; gap:10px; margin:3px 0 18px;
+      color:#54718e; font-size:13px; line-height:1.55;
+    }
+    .privacy-consent input { width:18px; height:18px; margin-top:2px; flex:0 0 auto; accent-color:var(--blue); }
+    .privacy-consent label { margin:0; cursor:pointer; }
+
+    @media(max-width:600px) {
+      .appointment-next { padding:20px; margin-top:24px; }
+    }
+
+
+    /* =========================================================
        FAQ
     ========================================================= */
 
@@ -2824,38 +2860,26 @@
 
 
           <p>
-
-            Send an appointment enquiry directly through WhatsApp.
-            Fill in the form and your information will be prepared as
-            a message for Dr Jeeva A.
-
+            Tell us a little about the person seeking support and the service you
+            are enquiring about. Your details will be prepared for the clinic and
+            opened in WhatsApp for direct communication.
           </p>
 
-
           <ul class="appointment-points">
-
-
-            <li>
-              ✓ Simple appointment enquiry
-            </li>
-
-
-            <li>
-              ✓ Direct WhatsApp communication
-            </li>
-
-
-            <li>
-              ✓ Monday – Friday availability
-            </li>
-
-
-            <li>
-              ✓ Purposeful, individualized care
-            </li>
-
-
+            <li>✓ Simple appointment enquiry</li>
+            <li>✓ Clinic and home visit options</li>
+            <li>✓ Monday – Friday appointment requests</li>
+            <li>✓ Direct WhatsApp communication</li>
           </ul>
+
+          <div class="appointment-next">
+            <h3>What happens next?</h3>
+            <ul class="appointment-next-list">
+              <li><i class="fa-solid fa-1"></i><span>Complete the enquiry form with your preferred details.</span></li>
+              <li><i class="fa-solid fa-2"></i><span>Your enquiry is prepared and WhatsApp opens with the details.</span></li>
+              <li><i class="fa-solid fa-3"></i><span>Send the WhatsApp message so the clinic can respond to your enquiry.</span></li>
+            </ul>
+          </div>
 
         </div>
 
@@ -3102,6 +3126,10 @@
 
               </div>
 
+              <div class="form-group full">
+                <div class="therapy-guidance" id="therapyGuidance" role="status" aria-live="polite"></div>
+              </div>
+
 
               <!-- DATE -->
 
@@ -3201,6 +3229,20 @@
               </div>
 
 
+              <!-- PRIVACY CONSENT -->
+
+              <div class="form-group full">
+                <div class="privacy-consent">
+                  <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                  <label for="privacyConsent">
+                    I confirm that the information provided is accurate and consent to
+                    Growing Beyond Limits Rehab Center using these details to respond
+                    to my appointment enquiry.
+                  </label>
+                </div>
+              </div>
+
+
               <!-- SUBMIT -->
 
               <div class="form-group full">
@@ -3227,8 +3269,8 @@
 
               Required fields must be completed. Email ID, gender, and
               "How can we help?" are optional. Home Visit Location becomes
-              required only when Home Visit is selected. Your enquiry will be
-              added to the clinic's Google Sheet and opened in WhatsApp.
+              required only when Home Visit is selected. Your enquiry is prepared
+              for WhatsApp and, when configured, submitted to the clinic's Google Sheet.
 
             </p>
 
@@ -3935,6 +3977,36 @@
 
 
     /* =====================================================
+       APPOINTMENT FORM GUIDANCE
+    ====================================================== */
+
+    const therapyInput = document.getElementById("therapy");
+    const therapyGuidance = document.getElementById("therapyGuidance");
+
+    const therapyGuidanceText = {
+      "Occupational Therapy": "For support with everyday skills, participation, confidence and greater independence.",
+      "Physiotherapy": "For movement, mobility, neuro rehabilitation and physical goals.",
+      "Speech Therapy": "For speech, language and communication needs.",
+      "Audiology": "For hearing-related assessment and support.",
+      "Not Sure / Need Guidance": "That's okay. Describe your concerns in the message field and the clinic can guide you toward the appropriate next step."
+    };
+
+    function updateTherapyGuidance() {
+      if (!therapyInput || !therapyGuidance) return;
+      const selected = therapyInput.value;
+      if (therapyGuidanceText[selected]) {
+        therapyGuidance.textContent = therapyGuidanceText[selected];
+        therapyGuidance.classList.add("show");
+      } else {
+        therapyGuidance.textContent = "";
+        therapyGuidance.classList.remove("show");
+      }
+    }
+
+    if (therapyInput) therapyInput.addEventListener("change", updateTherapyGuidance);
+
+
+    /* =====================================================
        APPOINTMENT FORM SUBMIT
     ====================================================== */
 
@@ -4037,6 +4109,10 @@
             .trim();
 
 
+        const privacyConsent =
+          document.getElementById("privacyConsent").checked;
+
+
 
         /* ===============================================
            REQUIRED FIELD VALIDATION
@@ -4051,11 +4127,14 @@
           (visitType === "Home Visit" && !homeLocation) ||
           !therapy ||
           !date ||
-          !time
+          !time ||
+          !privacyConsent
         ) {
 
           alert(
-            "Please complete all required appointment fields before submitting."
+            privacyConsent
+              ? "Please complete all required appointment fields before submitting."
+              : "Please confirm the consent checkbox before submitting your enquiry."
           );
 
           return;
@@ -4247,6 +4326,17 @@ Growing Beyond Limits Rehab Center`;
 
 
         /* ===============================================
+           PREPARE SUBMISSION STATE
+        ================================================ */
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fa-solid fa-spinner fa-spin"></i> Preparing enquiry...';
+
+        formStatus.classList.remove("show");
+
+
+        /* ===============================================
            OPEN WHATSAPP
         ================================================ */
 
@@ -4260,17 +4350,6 @@ Growing Beyond Limits Rehab Center`;
           formStatus.textContent = "Your enquiry is ready, but WhatsApp was blocked by the browser. Please allow pop-ups or use the WhatsApp button below.";
           formStatus.classList.add("show");
         }
-
-
-        /* ===============================================
-           DISABLE BUTTON
-        ================================================ */
-
-        submitBtn.disabled = true;
-
-        submitBtn.innerHTML =
-          '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
-
 
 
         /* ===============================================
@@ -4372,6 +4451,12 @@ Growing Beyond Limits Rehab Center`;
 
 
           formData.append(
+            "privacyConsent",
+            privacyConsent ? "Yes" : "No"
+          );
+
+
+          formData.append(
             "pageUrl",
             window.location.href
           );
@@ -4452,6 +4537,7 @@ Growing Beyond Limits Rehab Center`;
 
         appointmentForm.reset();
         updateHomeVisitFields();
+        updateTherapyGuidance();
         dateInput.min = todayString;
 
       }

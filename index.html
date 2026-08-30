@@ -1,862 +1,842 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
-    <title>Book an Appointment | Growing Beyond Limits Rehab Center</title>
+const mobileMenu =
+  document.getElementById("mobileMenu");
 
-    <meta name="description"
-          content="Book an appointment at Growing Beyond Limits Rehab Center for occupational therapy, physiotherapy and speech therapy.">
+const navLinks =
+  document.getElementById("navLinks");
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f8f7;
-            color: #243333;
-            line-height: 1.6;
-        }
+mobileMenu.addEventListener("click", function () {
 
-        header {
-            background: #ffffff;
-            padding: 18px 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
+  navLinks.classList.toggle("active");
 
-        .header-container {
-            max-width: 1100px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+  const icon =
+    mobileMenu.querySelector("i");
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #16796b;
-        }
+  if (navLinks.classList.contains("active")) {
 
-        .logo span {
-            display: block;
-            font-size: 13px;
-            font-weight: 400;
-            color: #666;
-        }
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
 
-        .hero {
-            background: linear-gradient(135deg, #16796b, #38a890);
-            color: white;
-            padding: 65px 20px;
-            text-align: center;
-        }
+  } else {
 
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
 
-        .hero p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 17px;
-        }
+  }
 
-        .appointment-section {
-            padding: 50px 20px;
-        }
+});
 
-        .appointment-container {
-            max-width: 900px;
-            margin: auto;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
-        }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+/* =====================================================
+   CLOSE MOBILE MENU AFTER CLICK
+===================================================== */
 
-        .section-title h2 {
-            color: #16796b;
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
+document
+  .querySelectorAll("#navLinks a")
+  .forEach(function (link) {
 
-        .section-title p {
-            color: #666;
-        }
+    link.addEventListener("click", function () {
 
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+      navLinks.classList.remove("active");
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+      const icon =
+        mobileMenu.querySelector("i");
 
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 7px;
-            color: #243333;
-        }
-
-        label span {
-            color: #e63946;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 13px 14px;
-            border: 1px solid #d5dddd;
-            border-radius: 8px;
-            font-size: 15px;
-            outline: none;
-            transition: 0.2s;
-            background: #fff;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #16796b;
-            box-shadow: 0 0 0 3px rgba(22,121,107,0.10);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .therapy-options {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-        }
-
-        .therapy-option {
-            position: relative;
-        }
-
-        .therapy-option input {
-            position: absolute;
-            opacity: 0;
-        }
-
-        .therapy-option label {
-            display: block;
-            padding: 15px;
-            border: 1px solid #d5dddd;
-            border-radius: 8px;
-            text-align: center;
-            cursor: pointer;
-            font-weight: 500;
-            transition: 0.2s;
-        }
-
-        .therapy-option input:checked + label {
-            border-color: #16796b;
-            background: #eaf7f4;
-            color: #16796b;
-            font-weight: 700;
-        }
-
-        .consent {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            margin: 20px 0;
-        }
-
-        .consent input {
-            width: auto;
-            margin-top: 5px;
-        }
-
-        .consent label {
-            font-weight: 400;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        .submit-btn {
-            width: 100%;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
-            background: #16796b;
-            color: white;
-            font-size: 17px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.2s;
-        }
-
-        .submit-btn:hover {
-            background: #105e53;
-        }
-
-        .submit-btn:disabled {
-            background: #9aaaa7;
-            cursor: not-allowed;
-        }
-
-        .message {
-            display: none;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .success {
-            background: #e7f7ee;
-            color: #176b3a;
-        }
-
-        .error {
-            background: #fdecec;
-            color: #a32323;
-        }
-
-        .privacy-note {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 13px;
-            color: #777;
-        }
-
-        footer {
-            background: #173b37;
-            color: white;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 700px) {
-
-            .hero h1 {
-                font-size: 32px;
-            }
-
-            .appointment-container {
-                padding: 25px 18px;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .therapy-options {
-                grid-template-columns: 1fr;
-            }
-
-            .header-container {
-                flex-direction: column;
-                gap: 8px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <div class="header-container">
-        <div class="logo">
-            Growing Beyond Limits
-            <span>Rehabilitation Center</span>
-        </div>
-    </div>
-</header>
-
-<section class="hero">
-    <h1>Book an Appointment</h1>
-    <p>
-        Take the first step toward better development, communication,
-        movement and independence. Schedule an appointment with our
-        rehabilitation team.
-    </p>
-</section>
-
-<section class="appointment-section">
-
-    <div class="appointment-container">
-
-        <div class="section-title">
-            <h2>Appointment Form</h2>
-            <p>Please provide your details and preferred appointment time.</p>
-        </div>
-
-        <div id="successMessage" class="message success">
-            Your appointment request has been submitted successfully.
-            We will contact you shortly.
-        </div>
-
-        <div id="errorMessage" class="message error">
-            Please check the form and complete all required fields.
-        </div>
-
-        <form id="appointmentForm">
-
-            <!-- Patient Information -->
-
-            <h3 style="margin-bottom:20px;color:#16796b;">
-                Patient Information
-            </h3>
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="patientName">
-                        Patient Name <span>*</span>
-                    </label>
-
-                    <input
-                        type="text"
-                        id="patientName"
-                        name="patientName"
-                        placeholder="Enter patient's full name"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="guardianName">
-                        Parent / Guardian Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="guardianName"
-                        name="guardianName"
-                        placeholder="Parent or guardian name">
-                </div>
-
-            </div>
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="dob">
-                        Date of Birth
-                    </label>
-
-                    <input
-                        type="date"
-                        id="dob"
-                        name="dob">
-                </div>
-
-                <div class="form-group">
-                    <label for="gender">
-                        Gender
-                    </label>
-
-                    <select id="gender" name="gender">
-                        <option value="">Select gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                        <option value="Prefer not to say">
-                            Prefer not to say
-                        </option>
-                    </select>
-                </div>
-
-            </div>
-
-            <!-- Contact Information -->
-
-            <h3 style="margin:20px 0;color:#16796b;">
-                Contact Information
-            </h3>
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="email">
-                        Email Address <span>*</span>
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="example@email.com"
-                        autocomplete="email"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="phone">
-                        Phone Number <span>*</span>
-                    </label>
-
-                    <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        placeholder="Enter phone number"
-                        autocomplete="tel"
-                        required>
-                </div>
-
-            </div>
-
-            <!-- Therapy -->
-
-            <h3 style="margin:20px 0;color:#16796b;">
-                Select Therapy
-            </h3>
-
-            <div class="form-group">
-
-                <div class="therapy-options">
-
-                    <div class="therapy-option">
-                        <input
-                            type="radio"
-                            id="occupational"
-                            name="therapy"
-                            value="Occupational Therapy"
-                            required>
-
-                        <label for="occupational">
-                            Occupational Therapy
-                        </label>
-                    </div>
-
-                    <div class="therapy-option">
-                        <input
-                            type="radio"
-                            id="physiotherapy"
-                            name="therapy"
-                            value="Physiotherapy">
-
-                        <label for="physiotherapy">
-                            Physiotherapy
-                        </label>
-                    </div>
-
-                    <div class="therapy-option">
-                        <input
-                            type="radio"
-                            id="speech"
-                            name="therapy"
-                            value="Speech Therapy">
-
-                        <label for="speech">
-                            Speech Therapy
-                        </label>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Appointment Details -->
-
-            <h3 style="margin:20px 0;color:#16796b;">
-                Appointment Details
-            </h3>
-
-            <div class="form-row">
-
-                <div class="form-group">
-                    <label for="appointmentDate">
-                        Preferred Date <span>*</span>
-                    </label>
-
-                    <input
-                        type="date"
-                        id="appointmentDate"
-                        name="appointmentDate"
-                        required>
-                </div>
-
-                <div class="form-group">
-                    <label for="appointmentTime">
-                        Preferred Time <span>*</span>
-                    </label>
-
-                    <select
-                        id="appointmentTime"
-                        name="appointmentTime"
-                        required>
-
-                        <option value="">Select time</option>
-                        <option value="09:00 AM">09:00 AM</option>
-                        <option value="10:00 AM">10:00 AM</option>
-                        <option value="11:00 AM">11:00 AM</option>
-                        <option value="12:00 PM">12:00 PM</option>
-                        <option value="02:00 PM">02:00 PM</option>
-                        <option value="03:00 PM">03:00 PM</option>
-                        <option value="04:00 PM">04:00 PM</option>
-                        <option value="05:00 PM">05:00 PM</option>
-
-                    </select>
-                </div>
-
-            </div>
-
-            <div class="form-group">
-                <label for="reason">
-                    Reason for Appointment
-                </label>
-
-                <select id="reason" name="reason">
-
-                    <option value="">
-                        Select reason
-                    </option>
-
-                    <option value="New Assessment">
-                        New Assessment
-                    </option>
-
-                    <option value="Therapy Session">
-                        Therapy Session
-                    </option>
-
-                    <option value="Follow-up">
-                        Follow-up
-                    </option>
-
-                    <option value="Consultation">
-                        Consultation
-                    </option>
-
-                    <option value="Other">
-                        Other
-                    </option>
-
-                </select>
-            </div>
-
-            <div class="form-group">
-
-                <label for="message">
-                    Additional Information
-                </label>
-
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Please tell us anything important about the appointment..."></textarea>
-
-            </div>
-
-            <!-- Consent -->
-
-            <div class="consent">
-
-                <input
-                    type="checkbox"
-                    id="consent"
-                    name="consent"
-                    required>
-
-                <label for="consent">
-                    I agree to be contacted by Growing Beyond Limits
-                    Rehab Center regarding this appointment request.
-                    <span>*</span>
-                </label>
-
-            </div>
-
-            <button
-                type="submit"
-                class="submit-btn"
-                id="submitButton">
-
-                Book Appointment
-
-            </button>
-
-            <p class="privacy-note">
-                Your information will be used only for appointment
-                communication and related services.
-            </p>
-
-        </form>
-
-    </div>
-
-</section>
-
-<footer>
-    <p>
-        © <span id="year"></span>
-        Growing Beyond Limits Rehab Center.
-        All rights reserved.
-    </p>
-</footer>
-
-
-<script>
-
-    // Current year
-    document.getElementById("year").textContent =
-        new Date().getFullYear();
-
-
-    // Prevent selecting a date in the past
-
-    const appointmentDate =
-        document.getElementById("appointmentDate");
-
-    const today =
-        new Date().toISOString().split("T")[0];
-
-    appointmentDate.min = today;
-
-
-    // Appointment form
-
-    const form =
-        document.getElementById("appointmentForm");
-
-    const successMessage =
-        document.getElementById("successMessage");
-
-    const errorMessage =
-        document.getElementById("errorMessage");
-
-    const submitButton =
-        document.getElementById("submitButton");
-
-
-    form.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        successMessage.style.display = "none";
-        errorMessage.style.display = "none";
-
-
-        // Get form values
-
-        const patientName =
-            document.getElementById("patientName").value.trim();
-
-        const email =
-            document.getElementById("email").value.trim();
-
-        const phone =
-            document.getElementById("phone").value.trim();
-
-        const date =
-            document.getElementById("appointmentDate").value;
-
-        const time =
-            document.getElementById("appointmentTime").value;
-
-        const consent =
-            document.getElementById("consent").checked;
-
-        const therapy =
-            document.querySelector(
-                'input[name="therapy"]:checked'
-            );
-
-
-        // Email validation
-
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-
-        // Phone validation
-
-        const phonePattern =
-            /^[0-9+\-\s()]{7,20}$/;
-
-
-        // Validate
-
-        if (!patientName) {
-
-            showError("Please enter the patient's name.");
-            return;
-
-        }
-
-
-        if (!emailPattern.test(email)) {
-
-            showError("Please enter a valid email address.");
-            return;
-
-        }
-
-
-        if (!phonePattern.test(phone)) {
-
-            showError("Please enter a valid phone number.");
-            return;
-
-        }
-
-
-        if (!therapy) {
-
-            showError("Please select a therapy.");
-            return;
-
-        }
-
-
-        if (!date) {
-
-            showError("Please select an appointment date.");
-            return;
-
-        }
-
-
-        if (!time) {
-
-            showError("Please select a preferred time.");
-            return;
-
-        }
-
-
-        if (!consent) {
-
-            showError(
-                "Please agree to the contact consent."
-            );
-
-            return;
-
-        }
-
-
-        // Disable button
-
-        submitButton.disabled = true;
-
-        submitButton.textContent =
-            "Submitting...";
-
-
-        /*
-         * At this point the form is validated.
-         *
-         * Replace this section with your backend/API.
-         */
-
-        const appointmentData = {
-
-            patientName:
-                patientName,
-
-            guardianName:
-                document.getElementById("guardianName").value,
-
-            email:
-                email,
-
-            phone:
-                phone,
-
-            dob:
-                document.getElementById("dob").value,
-
-            gender:
-                document.getElementById("gender").value,
-
-            therapy:
-                therapy.value,
-
-            appointmentDate:
-                date,
-
-            appointmentTime:
-                time,
-
-            reason:
-                document.getElementById("reason").value,
-
-            message:
-                document.getElementById("message").value,
-
-            submittedAt:
-                new Date().toISOString()
-
-        };
-
-
-        console.log(
-            "Appointment:",
-            appointmentData
-        );
-
-
-        /*
-         * DEMO ONLY
-         *
-         * This simulates a successful submission.
-         *
-         * For a real website, send appointmentData
-         * to your server/database here.
-         */
-
-        setTimeout(function() {
-
-            successMessage.style.display = "block";
-
-            form.reset();
-
-            submitButton.disabled = false;
-
-            submitButton.textContent =
-                "Book Appointment";
-
-            window.scrollTo({
-                top:
-                    successMessage.offsetTop - 100,
-                behavior: "smooth"
-            });
-
-        }, 1000);
+      icon.classList.remove("fa-xmark");
+      icon.classList.add("fa-bars");
 
     });
 
+  });
 
-    function showError(message) {
 
-        errorMessage.textContent = message;
+/* =====================================================
+   GOOGLE APPS SCRIPT
+===================================================== */
 
-        errorMessage.style.display = "block";
+const GOOGLE_SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbyRPqWZ_7ZONDEhUsKzHEvwFbvfAGlVZIIA57jCayNgQIXwO8uB8-ZioL8Trt5ijHqp/exec";
 
-        window.scrollTo({
-            top:
-                errorMessage.offsetTop - 100,
-            behavior: "smooth"
-        });
+
+/* =====================================================
+   APPOINTMENT FORM
+===================================================== */
+
+const appointmentForm =
+  document.getElementById("appointmentForm");
+
+const phoneInput =
+  document.getElementById("phone");
+
+const emailInput =
+  document.getElementById("email");
+
+const submitBtn =
+  document.getElementById("submitBtn");
+
+
+/* =====================================================
+   NEW FORM FIELDS
+===================================================== */
+
+const genderInput =
+  document.getElementById("gender");
+
+const visitTypeInput =
+  document.getElementById("visitType");
+
+const homeVisitLocationGroup =
+  document.getElementById("homeVisitLocationGroup");
+
+const homeVisitLocationInput =
+  document.getElementById("homeVisitLocation");
+
+
+/* =====================================================
+   HOME VISIT LOCATION TOGGLE
+===================================================== */
+
+visitTypeInput.addEventListener("change", function () {
+
+  if (this.value === "Home Visit") {
+
+    homeVisitLocationGroup.style.display = "block";
+
+    homeVisitLocationInput.required = true;
+
+  } else {
+
+    homeVisitLocationGroup.style.display = "none";
+
+    homeVisitLocationInput.required = false;
+
+    homeVisitLocationInput.value = "";
+
+  }
+
+});
+
+
+/* =====================================================
+   PHONE INPUT
+===================================================== */
+
+phoneInput.addEventListener("input", function () {
+
+  this.value =
+    this.value
+      .replace(/\D/g, "")
+      .slice(0, 10);
+
+});
+
+
+/* =====================================================
+   EMAIL INPUT
+===================================================== */
+
+emailInput.addEventListener("input", function () {
+
+  /*
+   * Remove spaces from email.
+   * Convert to lowercase.
+   */
+
+  this.value =
+    this.value
+      .replace(/\s/g, "")
+      .toLowerCase();
+
+});
+
+
+/* =====================================================
+   EMAIL VALIDATION
+===================================================== */
+
+function isValidEmail(email) {
+
+  const emailPattern =
+    /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  return emailPattern.test(email);
+
+}
+
+
+/* =====================================================
+   APPOINTMENT FORM SUBMIT
+===================================================== */
+
+appointmentForm.addEventListener(
+  "submit",
+  function (event) {
+
+    event.preventDefault();
+
+
+    /* ===============================================
+       BROWSER VALIDATION
+    ================================================ */
+
+    if (!appointmentForm.reportValidity()) {
+      return;
+    }
+
+
+    /* ===============================================
+       GET FORM VALUES
+    ================================================ */
+
+    const parentName =
+      document
+        .getElementById("parentName")
+        .value
+        .trim();
+
+
+    const patientName =
+      document
+        .getElementById("patientName")
+        .value
+        .trim();
+
+
+    const gender =
+      document
+        .getElementById("gender")
+        .value;
+
+
+    const age =
+      document
+        .getElementById("age")
+        .value
+        .trim();
+
+
+    const phone =
+      document
+        .getElementById("phone")
+        .value
+        .trim();
+
+
+    const email =
+      document
+        .getElementById("email")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const therapy =
+      document
+        .getElementById("therapy")
+        .value;
+
+
+    const visitType =
+      document
+        .getElementById("visitType")
+        .value;
+
+
+    const homeVisitLocation =
+      document
+        .getElementById("homeVisitLocation")
+        .value
+        .trim();
+
+
+    const date =
+      document
+        .getElementById("date")
+        .value;
+
+
+    const time =
+      document
+        .getElementById("time")
+        .value;
+
+
+    const message =
+      document
+        .getElementById("message")
+        .value
+        .trim();
+
+
+    /* ===============================================
+       REQUIRED FIELD VALIDATION
+    ================================================ */
+
+    if (
+      !parentName ||
+      !patientName ||
+      !gender ||
+      !age ||
+      !phone ||
+      !email ||
+      !therapy ||
+      !visitType ||
+      !date ||
+      !time ||
+      !message
+    ) {
+
+      alert(
+        "Please complete all required appointment fields."
+      );
+
+      return;
 
     }
 
-</script>
 
-</body>
-</html>
+    /* ===============================================
+       HOME VISIT VALIDATION
+    ================================================ */
+
+    if (visitType === "Home Visit" && !homeVisitLocation) {
+
+      alert(
+        "Please enter the home visit location."
+      );
+
+      homeVisitLocationInput.focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       AGE VALIDATION
+    ================================================ */
+
+    const ageNumber =
+      Number(age);
+
+
+    if (
+      !Number.isInteger(ageNumber) ||
+      ageNumber < 0 ||
+      ageNumber > 120
+    ) {
+
+      alert(
+        "Please enter a valid age."
+      );
+
+      document
+        .getElementById("age")
+        .focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       PHONE VALIDATION
+    ================================================ */
+
+    const phoneDigits =
+      phone;
+
+
+    if (
+      !/^[6-9][0-9]{9}$/.test(phoneDigits)
+    ) {
+
+      alert(
+        "Please enter a valid 10-digit Indian mobile number without country code (for example, 9876543210)."
+      );
+
+      phoneInput.focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       EMAIL VALIDATION
+    ================================================ */
+
+    if (!isValidEmail(email)) {
+
+      alert(
+        "Please enter a valid email address."
+      );
+
+      emailInput.focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       MESSAGE VALIDATION
+    ================================================ */
+
+    if (message.length < 2) {
+
+      alert(
+        "Please enter some details about your enquiry."
+      );
+
+      document
+        .getElementById("message")
+        .focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       DATE VALIDATION
+    ================================================ */
+
+    const selectedDate =
+      new Date(
+        date + "T00:00:00"
+      );
+
+
+    const selectedDay =
+      selectedDate.getDay();
+
+
+    if (
+      selectedDay === 0 ||
+      selectedDay === 6
+    ) {
+
+      alert(
+        "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
+      );
+
+      document
+        .getElementById("date")
+        .focus();
+
+      return;
+
+    }
+
+
+    /* ===============================================
+       FORMAT DATE
+    ================================================ */
+
+    const formattedDate =
+      selectedDate.toLocaleDateString(
+        "en-IN",
+        {
+          day: "2-digit",
+          month: "2-digit",
+          year: "numeric"
+        }
+      );
+
+
+    /* ===============================================
+       CREATE WHATSAPP MESSAGE
+    ================================================ */
+
+    let whatsappMessage =
+`Hello Dr Jeeva A,
+
+I would like to enquire about an appointment.
+
+Parent / Guardian: ${parentName}
+Child / Client Name: ${patientName}
+Gender: ${gender}
+Age: ${age}
+Phone: ${phone}
+Email: ${email}
+Therapy: ${therapy}
+Visit Type: ${visitType}`;
+
+
+    /* ===============================================
+       ADD HOME VISIT LOCATION ONLY FOR
+       HOME VISIT
+    ================================================ */
+
+    if (visitType === "Home Visit") {
+
+      whatsappMessage +=
+`
+Home Visit Location: ${homeVisitLocation}`;
+
+    }
+
+
+    whatsappMessage +=
+`
+Preferred Date: ${formattedDate}
+Preferred Time: ${time}
+
+How can we help:
+${message}
+
+Thank you.
+Growing Beyond Limits Rehab Center`;
+
+
+    /* ===============================================
+       CREATE WHATSAPP URL
+    ================================================ */
+
+    const whatsappURL =
+      "https://wa.me/917812821216?text=" +
+      encodeURIComponent(
+        whatsappMessage
+      );
+
+
+    /* ===============================================
+       OPEN WHATSAPP
+    ================================================ */
+
+    window.open(
+      whatsappURL,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+
+    /* ===============================================
+       DISABLE BUTTON
+    ================================================ */
+
+    submitBtn.disabled = true;
+
+    submitBtn.innerHTML =
+      '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+
+    /* ===============================================
+       SEND DATA TO GOOGLE APPS SCRIPT
+    ================================================ */
+
+    if (
+      GOOGLE_SCRIPT_URL &&
+      !GOOGLE_SCRIPT_URL.includes(
+        "PASTE_YOUR_GOOGLE_APPS_SCRIPT"
+      )
+    ) {
+
+      const formData =
+        new URLSearchParams();
+
+
+      /* SOURCE */
+
+      formData.append(
+        "source",
+        "Website"
+      );
+
+
+      /* PARENT / GUARDIAN */
+
+      formData.append(
+        "parentName",
+        parentName
+      );
+
+
+      /* CHILD / CLIENT */
+
+      /*
+       * Keep the parameter name "patientName"
+       * so your existing Google Apps Script
+       * continues to recognize it.
+       */
+
+      formData.append(
+        "patientName",
+        patientName
+      );
+
+
+      /* GENDER */
+
+      formData.append(
+        "gender",
+        gender
+      );
+
+
+      /* AGE */
+
+      formData.append(
+        "age",
+        age
+      );
+
+
+      /* PHONE */
+
+      formData.append(
+        "phone",
+        phone
+      );
+
+
+      /* EMAIL */
+
+      formData.append(
+        "email",
+        email
+      );
+
+
+      /* THERAPY */
+
+      formData.append(
+        "therapy",
+        therapy
+      );
+
+
+      /* VISIT TYPE */
+
+      formData.append(
+        "visitType",
+        visitType
+      );
+
+
+      /* HOME VISIT LOCATION */
+
+      formData.append(
+        "homeVisitLocation",
+        visitType === "Home Visit"
+          ? homeVisitLocation
+          : ""
+      );
+
+
+      /* PREFERRED DATE */
+
+      formData.append(
+        "preferredDate",
+        date
+      );
+
+
+      /* PREFERRED TIME */
+
+      formData.append(
+        "preferredTime",
+        time
+      );
+
+
+      /* MESSAGE */
+
+      formData.append(
+        "message",
+        message
+      );
+
+
+      /* PAGE URL */
+
+      formData.append(
+        "pageUrl",
+        window.location.href
+      );
+
+
+      /* =============================================
+         SEND REQUEST
+      ============================================== */
+
+      fetch(
+        GOOGLE_SCRIPT_URL,
+        {
+          method: "POST",
+
+          mode: "no-cors",
+
+          headers: {
+            "Content-Type":
+              "application/x-www-form-urlencoded;charset=UTF-8"
+          },
+
+          body:
+            formData.toString()
+        }
+      )
+
+      .then(function () {
+
+        console.log(
+          "Appointment enquiry submitted successfully."
+        );
+
+      })
+
+      .catch(function (error) {
+
+        console.error(
+          "Google Sheet submission failed:",
+          error
+        );
+
+      })
+
+      .finally(function () {
+
+        submitBtn.disabled = false;
+
+        submitBtn.innerHTML =
+          '<i class="fa-brands fa-whatsapp"></i> Send Appointment Enquiry on WhatsApp';
+
+      });
+
+
+    } else {
+
+      console.warn(
+        "Google Apps Script URL has not been configured yet."
+      );
+
+      submitBtn.disabled = false;
+
+      submitBtn.innerHTML =
+        '<i class="fa-brands fa-whatsapp"></i> Send Appointment Enquiry on WhatsApp';
+
+    }
+
+
+    /* ===============================================
+       SUCCESS MESSAGE
+    ================================================ */
+
+    alert(
+      "Thank you. Your appointment enquiry has been submitted. Please check WhatsApp for the enquiry message."
+    );
+
+
+    /* ===============================================
+       RESET FORM
+    ================================================ */
+
+    appointmentForm.reset();
+
+
+    /* ===============================================
+       RESET HOME VISIT FIELD
+    ================================================ */
+
+    homeVisitLocationGroup.style.display =
+      "none";
+
+    homeVisitLocationInput.required =
+      false;
+
+    homeVisitLocationInput.value = "";
+
+  }
+);
+
+
+/* =====================================================
+   PREVENT WEEKEND APPOINTMENT DATES
+===================================================== */
+
+const dateInput =
+  document.getElementById("date");
+
+
+dateInput.addEventListener(
+  "change",
+  function () {
+
+    if (!this.value) {
+      return;
+    }
+
+
+    const selectedDate =
+      new Date(
+        this.value + "T00:00:00"
+      );
+
+
+    const day =
+      selectedDate.getDay();
+
+
+    if (
+      day === 0 ||
+      day === 6
+    ) {
+
+      alert(
+        "The clinic is closed on Saturday and Sunday. Please select a Monday to Friday date."
+      );
+
+      this.value = "";
+
+    }
+
+  }
+);
+
+
+/* =====================================================
+   SET MINIMUM DATE
+===================================================== */
+
+/*
+ * Prevent patients from selecting
+ * a date in the past.
+ */
+
+const today =
+  new Date();
+
+
+const year =
+  today.getFullYear();
+
+
+const month =
+  String(
+    today.getMonth() + 1
+  ).padStart(
+    2,
+    "0"
+  );
+
+
+const day =
+  String(
+    today.getDate()
+  ).padStart(
+    2,
+    "0"
+  );
+
+
+const todayString =
+  `${year}-${month}-${day}`;
+
+
+dateInput.min =
+  todayString;

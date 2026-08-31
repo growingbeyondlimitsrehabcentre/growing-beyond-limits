@@ -824,6 +824,34 @@
       box-shadow: 0 12px 30px rgba(7,27,53,0.07);
     }
 
+    .ot-detail-image {
+      width: 145px;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 14px;
+      flex-shrink: 0;
+      display: block;
+      border: 1px solid rgba(7,27,53,0.06);
+    }
+
+    .ot-detail-card.has-image {
+      align-items: center;
+    }
+
+    .ot-detail-card.has-image .ot-detail-icon {
+      display: none;
+    }
+
+    @media (max-width: 700px) {
+      .ot-detail-card.has-image { padding: 16px; gap: 13px; }
+      .ot-detail-image { width: 110px; height: 78px; }
+    }
+
+    @media (max-width: 430px) {
+      .ot-detail-card.has-image { flex-direction: column; align-items: flex-start; }
+      .ot-detail-image { width: 100%; height: 150px; }
+    }
+
     .ot-detail-icon {
       width: 42px;
       height: 42px;
@@ -2423,16 +2451,16 @@
 
           <!-- OCCUPATIONAL THERAPY DETAIL CARDS -->
           <div class="ot-details" id="otDetails">
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-brain"></i></div><div><h4>Cognitive Skills</h4><p>Attention, memory, problem-solving, planning and executive functioning.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-hand"></i></div><div><h4>Fine Motor Skills</h4><p>Hand strength, dexterity, grasp, manipulation and precise hand movements.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-person-running"></i></div><div><h4>Gross Motor Skills</h4><p>Movement skills involving posture, balance, coordination and whole-body control.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-dumbbell"></i></div><div><h4>Strength &amp; Coordination</h4><p>Building functional strength, bilateral coordination and movement efficiency.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-eye"></i></div><div><h4>Visual-Motor &amp; Perceptual Skills</h4><p>Supporting visual processing, eye-hand coordination and spatial awareness.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-sun"></i></div><div><h4>Sensory Processing</h4><p>Helping individuals respond to sensory information and participate comfortably.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-house"></i></div><div><h4>Activities of Daily Living (ADLs)</h4><p>Developing skills for dressing, feeding, grooming, routines and everyday tasks.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-school"></i></div><div><h4>School Skills</h4><p>Supporting classroom participation, handwriting, organization and learning routines.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-people-group"></i></div><div><h4>Social &amp; Emotional Participation</h4><p>Supporting confidence, interaction, self-regulation and meaningful participation.</p></div></article>
-            <article class="ot-detail-card"><div class="ot-detail-icon"><i class="fa-solid fa-bullseye"></i></div><div><h4>Functional Independence</h4><p>Building practical skills that help individuals participate more independently in daily life.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="cognitive-skills.png" alt="Child developing cognitive skills"><div><h4>Cognitive Skills</h4><p>Attention, memory, problem-solving, planning and executive functioning.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="fine-motor-skills.png" alt="Child practicing fine motor skills"><div><h4>Fine Motor Skills</h4><p>Hand strength, dexterity, grasp, manipulation and precise hand movements.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="gross-motor-skills.png" alt="Child practicing gross motor skills"><div><h4>Gross Motor Skills</h4><p>Movement skills involving posture, balance, coordination and whole-body control.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="strength-coordination.png" alt="Child practicing strength and coordination"><div><h4>Strength &amp; Coordination</h4><p>Building functional strength, bilateral coordination and movement efficiency.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="visual-motor-perceptual-skills.png" alt="Child practicing visual motor and perceptual skills"><div><h4>Visual-Motor &amp; Perceptual Skills</h4><p>Supporting visual processing, eye-hand coordination and spatial awareness.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="sensory-processing.png" alt="Child participating in sensory processing activities"><div><h4>Sensory Processing</h4><p>Helping individuals respond to sensory information and participate comfortably.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="activities-daily-living.png" alt="Child practicing activities of daily living"><div><h4>Activities of Daily Living (ADLs)</h4><p>Developing skills for dressing, feeding, grooming, routines and everyday tasks.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="school-skills.png" alt="Child practicing school skills and handwriting"><div><h4>School Skills</h4><p>Supporting classroom participation, handwriting, organization and learning routines.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="social-emotional-participation.png" alt="Children practicing social and emotional participation"><div><h4>Social &amp; Emotional Participation</h4><p>Supporting confidence, interaction, self-regulation and meaningful participation.</p></div></article>
+            <article class="ot-detail-card has-image"><img class="ot-detail-image" src="functional-independence.png" alt="Child building functional independence"><div><h4>Functional Independence</h4><p>Building practical skills that help individuals participate more independently in daily life.</p></div></article>
           </div>
 
         </div>

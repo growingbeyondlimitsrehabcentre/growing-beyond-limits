@@ -1228,7 +1228,9 @@
     ========================================================= */
 
     .appointment-section {
-      background: var(--navy);
+      background:
+        linear-gradient(rgba(15, 37, 62, 0.92), rgba(15, 37, 62, 0.92)),
+        url("assets/appointment%20Enquiry/wide_friendly_child_focused_pastel_cartoon_ill.png") center / cover no-repeat;
 
       color: white;
 
@@ -1953,6 +1955,23 @@
       display: block;
     }
 
+    /* HOW THERAPY WORKS IMAGES */
+    .step-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      margin-bottom: 24px;
+      border-radius: 16px;
+    }
+
+    @media (max-width: 600px) {
+      .step-image {
+        height: 170px;
+      }
+    }
+
   </style>
 
 
@@ -2545,30 +2564,35 @@
         <div class="steps">
 
           <div class="step">
+            <img class="step-image" src="assets/how therapy works/01-enquiry.png" alt="Appointment enquiry">
             <div class="step-number">01</div>
             <h3>Enquiry</h3>
             <p>Contact us through WhatsApp, phone or the appointment form and tell us how we can help.</p>
           </div>
 
           <div class="step">
+            <img class="step-image" src="assets/how therapy works/02-initial-assessment.png" alt="Initial assessment">
             <div class="step-number">02</div>
             <h3>Initial Assessment</h3>
             <p>Understand strengths, needs, challenges and meaningful goals through an individualized assessment.</p>
           </div>
 
           <div class="step">
+            <img class="step-image" src="assets/how therapy works/03-personalized-plan.png" alt="Personalized therapy plan">
             <div class="step-number">03</div>
             <h3>Personalized Plan</h3>
             <p>Create a purposeful therapy plan focused on practical, functional and measurable goals.</p>
           </div>
 
           <div class="step">
+            <img class="step-image" src="assets/how therapy works/04-therapy-family-support.png" alt="Therapy and family support">
             <div class="step-number">04</div>
             <h3>Therapy & Family Support</h3>
             <p>Build skills through structured therapy with practical guidance for families and caregivers.</p>
           </div>
 
           <div class="step">
+            <img class="step-image" src="assets/how therapy works/05-progress-review.png" alt="Progress review">
             <div class="step-number">05</div>
             <h3>Progress Review</h3>
             <p>Review progress, celebrate gains and adjust goals or therapy strategies when needed.</p>

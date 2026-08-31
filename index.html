@@ -1895,19 +1895,6 @@
 
     }
 
-
-    /* BILINGUAL LANGUAGE SWITCHER */
-    .language-switcher{display:flex;align-items:center;gap:8px;margin-left:6px;flex-shrink:0}
-    .language-switcher button{border:1px solid var(--border);background:#fff;color:var(--navy);padding:9px 14px;border-radius:22px;font-weight:700;cursor:pointer;font-size:14px;transition:.2s ease}
-    .language-switcher button.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-    .language-switcher button:hover{transform:translateY(-1px)}
-    .goog-te-banner-frame.skiptranslate{display:none!important}
-    body{top:0!important}
-    #google_translate_element{display:none!important}
-    .goog-logo-link,.goog-te-gadget span{display:none!important}
-    .goog-te-gadget{font-size:0!important}
-    @media(max-width:850px){.language-switcher{margin:12px 0 0;justify-content:center}.language-switcher button{padding:10px 16px}}
-
   </style>
 
 
@@ -1995,11 +1982,6 @@
           Dr Jeeva A
         </a>
 
-
-        <div class="language-switcher" role="group" aria-label="Website language">
-          <button type="button" id="englishLang" class="active">English</button>
-          <button type="button" id="tamilLang">தமிழ்</button>
-        </div>
 
         <!-- INSTAGRAM -->
 
@@ -4843,55 +4825,6 @@ Growing Beyond Limits Rehab Center`;
 
   </script>
 
-
-
-  <!-- BILINGUAL TRANSLATION ENGINE -->
-  <div id="google_translate_element" aria-hidden="true"></div>
-  <script>
-    function googleTranslateElementInit(){
-      new google.translate.TranslateElement({pageLanguage:'en', includedLanguages:'en,ta', autoDisplay:false}, 'google_translate_element');
-      applySavedLanguage();
-    }
-    function setLanguage(lang){
-      if(lang==='en'){
-        document.cookie='googtrans=/en/en;path=/';
-        document.cookie='googtrans=/en/en;path=/;domain='+location.hostname;
-      } else {
-        document.cookie='googtrans=/en/ta;path=/';
-        document.cookie='googtrans=/en/ta;path=/;domain='+location.hostname;
-      }
-      localStorage.setItem('gbl-language',lang);
-      location.reload();
-    }
-    function applySavedLanguage(){
-      const lang=localStorage.getItem('gbl-language') || (document.cookie.includes('googtrans=/en/ta')?'ta':'en');
-      document.documentElement.lang=lang;
-      document.getElementById('englishLang')?.classList.toggle('active',lang==='en');
-      document.getElementById('tamilLang')?.classList.toggle('active',lang==='ta');
-      if(lang==='ta') enforceTamilServiceNames();
-    }
-    function enforceTamilServiceNames(){
-      const names={
-        'Occupational Therapy':'செயல்முறை மருத்துவம் (Occupational Therapy)',
-        'Physiotherapy':'இயன்முறை மருத்துவம் (Physiotherapy)',
-        'Speech Therapy':'பேச்சுப் பயிற்சி மருத்துவம் (Speech Therapy)',
-        'Audiology':'காது கேட்டல் பற்றிய ஆய்வு (Audiology)'
-      };
-      const fix=()=>{
-        document.querySelectorAll('h3,h4,option,summary,label,span,p,a').forEach(el=>{
-          const t=(el.textContent||'').trim();
-          if(names[t]) el.textContent=names[t];
-        });
-      };
-      fix(); setTimeout(fix,800); setTimeout(fix,1800);
-    }
-    document.addEventListener('DOMContentLoaded',()=>{
-      document.getElementById('englishLang')?.addEventListener('click',()=>setLanguage('en'));
-      document.getElementById('tamilLang')?.addEventListener('click',()=>setLanguage('ta'));
-      applySavedLanguage();
-    });
-  </script>
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>
